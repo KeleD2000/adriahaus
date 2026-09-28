@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tengerpart Ingatlan – Adriai ingatlanközvetítés</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand" id="brand"></div>
+    <nav>
+      <ul id="navList"></ul>
+    </nav>
+    <div class="lang-switch" id="langSwitch"></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 id="heroTitle"></h1>
+    <p id="heroText"></p>
+    <a id="heroCtaPrimary" class="btn" href="#"></a>
+    <a id="heroCtaSecondary" class="btn btn-outline" href="#"></a>
+  </div>
+  <div class="hero-wave"></div>
+</section>
+
+<section id="ingatlanok">
+  <div class="wrap">
+    <div class="eyebrow-line">
+      <h2 id="propTitle"></h2>
+      <span id="propNote"></span>
+    </div>
+    <div class="grid" id="propertyGrid"></div>
+  </div>
+</section>
+
+<section id="rolunk" class="about">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 id="aboutTitle"></h2>
+      <p id="aboutIntro"></p>
+      <div class="stats" id="aboutStats"></div>
+    </div>
+    <div class="reveal" id="aboutParagraphs"></div>
+  </div>
+</section>
+
+<section id="kapcsolat">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <h2 id="contactTitle"></h2>
+      <p id="contactText"></p>
+      <div class="contact-details" id="contactDetails"></div>
+      <ul id="contactBullets"></ul>
+    </div>
+    <div class="reveal">
+      <form id="listingForm">
+        <div class="row2">
+          <div>
+            <label for="name" id="lblName"></label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="phone" id="lblPhone"></label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+        </div>
+        <div>
+          <label for="email" id="lblEmail"></label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="location" id="lblLocation"></label>
+          <input id="location" name="location" type="text" required>
+        </div>
+        <div>
+          <label for="details" id="lblDetails"></label>
+          <textarea id="details" name="details" placeholder="Alapterület, szobák száma, távolság a tengertől, irányár..."></textarea>
+        </div>
+        <p class="form-note" id="formNote"></p>
+        <button type="submit" class="btn" id="submitBtn"></button>
+        <div id="formOk"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div id="footerText"></div>
+    <div id="footerContact"></div>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
