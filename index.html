@@ -22,6 +22,9 @@
 </header>
 
 <section class="hero">
+  <div class="hero-photo">
+    <img src="hero-sea.svg" alt="Az Adriai-tenger partvidéke naplementében">
+  </div>
   <div class="wrap">
     <h1 id="heroTitle"></h1>
     <p id="heroText"></p>
@@ -38,6 +41,16 @@
       <span id="propNote"></span>
     </div>
     <div class="grid" id="propertyGrid"></div>
+  </div>
+</section>
+
+<section id="pelda-ingatlanok">
+  <div class="wrap">
+    <div class="eyebrow-line">
+      <h2 id="exTitle"></h2>
+      <span id="exNote"></span>
+    </div>
+    <div class="grid" id="exampleGrid"></div>
   </div>
 </section>
 
@@ -77,12 +90,9 @@
           <input id="email" name="email" type="email" required>
         </div>
         <div>
-          <label for="location" id="lblLocation"></label>
-          <input id="location" name="location" type="text" required>
-        </div>
-        <div>
-          <label for="details" id="lblDetails"></label>
-          <textarea id="details" name="details" placeholder="Alapterület, szobák száma, távolság a tengertől, irányár..."></textarea>
+          <label for="service" id="lblService"></label>
+          <select id="service" name="service" required>
+          </select>
         </div>
         <p class="form-note" id="formNote"></p>
         <button type="submit" class="btn" id="submitBtn"></button>
@@ -98,6 +108,21 @@
     <div id="footerContact"></div>
   </div>
 </footer>
+
+<div class="modal-overlay" id="galleryModal" hidden>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+    <button type="button" class="modal-close" id="galleryClose" aria-label="Bezárás">&times;</button>
+    <div class="modal-img-wrap">
+      <button type="button" class="modal-nav modal-prev" id="galleryPrev" aria-label="Előző kép">&#8249;</button>
+      <img id="galleryImg" src="" alt="">
+      <button type="button" class="modal-nav modal-next" id="galleryNext" aria-label="Következő kép">&#8250;</button>
+    </div>
+    <div class="modal-caption">
+      <span id="galleryTitle"></span>
+      <span class="modal-counter" id="galleryCounter"></span>
+    </div>
+  </div>
+</div>
 
 <script src="content.js"></script>
 <script src="script.js"></script>
