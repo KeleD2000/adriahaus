@@ -129,8 +129,14 @@
         T.nav.forEach(function (label, i) {
             var li = document.createElement('li');
             var a = document.createElement('a');
+
             a.href = S.navHrefs[i];
             a.textContent = label;
+
+            if (i === T.nav.length - 1) {
+                a.className = 'nav-sell';
+            }
+
             li.appendChild(a);
             navList.appendChild(li);
         });
@@ -138,20 +144,40 @@
         // Hero
         $('heroTitle').textContent = T.hero.title;
         $('heroText').textContent = T.hero.text;
-        $('heroCtaPrimary').textContent = T.hero.ctaPrimary;
-        $('heroCtaPrimary').href = S.heroHrefs[0];
-        $('heroCtaSecondary').textContent = T.hero.ctaSecondary;
-        $('heroCtaSecondary').href = S.heroHrefs[1];
 
-        // Szolgáltatások (mindegyik a példa ingatlanokhoz ugrik)
+        // 3 specifikus gomb dinamikus renderelése a Hero szekcióban
+        var heroActions = $('heroActions') || $('heroCtaPrimary').parentElement;
+        clear(heroActions);
+        T.hero.ctaServices.forEach(function (btnText, i) {
+            var a = document.createElement('a');
+            a.href = S.heroHrefs[i] || '#ingatlanok';
+
+            a.addEventListener('click', function (e) {
+                var target = document.querySelector(a.getAttribute('href'));
+
+                if (target) {
+                    e.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            });
+            a.className = i === 0 ? 'btn btn-primary' : 'btn btn-secondary';
+            a.textContent = btnText;
+            heroActions.appendChild(a);
+        });
+
+        // Szolgáltatások
         $('propTitle').textContent = T.servicesHeading.title;
         $('propNote').textContent = T.servicesHeading.note;
         var grid = $('propertyGrid');
         clear(grid);
         T.services.forEach(function (svc, i) {
             var shared = S.services[i] || {};
-            var card = document.createElement('a');
-            card.href = '#pelda-ingatlanok';
+            var card = document.createElement('div');
+            card.id = shared.id || ('service-' + i);
             card.className = 'card service-card reveal';
             card.innerHTML =
                 '<div class="service-emoji" aria-hidden="true">' + shared.emoji + '</div>' +
@@ -197,13 +223,6 @@
             d.className = 'stat';
             d.innerHTML = '<b>' + s.value + '</b><span>' + s.label + '</span>';
             stats.appendChild(d);
-        });
-        var paras = $('aboutParagraphs');
-        clear(paras);
-        T.about.paragraphs.forEach(function (text) {
-            var p = document.createElement('p');
-            p.textContent = text;
-            paras.appendChild(p);
         });
 
         // Kapcsolat

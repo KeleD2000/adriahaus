@@ -13,11 +13,11 @@ window.SITE_CONTENT = {
 
   shared: {
     brand: { name: "Adria Haus", accent: "Tengerparti ingatlanok" },
-    phone: "+36 1 234 5678",
-    phoneHref: "tel:+3612345678",
-    email: "info@tengerpartingatlan.example",
-    navHrefs: ["#ingatlanok", "#rolunk", "#kapcsolat"],
-    heroHrefs: ["#ingatlanok", "#kapcsolat"],
+    phone: "+36 30 878 7226",
+    phoneHref: "tel:+36308787226",
+    email: "adriahaus70@gmail.com",
+    navHrefs: ["#ingatlanok", "#rolunk", "#kapcsolat", "#kapcsolat"],
+    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-hasznositas", "#ingatlan-felujitas"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
       { gradient: "linear-gradient(160deg,#3B5245,#7FA98C)", size: "210 m²", price: "395 000 €" },
@@ -27,9 +27,9 @@ window.SITE_CONTENT = {
       { gradient: "linear-gradient(160deg,#3E7C8C,#DCA95F)", size: "93 m²",  price: "62 000 €" }
     ],
     services: [
-      { emoji: "🏠" },
-      { emoji: "🔑" },
-      { emoji: "🛠️" }
+      { emoji: "🏠", id: "ingatlan-ertikesites" },
+      { emoji: "🔑", id: "ingatlan-hasznositas" },
+      { emoji: "🛠️", id: "ingatlan-felujitas" }
     ],
     examples: [
       { image: "property-apartment.svg", size: "68 m²",  price: "185 000 €",
@@ -45,12 +45,14 @@ window.SITE_CONTENT = {
 
     hu: {
       pageTitle: "Adria Hause – Adriai ingatlanközvetítés",
-      nav: ["Szolgáltatások", "Rólunk", "Kapcsolat"],
+      nav: ["Szolgáltatások", "Rólunk", "Kapcsolat", "Eladnám az ingatlanom"],
       hero: {
-        title: "Otthon, ahol a tenger kezdődik",
-        text: "Horvátországi tengerparti ingatlanok közvetítése magyar vevőknek – Isztriától Dalmáciáig, teljes körű ügyintézéssel.",
-        ctaPrimary: "Ingatlanok megtekintése",
-        ctaSecondary: "Eladnám az ingatlanomat"
+        title: "Horvátországi ingatlanok közvetítése",
+        ctaServices: [
+          "Ingatlan értékesítés",
+          "Ingatlanok hasznosítása",
+          "Felújítás / Karbantartás"
+        ]
       },
       servicesHeading: { title: "Aktuális szolgáltatásaink", note: "3 fő szolgáltatási terület" },
       services: [
@@ -71,17 +73,12 @@ window.SITE_CONTENT = {
           description: "Történelmi óvárosi kőház, részlegesen felújítva, kiváló befektetési lehetőség rövid távú bérbeadásra." }
       ],
       about: {
-        title: "12 éve közvetítünk a horvát tengerparton",
+        title: "Több mint 10 éve közvetítünk a horvát tengerparton",
         intro: "Helyi jogi és piaci ismeretünk, valamint horvátországi partnerhálózatunk révén végigkísérjük ügyfeleinket a kiválasztástól a tulajdonjog bejegyzéséig.",
         stats: [
-          { value: "12", label: "év tapasztalat" },
-          { value: "300+", label: "lezárt ügylet" },
+          { value: "10+", label: "év tapasztalat" },
           { value: "5", label: "régió" }
         ],
-        paragraphs: [
-          "Munkánk során saját ügyvédi és fordítói háttérrel dolgozunk, így az adásvétel minden lépése – a foglalótól a birtokbaadásig – átlátható és biztonságos.",
-          "Minden ingatlant személyesen megtekintünk és ellenőrizünk, mielőtt felvennénk a kínálatunkba."
-        ]
       },
       contact: {
         title: "Kapcsolat",
@@ -116,12 +113,14 @@ window.SITE_CONTENT = {
 
     en: {
       pageTitle: "Adria Hause – Adriatic real estate brokerage",
-      nav: ["Services", "About us", "Contact"],
+      nav: ["Services", "About us", "Contact", "I want to sell my property"],
       hero: {
-        title: "A home where the sea begins",
-        text: "Brokerage of Croatian seaside properties for Hungarian buyers – from Istria to Dalmatia, with full-service support.",
-        ctaPrimary: "View properties",
-        ctaSecondary: "I want to sell my property"
+        title: "Real estate brokerage in Croatia",
+        ctaServices: [
+          "Property Sales",
+          "Property Management",
+          "Renovation & Maintenance"
+        ]
       },
       servicesHeading: { title: "Our current services", note: "3 core service areas" },
       services: [
@@ -142,17 +141,12 @@ window.SITE_CONTENT = {
           description: "Historic old-town stone house, partly renovated, an excellent investment for short-term rentals." }
       ],
       about: {
-        title: "12 years of brokerage on the Croatian coast",
+        title: "Over 10 years of brokerage experience on the Croatian coast",
         intro: "With local legal and market expertise and a partner network in Croatia, we guide our clients from selection to registration of ownership.",
         stats: [
-          { value: "12", label: "years of experience" },
-          { value: "300+", label: "closed deals" },
+          { value: "10+", label: "years of experience" },
           { value: "5", label: "regions" }
         ],
-        paragraphs: [
-          "We work with our own legal and translation team, so every step of the purchase – from deposit to handover – is transparent and secure.",
-          "We personally visit and inspect every property before adding it to our portfolio."
-        ]
       },
       contact: {
         title: "Contact",
@@ -187,12 +181,14 @@ window.SITE_CONTENT = {
 
     de: {
       pageTitle: "Adria Hause – Immobilienvermittlung an der Adria",
-      nav: ["Dienstleistungen", "Über uns", "Kontakt"],
+      nav: ["Dienstleistungen", "Über uns", "Kontakt", "Ich möchte meine Immobilie verkaufen"],
       hero: {
-        title: "Zuhause, wo das Meer beginnt",
-        text: "Vermittlung von Küstenimmobilien in Kroatien – von Istrien bis Dalmatien, mit umfassendem Komplettservice.",
-        ctaPrimary: "Immobilien ansehen",
-        ctaSecondary: "Immobilie verkaufen"
+        title: "Immobilienvermittlung in Kroatien",
+        ctaServices: [
+          "Immobilienverkauf",
+          "Immobilienverwaltung",
+          "Renovierung & Instandhaltung"
+        ]
       },
       servicesHeading: { title: "Unsere Dienstleistungen", note: "3 Hauptleistungsbereiche" },
       services: [
@@ -213,17 +209,12 @@ window.SITE_CONTENT = {
           description: "Historisches Steinhaus in der Altstadt, teilweise renoviert, hervorragende Kapitalanlage für die Ferienvermietung." }
       ],
       about: {
-        title: "Seit 12 Jahren Vermittler an der kroatischen Küste",
+        title: "Seit über 10 Jahren vermitteln wir Immobilien an der kroatischen Küste",
         intro: "Durch unsere fundierte Rechts- und Marktkenntnis vor Ort sowie unser Partnernetzwerk begleiten wir Sie vom Erstkontakt bis zum Grundbucheintrag.",
         stats: [
-          { value: "12", label: "Jahre Erfahrung" },
-          { value: "300+", label: "erfolgreiche Abschlüsse" },
+          { value: "10+", label: "Jahre Erfahrung" },
           { value: "5", label: "Regionen" }
         ],
-        paragraphs: [
-          "Wir arbeiten mit eigenen Anwälten und Übersetzern zusammen, wodurch jeder Schritt des Kaufs – von der Anzahlung bis zur Übergabe – transparent und sicher ist.",
-          "Jede Immobilie wird von uns persönlich besichtigt und geprüft, bevor sie in unser Portfolio aufgenommen wird."
-        ]
       },
       contact: {
         title: "Kontakt",
@@ -258,12 +249,14 @@ window.SITE_CONTENT = {
 
     hr: {
       pageTitle: "Adria Hause – Agencija za nekretnine na Jadranu",
-      nav: ["Usluge", "O nama", "Kontakt"],
+      nav: ["Usluge", "O nama", "Kontakt", "Želim prodati svoju nekretninu"],
       hero: {
-        title: "Dom tamo gdje more počinje",
-        text: "Posredovanje u kupoprodaji nekretnina na hrvatskoj obali – od Istre do Dalmacije, uz kompletnu uslugu i podršku.",
-        ctaPrimary: "Pregledaj nekretnine",
-        ctaSecondary: "Želim prodati nekretninu"
+        title: "Posredovanje u prometu nekretninama u Hrvatskoj",
+        ctaServices: [
+          "Prodaja nekretnina",
+          "Upravljanje nekretninama",
+          "Renovacija i održavanje"
+        ]
       },
       servicesHeading: { title: "Naše usluge", note: "3 glavna područja rada" },
       services: [
@@ -284,17 +277,12 @@ window.SITE_CONTENT = {
           description: "Povijesna kamena kuća u staroj jezgre grada, djelomično renovirana, izvrsna prilika za turistički najam." }
       ],
       about: {
-        title: "12 godina iskustva na hrvatskoj obali",
+        title: "Više od 10 godina iskustva u posredovanju na hrvatskoj obali",
         intro: "Zahvaljujući poznavanju lokalnog prava i tržišta te mreži partnera diljem Hrvatske, pratimo klijente od odabira do uknjižbe vlasništva.",
         stats: [
-          { value: "12", label: "godina iskustva" },
-          { value: "300+", label: "realiziranih poslova" },
+          { value: "10+", label: "godina iskustva" },
           { value: "5", label: "regija" }
         ],
-        paragraphs: [
-          "Surađujemo s vlastitim pravnim i prevoditeljskim timom, tako da je svaki korak kupnje – od kapare do primopredaje – transparentan i siguran.",
-          "Svaku nekretninu osobno pregledavamo i provjeravamo prije uvrštavanja u našu ponudu."
-        ]
       },
       contact: {
         title: "Kontakt",
@@ -329,12 +317,14 @@ window.SITE_CONTENT = {
 
     cs: {
       pageTitle: "Adria Hause – nemovitosti u Jadranu",
-      nav: ["Služby", "O nás", "Kontakt"],
+      nav: ["Služby", "O nás", "Kontakt", "Chci prodat svou nemovitost"],
       hero: {
-        title: "Domov tam, kde začíná moře",
-        text: "Zprostředkování nemovitostí u chorvatského pobřeží pro maďarské kupující – od Istrie po Dalmácii, s kompletním vyřízením.",
-        ctaPrimary: "Prohlédnout nemovitosti",
-        ctaSecondary: "Chci prodat nemovitost"
+        title: "Zprostředkování nemovitostí v Chorvatsku",
+        ctaServices: [
+          "Prodej nemovitostí",
+          "Správa nemovitostí",
+          "Renovace a údržba"
+        ]
       },
       servicesHeading: { title: "Naše aktuální služby", note: "3 hlavní oblasti služeb" },
       services: [
@@ -355,17 +345,12 @@ window.SITE_CONTENT = {
           description: "Historický kamenný dům ve starém městě, částečně zrekonstruovaný, skvělá investiční příležitost pro krátkodobý pronájem." }
       ],
       about: {
-        title: "12 let zprostředkováváme nemovitosti na chorvatském pobřeží",
+        title: "Více než 10 let zprostředkováváme nemovitosti na chorvatském pobřeží",
         intro: "Díky místním právním a tržním znalostem a partnerské síti v Chorvatsku provázíme klienty od výběru až po zápis vlastnického práva.",
         stats: [
-          { value: "12", label: "let zkušeností" },
-          { value: "300+", label: "uzavřených obchodů" },
+          { value: "10+", label: "let zkušeností" },
           { value: "5", label: "regionů" }
         ],
-        paragraphs: [
-          "Při naší práci využíváme vlastní právní a překladatelské zázemí, takže každý krok koupě – od rezervační zálohy po předání – je přehledný a bezpečný.",
-          "Každou nemovitost osobně prohlédneme a prověříme, než ji zařadíme do nabídky."
-        ]
       },
       contact: {
         title: "Kontakt",
@@ -400,12 +385,14 @@ window.SITE_CONTENT = {
 
     sk: {
       pageTitle: "Adria Hause – nehnuteľnosti pri Jadrane",
-      nav: ["Služby", "O nás", "Kontakt"],
+      nav: ["Služby", "O nás", "Kontakt", "Chcem predať svoju nehnuteľnosť"],
       hero: {
-        title: "Domov, kde sa začína more",
-        text: "Sprostredkovanie nehnuteľností pri chorvátskom pobreží pre maďarských kupujúcich – od Istrie po Dalmáciu, s kompletným vybavením.",
-        ctaPrimary: "Pozrieť nehnuteľnosti",
-        ctaSecondary: "Chcem predať nehnuteľnosť"
+        title: "Sprostredkovanie nehnuteľností v Chorvátsku",
+        ctaServices: [
+          "Predaj nehnuteľností",
+          "Správa nehnuteľností",
+          "Renovácia a údržba"
+        ]
       },
       servicesHeading: { title: "Naše aktuálne služby", note: "3 hlavné oblasti služieb" },
       services: [
@@ -426,17 +413,12 @@ window.SITE_CONTENT = {
           description: "Historický kamenný dom v starom meste, čiastočne zrekonštruovaný, skvelá investičná príležitosť na krátkodobý prenájom." }
       ],
       about: {
-        title: "12 rokov sprostredkúvame nehnuteľnosti na chorvátskom pobreží",
+        title: "Viac ako 10 rokov sprostredkúvame nehnuteľnosti na chorvátskom pobreží",
         intro: "Vďaka miestnym právnym a trhovým znalostiam a partnerskej sieti v Chorvátsku sprevádzame klientov od výberu až po zápis vlastníckeho práva.",
         stats: [
-          { value: "12", label: "rokov skúseností" },
-          { value: "300+", label: "uzavretých obchodov" },
+          { value: "10+", label: "rokov skúseností" },
           { value: "5", label: "regiónov" }
         ],
-        paragraphs: [
-          "Pri našej práci využívame vlastné právne a prekladateľské zázemie, takže každý krok kúpy – od rezervačnej zálohy po odovzdanie – je prehľadný a bezpečný.",
-          "Každú nehnuteľnosť osobne prezrieme a preveríme, skôr než ju zaradíme do ponuky."
-        ]
       },
       contact: {
         title: "Kontakt",
