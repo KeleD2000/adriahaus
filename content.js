@@ -16,8 +16,8 @@ window.SITE_CONTENT = {
     phone: "+36 30 878 7226",
     phoneHref: "tel:+36308787226",
     email: "adriahaus70@gmail.com",
-    navHrefs: ["#ingatlanok", "#rolunk", "#kapcsolat", "#kapcsolat"],
-    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-hasznositas", "#ingatlan-felujitas"],
+    navHrefs: ["#rolunk", "#kapcsolat"],
+    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-hasznositas", "#ingatlan-felujitas", "#kapcsolat"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
       { gradient: "linear-gradient(160deg,#3B5245,#7FA98C)", size: "210 m²", price: "395 000 €" },
@@ -29,7 +29,8 @@ window.SITE_CONTENT = {
     services: [
       { emoji: "🏠", id: "ingatlan-ertikesites" },
       { emoji: "🔑", id: "ingatlan-hasznositas" },
-      { emoji: "🛠️", id: "ingatlan-felujitas" }
+      { emoji: "🛠️", id: "ingatlan-felujitas" },
+      { emoji: "🏷️", id: "kapcsolat" }
     ],
     examples: [
       { image: "property-apartment.svg", size: "68 m²",  price: "185 000 €",
@@ -45,23 +46,21 @@ window.SITE_CONTENT = {
 
     hu: {
       pageTitle: "Adria Hause – Adriai ingatlanközvetítés",
-      nav: ["Szolgáltatások", "Rólunk", "Kapcsolat", "Eladnám az ingatlanom"],
+      nav: ["Rólunk", "Kapcsolat"],
       hero: {
         title: "Horvátországi ingatlanok közvetítése",
-        ctaServices: [
-          "Ingatlan értékesítés",
-          "Ingatlanok hasznosítása",
-          "Felújítás / Karbantartás"
-        ]
+        ctaServices: ["Ingatlan értékesítés", "Ingatlanok hasznosítása", "Felújítás / Karbantartás", "Eladnám az ingatlanom"]
       },
-      servicesHeading: { title: "Aktuális szolgáltatásaink", note: "3 fő szolgáltatási terület" },
+      servicesHeading: { title: "Aktuális szolgáltatásaink", note: "4 fő szolgáltatási terület" },
       services: [
         { title: "Ingatlan értékesítés",
           description: "Végigkísérjük Önt a hirdetéstől az adásvételi szerződésig, teljes körű jogi és piaci támogatással." },
         { title: "Ingatlanok hasznosítása",
           description: "Bérbeadás és hosszú távú hasznosítás megszervezése, hogy ingatlana a lehető legjobban megtérüljön." },
         { title: "Ingatlanok felújítása / karbantartás",
-          description: "Megbízható helyi partnereinkkel gondoskodunk ingatlana felújításáról és folyamatos karbantartásáról." }
+          description: "Megbízható helyi partnereinkkel gondoskodunk ingatlana felújításáról és folyamatos karbantartásáról." },
+        { title: "Eladnám az ingatlanomat",
+          description: "Segítünk gyorsan és a legjobb piaci áron értékesíteni horvátországi ingatlanát megbízható vevőkörben." }
       ],
       examplesHeading: { title: "Példa ingatlanaink", note: "3 kiválasztott ingatlan" },
       examples: [
@@ -113,23 +112,21 @@ window.SITE_CONTENT = {
 
     en: {
       pageTitle: "Adria Hause – Adriatic real estate brokerage",
-      nav: ["Services", "About us", "Contact", "I want to sell my property"],
+      nav: ["About us", "Contact"],
       hero: {
         title: "Real estate brokerage in Croatia",
-        ctaServices: [
-          "Property Sales",
-          "Property Management",
-          "Renovation & Maintenance"
-        ]
+        ctaServices: ["Property Sales", "Property Management", "Renovation & Maintenance", "I want to sell my property"]
       },
-      servicesHeading: { title: "Our current services", note: "3 core service areas" },
+      servicesHeading: { title: "Our current services", note: "4 core service areas" },
       services: [
         { title: "Property sales",
           description: "We guide you from listing to signing the contract, with full legal and market support." },
         { title: "Property management",
           description: "We arrange renting and long-term management so your property performs at its best." },
         { title: "Renovation & maintenance",
-          description: "With trusted local partners we take care of renovating and maintaining your property." }
+          description: "With trusted local partners we take care of renovating and maintaining your property." },
+        { title: "Sell your property",
+          description: "We help you sell your property in Croatia quickly and at the best market price to trusted buyers." }
       ],
       examplesHeading: { title: "Our example properties", note: "3 selected properties" },
       examples: [
@@ -155,7 +152,7 @@ window.SITE_CONTENT = {
         emailLabel: "E-mail",
         bullets: [
           "Free, no-obligation valuation",
-          "Targeted reach among Hungarian buyers",
+          "Targeted reach among buyers",
           "Full legal support"
         ],
         form: {
@@ -181,23 +178,21 @@ window.SITE_CONTENT = {
 
     de: {
       pageTitle: "Adria Hause – Immobilienvermittlung an der Adria",
-      nav: ["Dienstleistungen", "Über uns", "Kontakt", "Ich möchte meine Immobilie verkaufen"],
+      nav: ["Über uns", "Kontakt"],
       hero: {
         title: "Immobilienvermittlung in Kroatien",
-        ctaServices: [
-          "Immobilienverkauf",
-          "Immobilienverwaltung",
-          "Renovierung & Instandhaltung"
-        ]
+        ctaServices: ["Immobilienverkauf", "Immobilienverwaltung", "Renovierung & Instandhaltung", "Ich möchte meine Immobilie verkaufen"]
       },
-      servicesHeading: { title: "Unsere Dienstleistungen", note: "3 Hauptleistungsbereiche" },
+      servicesHeading: { title: "Unsere Dienstleistungen", note: "4 Hauptleistungsbereiche" },
       services: [
         { title: "Immobilienverkauf",
           description: "Wir begleiten Sie von der Inserierung bis zum Kaufvertrag mit vollständiger rechtlicher und marktbezogener Unterstützung." },
         { title: "Immobilienverwaltung",
           description: "Vermietung und langfristige Verwaltung, damit Ihre Immobilie den maximalen Ertrag erzielt." },
         { title: "Renovierung & Instandhaltung",
-          description: "Mit zuverlässigen lokalen Partnern kümmern wir uns um die Renovierung und kontinuierliche Pflege Ihrer Immobilie." }
+          description: "Mit zuverlässigen lokalen Partnern kümmern wir uns um die Renovierung und kontinuierliche Pflege Ihrer Immobilie." },
+        { title: "Immobilie verkaufen",
+          description: "Wir unterstützen Sie beim schnellen und erfolgreichen Verkauf Ihrer Immobilie in Kroatien." }
       ],
       examplesHeading: { title: "Beispielimmobilien", note: "3 ausgewählte Objekte" },
       examples: [
@@ -249,23 +244,21 @@ window.SITE_CONTENT = {
 
     hr: {
       pageTitle: "Adria Hause – Agencija za nekretnine na Jadranu",
-      nav: ["Usluge", "O nama", "Kontakt", "Želim prodati svoju nekretninu"],
+      nav: ["O nama", "Kontakt"],
       hero: {
         title: "Posredovanje u prometu nekretninama u Hrvatskoj",
-        ctaServices: [
-          "Prodaja nekretnina",
-          "Upravljanje nekretninama",
-          "Renovacija i održavanje"
-        ]
+        ctaServices: ["Prodaja nekretnina", "Upravljanje nekretninama", "Renovacija i održavanje", "Želim prodati svoju nekretninu"]
       },
-      servicesHeading: { title: "Naše usluge", note: "3 glavna područja rada" },
+      servicesHeading: { title: "Naše usluge", note: "4 glavna područja rada" },
       services: [
         { title: "Prodaja nekretnina",
           description: "Vodimo vas kroz cijeli proces, od oglašavanja do potpisivanja kupoprodajnog ugovora, uz punu pravnu podršku." },
         { title: "Upravljanje nekretninama",
           description: "Organizacija iznajmljivanja i dugoročnog održavanja kako bi vaša nekretnina ostvarila najbolji povrat." },
         { title: "Renovacija i održavanje",
-          description: "S pouzdanim lokalnim partnerima brinemo o renovaciji i redovitom održavanju vaše nekretnine." }
+          description: "S pouzdanim lokalnim partnerima brinemo o renovaciji i redovitom održavanju vaše nekretnine." },
+        { title: "Prodaja vaše nekretnine",
+          description: "Pomažemo vam u brzoj i uspješnoj prodaji nekretnine u Hrvatskoj po najboljoj cijeni." }
       ],
       examplesHeading: { title: "Primjeri nekretnina", note: "3 odabrane nekretnine" },
       examples: [
@@ -317,23 +310,21 @@ window.SITE_CONTENT = {
 
     cs: {
       pageTitle: "Adria Hause – nemovitosti u Jadranu",
-      nav: ["Služby", "O nás", "Kontakt", "Chci prodat svou nemovitost"],
+      nav: ["O nás", "Kontakt"],
       hero: {
         title: "Zprostředkování nemovitostí v Chorvatsku",
-        ctaServices: [
-          "Prodej nemovitostí",
-          "Správa nemovitostí",
-          "Renovace a údržba"
-        ]
+        ctaServices: ["Prodej nemovitostí", "Správa nemovitostí", "Renovace a údržba", "Chci prodat svou nemovitost"]
       },
-      servicesHeading: { title: "Naše aktuální služby", note: "3 hlavní oblasti služeb" },
+      servicesHeading: { title: "Naše aktuální služby", note: "4 hlavní oblasti služeb" },
       services: [
         { title: "Prodej nemovitostí",
           description: "Provedeme vás od inzerce až po podpis smlouvy, s kompletní právní a tržní podporou." },
         { title: "Správa nemovitostí",
           description: "Zajistíme pronájem a dlouhodobou správu, aby se vaše nemovitost co nejlépe zhodnotila." },
         { title: "Renovace a údržba",
-          description: "S prověřenými místními partnery se postaráme o renovaci a průběžnou údržbu vaší nemovitosti." }
+          description: "S prověřenými místními partnery se postaráme o renovaci a průběžnou údržbu vaší nemovitosti." },
+        { title: "Chci prodat nemovitost",
+          description: "Pomůžeme vám s rychlým a výhodným prodejem vaší nemovitosti v Chorvatsku." }
       ],
       examplesHeading: { title: "Příklady nemovitostí", note: "3 vybrané nemovitosti" },
       examples: [
@@ -359,7 +350,7 @@ window.SITE_CONTENT = {
         emailLabel: "E-mail",
         bullets: [
           "Bezplatné a nezávazné ocenění",
-          "Cílené oslovení maďarských kupujících",
+          "Cílené oslovení kupujících",
           "Kompletní právní servis"
         ],
         form: {
@@ -385,23 +376,21 @@ window.SITE_CONTENT = {
 
     sk: {
       pageTitle: "Adria Hause – nehnuteľnosti pri Jadrane",
-      nav: ["Služby", "O nás", "Kontakt", "Chcem predať svoju nehnuteľnosť"],
+      nav: ["O nás", "Kontakt"],
       hero: {
         title: "Sprostredkovanie nehnuteľností v Chorvátsku",
-        ctaServices: [
-          "Predaj nehnuteľností",
-          "Správa nehnuteľností",
-          "Renovácia a údržba"
-        ]
+        ctaServices: ["Predaj nehnuteľností", "Správa nehnuteľností", "Renovácia a údržba", "Chcem predať svoju nehnuteľnosť"]
       },
-      servicesHeading: { title: "Naše aktuálne služby", note: "3 hlavné oblasti služieb" },
+      servicesHeading: { title: "Naše aktuálne služby", note: "4 hlavné oblasti služieb" },
       services: [
         { title: "Predaj nehnuteľností",
           description: "Sprevádzame vás od inzercie až po podpis zmluvy, s kompletnou právnou a trhovou podporou." },
         { title: "Správa nehnuteľností",
           description: "Zabezpečíme prenájom a dlhodobú správu, aby sa vaša nehnuteľnosť čo najlepšie zhodnotila." },
         { title: "Renovácia a údržba",
-          description: "S overenými miestnymi partnermi sa staráme o renováciu a priebežnú údržbu vašej nehnuteľnosti." }
+          description: "S overenými miestnymi partnermi sa staráme o renováciu a priebežnú údržbu vašej nehnuteľnosti." },
+        { title: "Chcem predať nehnuteľnosť",
+          description: "Pomôžeme vám s rýchlym a výhodným predajom vašej nehnuteľnosti v Chorvátsku." }
       ],
       examplesHeading: { title: "Príklady nehnuteľností", note: "3 vybrané nehnuteľnosti" },
       examples: [
@@ -427,7 +416,7 @@ window.SITE_CONTENT = {
         emailLabel: "E-mail",
         bullets: [
           "Bezplatné a nezáväzné ocenenie",
-          "Cielené oslovenie maďarských kupujúcich",
+          "Cielené oslovenie kupujúcich",
           "Kompletný právny servis"
         ],
         form: {
@@ -440,7 +429,7 @@ window.SITE_CONTENT = {
             "Kúpa nehnuteľnosti",
             "Predaj nehnuteľnosti",
             "Správa / Prenájom nehnuteľnosti",
-            "Renovácia a údržba",
+            "Renovacija a údržba",
             "Iná požiadavka"
           ]
         },

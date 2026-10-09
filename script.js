@@ -133,10 +133,6 @@
             a.href = S.navHrefs[i];
             a.textContent = label;
 
-            if (i === T.nav.length - 1) {
-                a.className = 'nav-sell';
-            }
-
             li.appendChild(a);
             navList.appendChild(li);
         });
