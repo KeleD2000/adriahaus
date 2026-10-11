@@ -103,14 +103,44 @@
         box.appendChild(menu);
     }
 
+    // --- Hamburger menü (mobil) ---
+    var navBox = document.querySelector('.nav');
+    var navToggle = $('navToggle');
+    var MENU_LABELS = {hu: 'Menü', en: 'Menu', de: 'Menü', hr: 'Izbornik', cs: 'Menu', sk: 'Menu'};
+
+    function setNavOpen(open) {
+        navBox.classList.toggle('is-open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    navToggle.addEventListener('click', function () {
+        setNavOpen(!navBox.classList.contains('is-open'));
+    });
+
+    $('navMenu').addEventListener('click', function (e) {
+        if (e.target.closest('a')) {
+            setNavOpen(false);
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 560) {
+            setNavOpen(false);
+        }
+    });
+
     document.addEventListener('click', function (e) {
         if (!$('langSwitch').contains(e.target)) {
             closeMenu();
+        }
+        if (!navBox.contains(e.target)) {
+            setNavOpen(false);
         }
     });
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeMenu();
+            setNavOpen(false);
         }
     });
 
@@ -119,10 +149,14 @@
 
         document.documentElement.lang = lang;
         document.title = T.pageTitle;
+        navToggle.setAttribute('aria-label', MENU_LABELS[lang] || 'Menu');
 
-        // Fejléc
+        // Fejléc: a név alatt középre igazítva a "Tengerparti ingatlanok" felirat
         $('brand').innerHTML = '<img src="logo-mark.svg" alt="" class="brand-mark">' +
-            S.brand.name + ' <em>' + S.brand.accent + '</em>';
+            '<span class="brand-text">' +
+            '<span class="brand-name">' + S.brand.name + '</span>' +
+            '<em>' + S.brand.accent + '</em>' +
+            '</span>';
 
         var navList = $('navList');
         clear(navList);
@@ -137,12 +171,12 @@
             navList.appendChild(li);
         });
 
-        // Hero
+        // Hero (a cím vizuálisan rejtett, de SEO miatt megmarad)
         $('heroTitle').textContent = T.hero.title;
-        $('heroText').textContent = T.hero.text;
+        $('heroText').textContent = T.hero.text || '';
 
-        // 3 specifikus gomb dinamikus renderelése a Hero szekcióban
-        var heroActions = $('heroActions') || $('heroCtaPrimary').parentElement;
+        // 4 specifikus gomb dinamikus renderelése a Hero szekcióban
+        var heroActions = $('heroActions');
         clear(heroActions);
         T.hero.ctaServices.forEach(function (btnText, i) {
             var a = document.createElement('a');

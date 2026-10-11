@@ -17,19 +17,24 @@
 <header>
   <div class="nav">
     <div class="brand" id="brand"></div>
-    <nav>
+    <nav id="navMenu">
       <ul id="navList"></ul>
     </nav>
     <div class="lang-switch" id="langSwitch"></div>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menü">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-photo">
-    <img src="hero-sea.svg" alt="Az Adriai-tenger partvidéke naplementében">
+    <img src="1000000626.jpg" alt="Az Adriai-tenger partvidéke naplementében">
   </div>
   <div class="wrap">
-    <h1 id="heroTitle"></h1>
+    <h1 id="heroTitle" class="visually-hidden"></h1>
     <p id="heroText"></p>
     <div class="hero-actions" id="heroActions"></div>
   </div>
