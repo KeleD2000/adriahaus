@@ -29,7 +29,9 @@ window.SITE_CONTENT = {
     services: [
       { emoji: "🏠", id: "ingatlan-ertikesites" },
       { emoji: "🔑", id: "ingatlan-hasznositas" },
-      { emoji: "🛠️", id: "ingatlan-felujitas" },
+      { emoji: "🛠️", id: "ingatlan-felujitas",
+        // A fájlneveket cseréld a saját képeidre
+        gallery: ["felujitas-1.jpg", "felujitas-2.jpg", "felujitas-3.jpg", "felujitas-4.jpg"] },
       { emoji: "🏷️", id: "kapcsolat" }
     ],
     examples: [
@@ -58,7 +60,15 @@ window.SITE_CONTENT = {
         { title: "Ingatlanok hasznosítása",
           description: "Bérbeadás és hosszú távú hasznosítás megszervezése, hogy ingatlana a lehető legjobban megtérüljön." },
         { title: "Ingatlanok felújítása / karbantartás",
-          description: "Megbízható helyi partnereinkkel gondoskodunk ingatlana felújításáról és folyamatos karbantartásáról." },
+          description: "Amennyiben felújítani szeretné ingatlanát, mi segítünk! Rijeka és Zadar között, beleértve a közeli szigeteket is (Pag, Krk, Rab). 15 éves tapasztalattal rendelkező vállalkozás vállal:",
+          items: [
+            "Külső-belső festés",
+            "Homlokzati hőszigetelés",
+            "Tetőszerkezet javítás",
+            "Nyílászárók cseréje, teljes helyreállítással",
+            "Riasztó, kamerák telepítése",
+            "Klímaberendezések telepítése, karbantartása, tisztítása"
+          ] },
         { title: "Eladnám az ingatlanomat",
           description: "Segítünk gyorsan és a legjobb piaci áron értékesíteni horvátországi ingatlanát megbízható vevőkörben." }
       ],
@@ -124,7 +134,15 @@ window.SITE_CONTENT = {
         { title: "Property management",
           description: "We arrange renting and long-term management so your property performs at its best." },
         { title: "Renovation & maintenance",
-          description: "With trusted local partners we take care of renovating and maintaining your property." },
+          description: "If you want to renovate your property, we are here to help! Between Rijeka and Zadar, including the nearby islands (Pag, Krk, Rab). A company with 15 years of experience offers:",
+          items: [
+            "Interior and exterior painting",
+            "Facade thermal insulation",
+            "Roof structure repair",
+            "Window and door replacement, with full restoration",
+            "Alarm and camera installation",
+            "Air conditioner installation, maintenance and cleaning"
+          ] },
         { title: "Sell your property",
           description: "We help you sell your property in Croatia quickly and at the best market price to trusted buyers." }
       ],
@@ -190,7 +208,15 @@ window.SITE_CONTENT = {
         { title: "Immobilienverwaltung",
           description: "Vermietung und langfristige Verwaltung, damit Ihre Immobilie den maximalen Ertrag erzielt." },
         { title: "Renovierung & Instandhaltung",
-          description: "Mit zuverlässigen lokalen Partnern kümmern wir uns um die Renovierung und kontinuierliche Pflege Ihrer Immobilie." },
+          description: "Wenn Sie Ihre Immobilie renovieren möchten, helfen wir Ihnen gerne! Zwischen Rijeka und Zadar, einschließlich der nahegelegenen Inseln (Pag, Krk, Rab). Ein Unternehmen mit 15 Jahren Erfahrung übernimmt:",
+          items: [
+            "Innen- und Außenanstrich",
+            "Fassadendämmung",
+            "Dachstuhlreparatur",
+            "Austausch von Fenstern und Türen, mit vollständiger Wiederherstellung",
+            "Installation von Alarmanlagen und Kameras",
+            "Installation, Wartung und Reinigung von Klimaanlagen"
+          ] },
         { title: "Immobilie verkaufen",
           description: "Wir unterstützen Sie beim schnellen und erfolgreichen Verkauf Ihrer Immobilie in Kroatien." }
       ],
@@ -237,7 +263,7 @@ window.SITE_CONTENT = {
         },
         formNote: "Die übermittelten Daten werden ausschließlich zur Kontaktaufnahme verwendet.",
         submitLabel: "Anfrage senden",
-        successMessage: "Vielen Dank! Unser Mitarbeiter wird sich Kürze bei Ihnen melden."
+        successMessage: "Vielen Dank! Unser Mitarbeiter wird sich in Kürze bei Ihnen melden."
       },
       footer: { text: "Adria Hause — Immobilienvermittlung in Kroatien" }
     },
@@ -256,7 +282,15 @@ window.SITE_CONTENT = {
         { title: "Upravljanje nekretninama",
           description: "Organizacija iznajmljivanja i dugoročnog održavanja kako bi vaša nekretnina ostvarila najbolji povrat." },
         { title: "Renovacija i održavanje",
-          description: "S pouzdanim lokalnim partnerima brinemo o renovaciji i redovitom održavanju vaše nekretnine." },
+          description: "Ako želite renovirati svoju nekretninu, mi vam pomažemo! Između Rijeke i Zadra, uključujući obližnje otoke (Pag, Krk, Rab). Tvrtka s 15 godina iskustva preuzima:",
+          items: [
+            "Unutarnje i vanjsko bojenje",
+            "Toplinska izolacija fasada",
+            "Popravak krovne konstrukcije",
+            "Zamjena stolarije, uz potpunu sanaciju",
+            "Ugradnja alarma i kamera",
+            "Ugradnja, održavanje i čišćenje klima uređaja"
+          ] },
         { title: "Prodaja vaše nekretnine",
           description: "Pomažemo vam u brzoj i uspješnoj prodaji nekretnine u Hrvatskoj po najboljoj cijeni." }
       ],
@@ -267,7 +301,7 @@ window.SITE_CONTENT = {
         { location: "Zadar, Sjeverna Dalmacija", region: "Sjeverna Dalmacija", title: "Novogradnja vila", rooms: "4 spavaće sobe",
           description: "Moderna, energetski učinkovita vila s bazenom i terasom s pogledom na Kornate, odmah useljiva." },
         { location: "Split, Srednja Dalmacija", region: "Srednja Dalmacija", title: "Kamena kuća u centru", rooms: "3 etaže",
-          description: "Povijesna kamena kuća u staroj jezgre grada, djelomično renovirana, izvrsna prilika za turistički najam." }
+          description: "Povijesna kamena kuća u staroj jezgri grada, djelomično renovirana, izvrsna prilika za turistički najam." }
       ],
       about: {
         title: "Više od 10 godina iskustva u posredovanju na hrvatskoj obali",
@@ -322,7 +356,15 @@ window.SITE_CONTENT = {
         { title: "Správa nemovitostí",
           description: "Zajistíme pronájem a dlouhodobou správu, aby se vaše nemovitost co nejlépe zhodnotila." },
         { title: "Renovace a údržba",
-          description: "S prověřenými místními partnery se postaráme o renovaci a průběžnou údržbu vaší nemovitosti." },
+          description: "Pokud chcete zrenovovat svou nemovitost, rádi vám pomůžeme! Mezi Rijekou a Zadarem, včetně blízkých ostrovů (Pag, Krk, Rab). Firma s 15letými zkušenostmi provádí:",
+          items: [
+            "Vnitřní a vnější malování",
+            "Zateplení fasády",
+            "Opravy střešní konstrukce",
+            "Výměna oken a dveří, včetně kompletní opravy okolí",
+            "Instalace alarmů a kamer",
+            "Instalace, údržba a čištění klimatizací"
+          ] },
         { title: "Chci prodat nemovitost",
           description: "Pomůžeme vám s rychlým a výhodným prodejem vaší nemovitosti v Chorvatsku." }
       ],
@@ -388,7 +430,15 @@ window.SITE_CONTENT = {
         { title: "Správa nehnuteľností",
           description: "Zabezpečíme prenájom a dlhodobú správu, aby sa vaša nehnuteľnosť čo najlepšie zhodnotila." },
         { title: "Renovácia a údržba",
-          description: "S overenými miestnymi partnermi sa staráme o renováciu a priebežnú údržbu vašej nehnuteľnosti." },
+          description: "Ak chcete zrenovovať svoju nehnuteľnosť, radi vám pomôžeme! Medzi Rijekou a Zadarom, vrátane blízkych ostrovov (Pag, Krk, Rab). Firma s 15-ročnými skúsenosťami vykonáva:",
+          items: [
+            "Vnútorné a vonkajšie maľovanie",
+            "Zateplenie fasády",
+            "Oprava strešnej konštrukcie",
+            "Výmena okien a dverí, vrátane kompletnej opravy okolia",
+            "Inštalácia alarmov a kamier",
+            "Inštalácia, údržba a čistenie klimatizácií"
+          ] },
         { title: "Chcem predať nehnuteľnosť",
           description: "Pomôžeme vám s rýchlym a výhodným predajom vašej nehnuteľnosti v Chorvátsku." }
       ],
@@ -429,7 +479,7 @@ window.SITE_CONTENT = {
             "Kúpa nehnuteľnosti",
             "Predaj nehnuteľnosti",
             "Správa / Prenájom nehnuteľnosti",
-            "Renovacija a údržba",
+            "Renovácia a údržba",
             "Iná požiadavka"
           ]
         },

@@ -644,6 +644,23 @@ button.property-card {
    GALÉRIA POPUP
    ========================================================= */
 
+.modal-list {
+    margin: 0;
+    padding: 12px 24px 20px 40px;
+    border-top: 1px solid var(--line);
+    background: var(--bg-alt);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+.modal-list li {
+    margin-bottom: 6px;
+}
+
+.modal-list li:last-child {
+    margin-bottom: 0;
+}
+
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -840,6 +857,38 @@ button.property-card {
     font-size: 0.92rem;
     color: var(--ink-soft);
     margin: 0;
+}
+
+.service-card.is-clickable {
+    cursor: pointer;
+}
+
+.service-card.is-clickable:focus-visible {
+    outline: 2px solid var(--sea);
+    outline-offset: 2px;
+}
+
+.service-hint {
+    margin-top: 16px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--sea);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--bg-alt);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card.is-clickable:hover .service-hint,
+.service-card.is-clickable:focus-visible .service-hint {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #16323A;
+}
+
+.service-list li {
+    margin-bottom: 4px;
 }
 
 /* =========================================================

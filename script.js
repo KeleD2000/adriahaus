@@ -108,6 +108,16 @@
     var navToggle = $('navToggle');
     var MENU_LABELS = {hu: 'Menü', en: 'Menu', de: 'Menü', hr: 'Izbornik', cs: 'Menu', sk: 'Menu'};
 
+    // Galéria jelző felirat a kattintható szolgáltatás kártyákon
+    var DETAILS_LABELS = {
+        hu: 'További részletek',
+        en: 'More details',
+        de: 'Weitere Details',
+        hr: 'Više detalja',
+        cs: 'Více informací',
+        sk: 'Viac informácií'
+    };
+
     function setNavOpen(open) {
         navBox.classList.toggle('is-open', open);
         navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -146,6 +156,7 @@
 
     function render(lang) {
         var T = C.translations[lang];
+        var galleryLabel = DETAILS_LABELS[lang] || DETAILS_LABELS.en;
 
         document.documentElement.lang = lang;
         document.title = T.pageTitle;
@@ -183,11 +194,21 @@
             a.href = S.heroHrefs[i] || '#ingatlanok';
 
             a.addEventListener('click', function (e) {
-                var target = document.querySelector(a.getAttribute('href'));
+                var href = a.getAttribute('href');
+                var id = href.charAt(0) === '#' ? href.slice(1) : '';
 
+                // Ha a gombhoz tartozó szolgáltatásnak van galériája, azt nyissa meg
+                for (var j = 0; j < S.services.length; j++) {
+                    if (S.services[j].id === id && S.services[j].gallery) {
+                        e.preventDefault();
+                        openGallery(S.services[j].gallery, T.services[j].title);
+                        return;
+                    }
+                }
+
+                var target = document.querySelector(href);
                 if (target) {
                     e.preventDefault();
-
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'center'
@@ -213,6 +234,30 @@
                 '<div class="service-emoji" aria-hidden="true">' + shared.emoji + '</div>' +
                 '<h3>' + svc.title + '</h3>' +
                 '<p>' + svc.description + '</p>';
+
+            // Ha van galéria VAGY elemek (lista), akkor legyen kattintható
+            if ((shared.gallery && shared.gallery.length) || (svc.items && svc.items.length)) {
+                var hint = document.createElement('span');
+                hint.className = 'service-hint';
+                hint.textContent = 'ℹ️ ' + galleryLabel;
+                card.appendChild(hint);
+
+                card.classList.add('is-clickable');
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('aria-label', svc.title + ' – ' + galleryLabel);
+
+                // Kattintáskor átadjuk a képeket, a címet ÉS a listát (svc.items) is!
+                card.addEventListener('click', function () {
+                    openGallery(shared.gallery || [], svc.title, svc.items);
+                });
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openGallery(shared.gallery || [], svc.title, svc.items);
+                    }
+                });
+            }
             grid.appendChild(card);
         });
 
@@ -368,12 +413,46 @@
         }, 180);
     }
 
-    function openGallery(images, title) {
-        galleryImages = images;
+    function openGallery(images, title, items) {
+        galleryImages = images || [];
         galleryIndex = 0;
         galleryReturnFocus = document.activeElement;
         $('galleryTitle').textContent = title;
-        showGalleryImage();
+
+        // Ha nincsenek képek (csak lista van, mint a felújításnál), elrejthetjük a képváltót vagy kezelhetjük
+        var imgEl = $('galleryImg');
+        var prevBtn = $('galleryPrev');
+        var nextBtn = $('galleryNext');
+        var counterEl = $('galleryCounter');
+
+        if (galleryImages.length > 0) {
+            showGalleryImage();
+            if(prevBtn) prevBtn.style.display = '';
+            if(nextBtn) nextBtn.style.display = '';
+            if(counterEl) counterEl.style.display = '';
+        } else {
+            if(imgEl) imgEl.src = '';
+            if(prevBtn) prevBtn.style.display = 'none';
+            if(nextBtn) prevBtn.style.display = 'none';
+            if(counterEl) counterEl.style.display = 'none';
+        }
+
+        // A részletező lista megjelenítése a popupban
+        var listEl = $('galleryList');
+        if (listEl) {
+            clear(listEl);
+            if (items && items.length) {
+                items.forEach(function (item) {
+                    var li = document.createElement('li');
+                    li.textContent = item;
+                    listEl.appendChild(li);
+                });
+                listEl.hidden = false;
+            } else {
+                listEl.hidden = true;
+            }
+        }
+
         var modal = $('galleryModal');
         modal.hidden = false;
         document.body.style.overflow = 'hidden';
@@ -382,7 +461,6 @@
         });
         $('galleryClose').focus();
     }
-
     window.openGallery = openGallery;
 
     function closeGallery() {
