@@ -108,7 +108,7 @@
     var navToggle = $('navToggle');
     var MENU_LABELS = {hu: 'Menü', en: 'Menu', de: 'Menü', hr: 'Izbornik', cs: 'Menu', sk: 'Menu'};
 
-    // Galéria jelző felirat a kattintható szolgáltatás kártyákon
+    // Felirat a kattintható szolgáltatás kártyákon
     var DETAILS_LABELS = {
         hu: 'További részletek',
         en: 'More details',
@@ -186,7 +186,7 @@
         $('heroTitle').textContent = T.hero.title;
         $('heroText').textContent = T.hero.text || '';
 
-        // 4 specifikus gomb dinamikus renderelése a Hero szekcióban
+        // Hero gombok: csak a megfelelő szekcióhoz görgetnek, galériát nem nyitnak
         var heroActions = $('heroActions');
         clear(heroActions);
         T.hero.ctaServices.forEach(function (btnText, i) {
@@ -194,19 +194,7 @@
             a.href = S.heroHrefs[i] || '#ingatlanok';
 
             a.addEventListener('click', function (e) {
-                var href = a.getAttribute('href');
-                var id = href.charAt(0) === '#' ? href.slice(1) : '';
-
-                // Ha a gombhoz tartozó szolgáltatásnak van galériája, azt nyissa meg
-                for (var j = 0; j < S.services.length; j++) {
-                    if (S.services[j].id === id && S.services[j].gallery) {
-                        e.preventDefault();
-                        openGallery(S.services[j].gallery, T.services[j].title);
-                        return;
-                    }
-                }
-
-                var target = document.querySelector(href);
+                var target = document.querySelector(a.getAttribute('href'));
                 if (target) {
                     e.preventDefault();
                     target.scrollIntoView({
@@ -235,29 +223,28 @@
                 '<h3>' + svc.title + '</h3>' +
                 '<p>' + svc.description + '</p>';
 
-            // Ha van galéria VAGY elemek (lista), akkor legyen kattintható
-            if ((shared.gallery && shared.gallery.length) || (svc.items && svc.items.length)) {
-                var hint = document.createElement('span');
-                hint.className = 'service-hint';
-                hint.textContent = 'ℹ️ ' + galleryLabel;
-                card.appendChild(hint);
+            // Minden szolgáltatás kártya kattintható, "További részletek" jelzéssel
+            var hint = document.createElement('span');
+            hint.className = 'service-hint';
+            hint.textContent = 'ℹ️ ' + galleryLabel;
+            card.appendChild(hint);
 
-                card.classList.add('is-clickable');
-                card.setAttribute('role', 'button');
-                card.setAttribute('tabindex', '0');
-                card.setAttribute('aria-label', svc.title + ' – ' + galleryLabel);
+            card.classList.add('is-clickable');
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', svc.title + ' – ' + galleryLabel);
 
-                // Kattintáskor átadjuk a képeket, a címet ÉS a listát (svc.items) is!
-                card.addEventListener('click', function () {
-                    openGallery(shared.gallery || [], svc.title, svc.items);
-                });
-                card.addEventListener('keydown', function (e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        openGallery(shared.gallery || [], svc.title, svc.items);
-                    }
-                });
-            }
+            var openDetails = function () {
+                openGallery(shared.gallery || [], svc.title, svc.items, svc.details || svc.description);
+            };
+            card.addEventListener('click', openDetails);
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openDetails();
+                }
+            });
+
             grid.appendChild(card);
         });
 
@@ -390,7 +377,7 @@
         this.reset();
     });
 
-    // --- Kép-galéria popup ---
+    // --- Popup: cím, szöveg, lista, kép ---
     var galleryImages = [];
     var galleryIndex = 0;
     var galleryReturnFocus = null;
@@ -413,28 +400,39 @@
         }, 180);
     }
 
-    function openGallery(images, title, items) {
+    function openGallery(images, title, items, text) {
         galleryImages = images || [];
         galleryIndex = 0;
         galleryReturnFocus = document.activeElement;
         $('galleryTitle').textContent = title;
 
-        // Ha nincsenek képek (csak lista van, mint a felújításnál), elrejthetjük a képváltót vagy kezelhetjük
         var imgEl = $('galleryImg');
+        var imgWrap = $('galleryImgWrap');
         var prevBtn = $('galleryPrev');
         var nextBtn = $('galleryNext');
         var counterEl = $('galleryCounter');
+        var counterBar = counterEl ? counterEl.parentNode : null;
 
         if (galleryImages.length > 0) {
             showGalleryImage();
-            if(prevBtn) prevBtn.style.display = '';
-            if(nextBtn) nextBtn.style.display = '';
-            if(counterEl) counterEl.style.display = '';
+            if (imgWrap) imgWrap.style.display = '';
+            if (counterBar) counterBar.style.display = '';
+            // egy képnél nincs szükség nyilakra és számlálóra
+            var multi = galleryImages.length > 1;
+            if (prevBtn) prevBtn.style.display = multi ? '' : 'none';
+            if (nextBtn) nextBtn.style.display = multi ? '' : 'none';
+            if (counterEl) counterEl.style.display = multi ? '' : 'none';
         } else {
-            if(imgEl) imgEl.src = '';
-            if(prevBtn) prevBtn.style.display = 'none';
-            if(nextBtn) prevBtn.style.display = 'none';
-            if(counterEl) counterEl.style.display = 'none';
+            if (imgEl) imgEl.src = '';
+            if (imgWrap) imgWrap.style.display = 'none';
+            if (counterBar) counterBar.style.display = 'none';
+        }
+
+        // Szöveges leírás a popupban
+        var textEl = $('galleryText');
+        if (textEl) {
+            textEl.textContent = text || '';
+            textEl.hidden = !text;
         }
 
         // A részletező lista megjelenítése a popupban
@@ -481,11 +479,17 @@
     }
 
     function nextImage() {
+        if (galleryImages.length < 2) {
+            return;
+        }
         galleryIndex = (galleryIndex + 1) % galleryImages.length;
         showGalleryImage('next');
     }
 
     function prevImage() {
+        if (galleryImages.length < 2) {
+            return;
+        }
         galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
         showGalleryImage('prev');
     }

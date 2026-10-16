@@ -641,25 +641,8 @@ button.property-card {
 }
 
 /* =========================================================
-   GALÉRIA POPUP
+   POPUP (cím, szöveg, lista, kép)
    ========================================================= */
-
-.modal-list {
-    margin: 0;
-    padding: 12px 24px 20px 40px;
-    border-top: 1px solid var(--line);
-    background: var(--bg-alt);
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-}
-
-.modal-list li {
-    margin-bottom: 6px;
-}
-
-.modal-list li:last-child {
-    margin-bottom: 0;
-}
 
 .modal-overlay {
     position: fixed;
@@ -686,8 +669,9 @@ button.property-card {
     background: var(--card);
     max-width: 720px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     border-radius: var(--radius);
-    overflow: hidden;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
     opacity: 0;
     transform: scale(0.94) translateY(10px);
@@ -697,6 +681,43 @@ button.property-card {
 .modal-overlay.is-open .modal-dialog {
     opacity: 1;
     transform: scale(1) translateY(0);
+}
+
+.modal-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 56px 12px 18px;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.15rem;
+    color: var(--ink);
+}
+
+.modal-text {
+    margin: 0;
+    padding: 0 18px 16px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    white-space: pre-line; /* az enter-ek a szövegben megmaradnak */
+}
+
+.modal-list {
+    margin: 0;
+    padding: 12px 24px 16px 40px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-alt);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+.modal-list li {
+    margin-bottom: 6px;
+}
+
+.modal-list li:last-child {
+    margin-bottom: 0;
 }
 
 .modal-img-wrap {
@@ -724,6 +745,17 @@ button.property-card {
 .modal-img-wrap img.slide-right {
     opacity: 0;
     transform: translateX(28px);
+}
+
+.modal-counter-bar {
+    padding: 8px 18px 12px;
+    text-align: right;
+}
+
+.modal-counter {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -790,22 +822,6 @@ button.property-card {
 
 .modal-next {
     right: 10px;
-}
-
-.modal-caption {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 14px 18px;
-    font-size: 0.95rem;
-    color: var(--ink);
-}
-
-.modal-counter {
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-    white-space: nowrap;
 }
 
 .modal-close:focus-visible,

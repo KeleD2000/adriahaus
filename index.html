@@ -118,16 +118,19 @@
 <div class="modal-overlay" id="galleryModal" hidden>
   <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
     <button type="button" class="modal-close" id="galleryClose" aria-label="Bezárás">&times;</button>
-    <div class="modal-img-wrap">
+    <div class="modal-caption">
+      <span id="galleryTitle"></span>
+    </div>
+    <p class="modal-text" id="galleryText" hidden></p>
+    <ul class="modal-list" id="galleryList" hidden></ul>
+    <div class="modal-img-wrap" id="galleryImgWrap">
       <button type="button" class="modal-nav modal-prev" id="galleryPrev" aria-label="Előző kép">&#8249;</button>
       <img id="galleryImg" src="" alt="">
       <button type="button" class="modal-nav modal-next" id="galleryNext" aria-label="Következő kép">&#8250;</button>
     </div>
-    <div class="modal-caption">
-      <span id="galleryTitle"></span>
+    <div class="modal-counter-bar">
       <span class="modal-counter" id="galleryCounter"></span>
     </div>
-    <ul class="modal-list" id="galleryList" hidden></ul>
   </div>
 </div>
 
