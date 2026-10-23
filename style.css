@@ -640,6 +640,51 @@ button.property-card {
     -webkit-appearance: none;
 }
 
+/* Hamarosan: elsötétített kártya felirattal */
+.property-card.is-soon {
+    position: relative;
+    cursor: default;
+    overflow: hidden;
+}
+
+.property-card.is-soon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(14, 31, 38, 0.45);
+    pointer-events: none;
+}
+
+.property-card.is-soon:hover,
+.property-card.is-soon:focus-within {
+    transform: none;
+    box-shadow: none;
+}
+
+.property-card.is-soon.is-clickable {
+    cursor: pointer;
+}
+
+.soon-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(-6deg);
+    padding: 10px 26px;
+    background: var(--accent);
+    color: #16323A;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
 /* =========================================================
    POPUP (cím, szöveg, lista, kép)
    ========================================================= */
@@ -682,6 +727,22 @@ button.property-card {
     opacity: 1;
     transform: scale(1) translateY(0);
 }
+
+/* Kép legfelül, alatta a szöveg és a lista (kiadó apartman) */
+.modal-dialog.images-first {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-dialog.images-first > * {
+    flex: none;
+}
+
+.modal-dialog.images-first .modal-caption { order: 1; }
+.modal-dialog.images-first .modal-img-wrap { order: 2; }
+.modal-dialog.images-first .modal-counter-bar { order: 3; }
+.modal-dialog.images-first .modal-text { order: 4; padding-top: 4px; }
+.modal-dialog.images-first .modal-list { order: 5; border-bottom: none; }
 
 .modal-caption {
     display: flex;

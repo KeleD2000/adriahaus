@@ -40,6 +40,17 @@ window.SITE_CONTENT = {
         gallery: ["property-villa.svg", "gallery-interior.svg", "gallery-terrace.svg"] },
       { image: "property-house.svg",     size: "140 m²", price: "340 000 €",
         gallery: ["property-house.svg", "gallery-interior.svg", "gallery-terrace.svg"] }
+    ],
+    rentals: [
+      { image: "lakas-1-8.jpg", size: "", price: "100 €",
+        gallery: [
+          "lakas-1-8.jpg", "lakas-1-2.jpg", "lakas-1-3.jpg", "lakas-1-4.jpg",
+          "lakas-1-5.jpg", "lakas-1-6.jpg", "lakas-1-7.jpg", "lakas-1-1.jpg",
+          "lakas-1-9.jpg", "lakas-1-10.jpg", "lakas-1-11.jpg", "lakas-1-12.jpg",
+          "lakas-1-13.jpg", "lakas-1-14.jpg"
+        ] },
+      { image: "property-apartment.svg", size: "38 m²", price: "480 €", soon: true },
+      { image: "property-house.svg", size: "110 m²", price: "900 €", soon: true }
     ]
   },
 
@@ -93,7 +104,7 @@ window.SITE_CONTENT = {
           ]
         }
       ],
-      examplesHeading: { title: "Példa ingatlanaink", note: "3 kiválasztott ingatlan" },
+      examplesHeading: { title: "Eladó ingatlanaink", note: "Hamarosan – a megjelenített értékek csak példák" },
       examples: [
         { location: "Rovinj, Isztria", region: "Isztria", title: "Tengerre néző lakás", rooms: "2 hálószoba",
           description: "Felújított, 68 m²-es lakás a városközponthoz közel, tágas terasszal és panorámás kilátással az öbölre." },
@@ -101,6 +112,29 @@ window.SITE_CONTENT = {
           description: "Modern, energiatakarékos villa medencével, a Kornati-szigetekre néző terasszal, azonnal beköltözhető." },
         { location: "Split, Közép-Dalmácia", region: "Közép-Dalmácia", title: "Belvárosi kőház", rooms: "3 szint",
           description: "Történelmi óvárosi kőház, részlegesen felújítva, kiváló befektetési lehetőség rövid távú bérbeadásra." }
+      ],
+      rentalsHeading: { title: "Kiadó ingatlanaink", note: "További ingatlanok hamarosan – a halványított kártyák értékei csak példák" },
+      rentals: [
+        { location: "Sveti Juraj, Zakos", region: "Adriai tengerpart", title: "Tengerre néző apartman", rooms: "3 hálószoba + nappali", priceUnit: "/ nap",
+          description: "Igényesen berendezett, teljesen felszerelt apartman 4–6 főre, a vízparttól 400 m-re.",
+          details: "Sveti Juraj Zakosában igényesen berendezett, tengerre néző apartman foglalható 4–6 fő számára. A part, ahol strand is van, kb. 400 m-re található, a kiépített strand kb. 1,5 km, ezért kisgyerekes családoknak is alkalmas.\n\nKeressen bizalommal további információért.",
+          items: [
+            "Tengerre néző, teljesen felszerelt: wifi, légkondi, mosási lehetőség, ágynemű, törölköző",
+            "3 hálószoba + nappali, 4–6 fő számára alkalmas",
+            "Vízpart, strand kb. 400 m, kiépített strand kb. 1,5 km – kisgyerekes családoknak is alkalmas",
+            "Boltok, éttermek, játszótér a közelben",
+            "Ár (nyári): alap 100 €/nap 4 főnek, minden további személy +10 €/nap, adóval együtt",
+            "Őszi és tavaszi 3 napos kirándulás: utazással, szállással mindössze 50 000 Ft-ért! Pároknak, családoknak egyedi kedvezmény.",
+            "Az ár tartalmazza a szállást és a kisbuszos utazás költségét; indulás Baranya, Somogy, Tolna megyékből és Budapestről, igény szerint háztól házig.",
+            "Zadar: Horvátország egyik legszebb és legismertebb városa, az ókori város az Adria kellős közepére épült.",
+            "Paklenica Nemzeti Park: a Velebit hegylánc tengeri oldalán, Zadartól kb. 30 km-re, sokszínű növény- és állatvilággal.",
+            "Kuterevo: menedékhely, ahol a mamájukat elvesztett barna medvebocsoknak minden gondoskodást megadnak.",
+            "Plitvicei-tavak: az erdős, szelíd völgyekben számtalan zuhatag ömlik alá, formájuk és magasságuk folyamatosan változik."
+          ] },
+        { location: "Rab, Kvarner", region: "Kvarner", title: "Stúdió apartman", rooms: "1 hálószoba", priceUnit: "/ hó",
+          description: "Kompakt, felszerelt apartman a tengerparti sétány közelében, pároknak vagy egyedülállóknak." },
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Családi ház kerttel", rooms: "3 hálószoba", priceUnit: "/ hó",
+          description: "Tágas, kertes családi ház csendes környéken, hosszú távú bérbeadásra." }
       ],
       about: {
         title: "Több mint 10 éve közvetítünk a horvát tengerparton",
@@ -189,7 +223,7 @@ window.SITE_CONTENT = {
           ]
         }
       ],
-      examplesHeading: { title: "Our example properties", note: "3 selected properties" },
+      examplesHeading: { title: "Properties for sale", note: "Coming soon – the values shown are examples only" },
       examples: [
         { location: "Rovinj, Istria", region: "Istria", title: "Sea-view apartment", rooms: "2 bedrooms",
           description: "Renovated 68 m² apartment close to the town centre, with a spacious terrace and panoramic views of the bay." },
@@ -197,6 +231,29 @@ window.SITE_CONTENT = {
           description: "Modern, energy-efficient villa with a pool and a terrace overlooking the Kornati Islands, ready to move in." },
         { location: "Split, Central Dalmatia", region: "Central Dalmatia", title: "Stone house in the city centre", rooms: "3 floors",
           description: "Historic old-town stone house, partly renovated, an excellent investment for short-term rentals." }
+      ],
+      rentalsHeading: { title: "Properties for rent", note: "More properties coming soon – values on the darkened cards are examples only" },
+      rentals: [
+        { location: "Sveti Juraj, Zakos", region: "Adriatic coast", title: "Sea-view apartment", rooms: "3 bedrooms + living room", priceUnit: "/ night",
+          description: "Tastefully furnished, fully equipped apartment for 4–6 guests, 400 m from the water.",
+          details: "A tastefully furnished sea-view apartment is available for booking in Zakos, Sveti Juraj, for 4–6 guests. The shore with a beach is about 400 m away and the developed beach about 1.5 km, so it also suits families with small children.\n\nFeel free to contact us for more information.",
+          items: [
+            "Sea view, fully equipped: Wi-Fi, air conditioning, laundry facilities, bed linen, towels",
+            "3 bedrooms + living room, suitable for 4–6 guests",
+            "Waterfront and beach about 400 m, developed beach about 1.5 km – also suitable for families with small children",
+            "Shops, restaurants and a playground nearby",
+            "Price (summer): base rate €100/night for 4 guests, each additional guest +€10/night, tax included",
+            "Autumn and spring 3-day trip: travel and accommodation for just 50,000 HUF! Special discounts for couples and families.",
+            "The price includes accommodation and minibus travel, departing from Baranya, Somogy and Tolna counties and Budapest; door-to-door on request.",
+            "Zadar: one of Croatia's most beautiful and best-known cities, an ancient town built in the middle of the Croatian Adriatic.",
+            "Paklenica National Park: on the sea side of the Velebit range, about 30 km from Zadar, home to a rich variety of plants and animals.",
+            "Kuterevo: a shelter where brown bear cubs that have lost their mothers receive full care.",
+            "Plitvice Lakes: in wooded, gentle valleys countless waterfalls cascade down, constantly changing in shape and height."
+          ] },
+        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartment", rooms: "1 bedroom", priceUnit: "/ month",
+          description: "Compact, furnished apartment near the seafront promenade, ideal for couples or singles." },
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Family house with garden", rooms: "3 bedrooms", priceUnit: "/ month",
+          description: "Spacious family house with a garden in a quiet area, for long-term rental." }
       ],
       about: {
         title: "Over 10 years of brokerage experience on the Croatian coast",
@@ -285,7 +342,7 @@ window.SITE_CONTENT = {
           ]
         }
       ],
-      examplesHeading: { title: "Beispielimmobilien", note: "3 ausgewählte Objekte" },
+      examplesHeading: { title: "Immobilien zum Verkauf", note: "Demnächst – die angezeigten Werte sind nur Beispiele" },
       examples: [
         { location: "Rovinj, Istrien", region: "Istrien", title: "Wohnung mit Meerblick", rooms: "2 Schlafzimmer",
           description: "Renovierte 68 m² Wohnung nahe dem Stadtzentrum mit großzügiger Terrasse und Panoramablick auf die Bucht." },
@@ -293,6 +350,29 @@ window.SITE_CONTENT = {
           description: "Moderne, energieeffiziente Villa mit Pool und Terrasse mit Blick auf die Kornaten-Inseln, sofort bezugsfertig." },
         { location: "Split, Mitteldalmatien", region: "Mitteldalmatien", title: "Steinhaus im Stadtzentrum", rooms: "3 Etagen",
           description: "Historisches Steinhaus in der Altstadt, teilweise renoviert, hervorragende Kapitalanlage für die Ferienvermietung." }
+      ],
+      rentalsHeading: { title: "Immobilien zur Miete", note: "Weitere Objekte demnächst – die Werte auf den abgedunkelten Karten sind nur Beispiele" },
+      rentals: [
+        { location: "Sveti Juraj, Zakos", region: "Adriaküste", title: "Apartment mit Meerblick", rooms: "3 Schlafzimmer + Wohnzimmer", priceUnit: "/ Nacht",
+          description: "Geschmackvoll eingerichtetes, voll ausgestattetes Apartment für 4–6 Personen, 400 m vom Wasser.",
+          details: "In Zakos bei Sveti Juraj kann ein geschmackvoll eingerichtetes Apartment mit Meerblick für 4–6 Personen gebucht werden. Der Strand am Wasser ist ca. 400 m entfernt, der ausgebaute Strand ca. 1,5 km – auch für Familien mit kleinen Kindern geeignet.\n\nKontaktieren Sie uns gerne für weitere Informationen.",
+          items: [
+            "Meerblick, voll ausgestattet: WLAN, Klimaanlage, Waschmöglichkeit, Bettwäsche, Handtücher",
+            "3 Schlafzimmer + Wohnzimmer, geeignet für 4–6 Personen",
+            "Wasser und Strand ca. 400 m, ausgebauter Strand ca. 1,5 km – auch für Familien mit kleinen Kindern geeignet",
+            "Geschäfte, Restaurants und Spielplatz in der Nähe",
+            "Preis (Sommer): Grundpreis 100 €/Nacht für 4 Personen, jede weitere Person +10 €/Nacht, inkl. Steuern",
+            "3-Tage-Reise im Herbst und Frühling: Anreise und Unterkunft für nur 50.000 HUF! Sonderrabatte für Paare und Familien.",
+            "Im Preis enthalten sind Unterkunft und Kleinbusfahrt ab den Komitaten Baranya, Somogy, Tolna und Budapest; auf Wunsch von Haus zu Haus.",
+            "Zadar: eine der schönsten und bekanntesten Städte Kroatiens, eine antike Stadt mitten an der kroatischen Adria.",
+            "Nationalpark Paklenica: an der Meerseite des Velebit-Gebirges, ca. 30 km von Zadar entfernt, mit vielfältiger Tier- und Pflanzenwelt.",
+            "Kuterevo: eine Auffangstation, in der Braunbärenjunge, die ihre Mutter verloren haben, rundum versorgt werden.",
+            "Plitvicer Seen: In bewaldeten, sanften Tälern stürzen unzählige Wasserfälle herab, deren Form und Höhe sich ständig verändern."
+          ] },
+        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio-Apartment", rooms: "1 Schlafzimmer", priceUnit: "/ Monat",
+          description: "Kompaktes, möbliertes Apartment nahe der Strandpromenade, ideal für Paare oder Singles." },
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Familienhaus mit Garten", rooms: "3 Schlafzimmer", priceUnit: "/ Monat",
+          description: "Geräumiges Familienhaus mit Garten in ruhiger Lage, für langfristige Vermietung." }
       ],
       about: {
         title: "Seit über 10 Jahren vermitteln wir Immobilien an der kroatischen Küste",
@@ -381,7 +461,7 @@ window.SITE_CONTENT = {
           ]
         }
       ],
-      examplesHeading: { title: "Primjeri nekretnina", note: "3 odabrane nekretnine" },
+      examplesHeading: { title: "Nekretnine na prodaju", note: "Uskoro – prikazane vrijednosti samo su primjeri" },
       examples: [
         { location: "Rovinj, Istra", region: "Istra", title: "Stan s pogledom na more", rooms: "2 spavaće sobe",
           description: "Obnovljen stan od 68 m² u blizini centra grada, s prostranom terasom i panoramskim pogledom na zaljev." },
@@ -389,6 +469,29 @@ window.SITE_CONTENT = {
           description: "Moderna, energetski učinkovita vila s bazenom i terasom s pogledom na Kornate, odmah useljiva." },
         { location: "Split, Srednja Dalmacija", region: "Srednja Dalmacija", title: "Kamena kuća u centru", rooms: "3 etaže",
           description: "Povijesna kamena kuća u staroj jezgri grada, djelomično renovirana, izvrsna prilika za turistički najam." }
+      ],
+      rentalsHeading: { title: "Nekretnine za najam", note: "Uskoro još nekretnina – vrijednosti na zatamnjenim karticama samo su primjeri" },
+      rentals: [
+        { location: "Sveti Juraj, Zakos", region: "Jadranska obala", title: "Apartman s pogledom na more", rooms: "3 spavaće sobe + dnevni boravak", priceUnit: "/ noć",
+          description: "Ukusno uređen, potpuno opremljen apartman za 4–6 osoba, 400 m od mora.",
+          details: "U Zakosu kod Svetog Jurja moguće je rezervirati ukusno uređen apartman s pogledom na more za 4–6 osoba. Obala s plažom udaljena je oko 400 m, a uređena plaža oko 1,5 km, pa je pogodan i za obitelji s malom djecom.\n\nSlobodno nas kontaktirajte za više informacija.",
+          items: [
+            "Pogled na more, potpuno opremljen: wifi, klima, mogućnost pranja rublja, posteljina, ručnici",
+            "3 spavaće sobe + dnevni boravak, pogodno za 4–6 osoba",
+            "More i plaža oko 400 m, uređena plaža oko 1,5 km – pogodno i za obitelji s malom djecom",
+            "Trgovine, restorani i igralište u blizini",
+            "Cijena (ljeto): osnovna cijena 100 €/noć za 4 osobe, svaka dodatna osoba +10 €/noć, porez uključen",
+            "Trodnevni izlet na jesen i proljeće: prijevoz i smještaj samo za 50.000 HUF! Posebni popusti za parove i obitelji.",
+            "Cijena uključuje smještaj i prijevoz kombijem iz županija Baranya, Somogy, Tolna i iz Budimpešte; na zahtjev od vrata do vrata.",
+            "Zadar: jedan od najljepših i najpoznatijih hrvatskih gradova, antički grad usred hrvatskog Jadrana.",
+            "Nacionalni park Paklenica: na morskoj strani Velebita, oko 30 km od Zadra, s raznolikim biljnim i životinjskim svijetom.",
+            "Kuterevo: utočište u kojem se o medvjedićima koji su ostali bez majke brine s punom pažnjom.",
+            "Plitvička jezera: u šumovitim blagim dolinama slijevaju se brojni slapovi čiji se oblik i visina stalno mijenjaju."
+          ] },
+        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartman", rooms: "1 spavaća soba", priceUnit: "/ mjesec",
+          description: "Kompaktan, opremljen apartman blizu morske šetnice, idealan za parove ili samce." },
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Obiteljska kuća s vrtom", rooms: "3 spavaće sobe", priceUnit: "/ mjesec",
+          description: "Prostrana obiteljska kuća s vrtom u mirnom okruženju, za dugoročni najam." }
       ],
       about: {
         title: "Više od 10 godina iskustva u posredovanju na hrvatskoj obali",
@@ -477,7 +580,7 @@ window.SITE_CONTENT = {
           ]
         }
       ],
-      examplesHeading: { title: "Příklady nemovitostí", note: "3 vybrané nemovitosti" },
+      examplesHeading: { title: "Nemovitosti k prodeji", note: "Již brzy – zobrazené hodnoty jsou pouze ukázkové" },
       examples: [
         { location: "Rovinj, Istrie", region: "Istrie", title: "Byt s výhledem na moře", rooms: "2 ložnice",
           description: "Zrekonstruovaný byt o velikosti 68 m² poblíž centra, s prostornou terasou a panoramatickým výhledem na záliv." },
@@ -485,6 +588,29 @@ window.SITE_CONTENT = {
           description: "Moderní energeticky úsporná vila s bazénem a terasou s výhledem na Kornatské ostrovy, ihned k nastěhování." },
         { location: "Split, Střední Dalmácie", region: "Střední Dalmácie", title: "Kamenný dům v centru", rooms: "3 podlaží",
           description: "Historický kamenný dům ve starém městě, částečně zrekonstruovaný, skvělá investiční příležitost pro krátkodobý pronájem." }
+      ],
+      rentalsHeading: { title: "Nemovitosti k pronájmu", note: "Další nemovitosti již brzy – hodnoty na ztmavených kartách jsou pouze ukázkové" },
+      rentals: [
+        { location: "Sveti Juraj, Zakos", region: "Jadranské pobřeží", title: "Apartmán s výhledem na moře", rooms: "3 ložnice + obývací pokoj", priceUnit: "/ noc",
+          description: "Vkusně zařízený, plně vybavený apartmán pro 4–6 osob, 400 m od moře.",
+          details: "V Zakosu u Sveti Juraj lze rezervovat vkusně zařízený apartmán s výhledem na moře pro 4–6 osob. Pobřeží s pláží je vzdáleno asi 400 m, upravená pláž asi 1,5 km, proto je vhodný i pro rodiny s malými dětmi.\n\nPro další informace nás neváhejte kontaktovat.",
+          items: [
+            "Výhled na moře, plně vybaveno: wifi, klimatizace, možnost praní, ložní prádlo, ručníky",
+            "3 ložnice + obývací pokoj, vhodné pro 4–6 osob",
+            "Moře a pláž asi 400 m, upravená pláž asi 1,5 km – vhodné i pro rodiny s malými dětmi",
+            "Obchody, restaurace a dětské hřiště v blízkosti",
+            "Cena (léto): základní cena 100 €/noc pro 4 osoby, každá další osoba +10 €/noc, včetně daně",
+            "3denní výlet na podzim a na jaře: doprava a ubytování jen za 50 000 HUF! Zvláštní slevy pro páry a rodiny.",
+            "Cena zahrnuje ubytování a dopravu minibusem z žup Baranya, Somogy, Tolna a z Budapešti; na přání od domu k domu.",
+            "Zadar: jedno z nejkrásnějších a nejznámějších chorvatských měst, antické město uprostřed chorvatského Jadranu.",
+            "Národní park Paklenica: na mořské straně pohoří Velebit, asi 30 km od Zadaru, s rozmanitou flórou a faunou.",
+            "Kuterevo: útulek, kde se medvíďatům, která přišla o matku, dostává plné péče.",
+            "Plitvická jezera: v zalesněných mírných údolích se řítí nespočet vodopádů, jejichž tvar a výška se neustále mění."
+          ] },
+        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartmán", rooms: "1 ložnice", priceUnit: "/ měsíc",
+          description: "Kompaktní, zařízený apartmán poblíž pobřežní promenády, ideální pro páry nebo jednotlivce." },
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dům se zahradou", rooms: "3 ložnice", priceUnit: "/ měsíc",
+          description: "Prostorný rodinný dům se zahradou v klidné lokalitě, pro dlouhodobý pronájem." }
       ],
       about: {
         title: "Více než 10 let zprostředkováváme nemovitosti na chorvatském pobřeží",
@@ -573,7 +699,7 @@ window.SITE_CONTENT = {
           ]
         }
       ],
-      examplesHeading: { title: "Príklady nehnuteľností", note: "3 vybrané nehnuteľnosti" },
+      examplesHeading: { title: "Nehnuteľnosti na predaj", note: "Čoskoro – zobrazené hodnoty sú len ukážkové" },
       examples: [
         { location: "Rovinj, Istria", region: "Istria", title: "Byt s výhľadom na more", rooms: "2 spálne",
           description: "Zrekonštruovaný byt s rozlohou 68 m² blízko centra, s priestrannou terasou a panoramatickým výhľadom na záliv." },
@@ -581,6 +707,29 @@ window.SITE_CONTENT = {
           description: "Moderná, energeticky úsporná vila s bazénom a terasou s výhľadom na Kornatské ostrovy, ihneď k nasťahovaniu." },
         { location: "Split, Stredná Dalmácia", region: "Stredná Dalmácia", title: "Kamenný dom v centre", rooms: "3 podlažia",
           description: "Historický kamenný dom v starom meste, čiastočne zrekonštruovaný, skvelá investičná príležitosť na krátkodobý prenájom." }
+      ],
+      rentalsHeading: { title: "Nehnuteľnosti na prenájom", note: "Ďalšie nehnuteľnosti čoskoro – hodnoty na stmavených kartách sú len ukážkové" },
+      rentals: [
+        { location: "Sveti Juraj, Zakos", region: "Jadranské pobrežie", title: "Apartmán s výhľadom na more", rooms: "3 spálne + obývačka", priceUnit: "/ noc",
+          description: "Vkusne zariadený, plne vybavený apartmán pre 4–6 osôb, 400 m od mora.",
+          details: "V Zakose pri Sveti Juraj je možné rezervovať vkusne zariadený apartmán s výhľadom na more pre 4–6 osôb. Pobrežie s pláží je vzdialené asi 400 m, upravená pláž asi 1,5 km, preto je vhodný aj pre rodiny s malými deťmi.\n\nPre ďalšie informácie nás neváhajte kontaktovať.",
+          items: [
+            "Výhľad na more, plne vybavené: wifi, klimatizácia, možnosť prania, posteľná bielizeň, uteráky",
+            "3 spálne + obývačka, vhodné pre 4–6 osôb",
+            "More a pláž asi 400 m, upravená pláž asi 1,5 km – vhodné aj pre rodiny s malými deťmi",
+            "Obchody, reštaurácie a detské ihrisko v blízkosti",
+            "Cena (leto): základná cena 100 €/noc pre 4 osoby, každá ďalšia osoba +10 €/noc, vrátane dane",
+            "3-dňový výlet na jeseň a na jar: doprava a ubytovanie len za 50 000 HUF! Zvláštne zľavy pre páry a rodiny.",
+            "Cena zahŕňa ubytovanie a dopravu minibusom zo žúp Baranya, Somogy, Tolna a z Budapešti; na želanie od domu k domu.",
+            "Zadar: jedno z najkrajších a najznámejších chorvátskych miest, antické mesto uprostred chorvátskeho Jadranu.",
+            "Národný park Paklenica: na morskej strane pohoria Velebit, asi 30 km od Zadaru, s rozmanitou flórou a faunou.",
+            "Kuterevo: útulok, kde sa medvieďatám, ktoré prišli o matku, dostáva plná starostlivosť.",
+            "Plitvické jazerá: v zalesnených miernych dolinách sa rútia nespočetné vodopády, ktorých tvar a výška sa neustále menia."
+          ] },
+        { location: "Rab, Kvarner", region: "Kvarner", title: "Štúdio apartmán", rooms: "1 spálňa", priceUnit: "/ mesiac",
+          description: "Kompaktný, zariadený apartmán blízko pobrežnej promenády, ideálny pre páry alebo jednotlivcov." },
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dom so záhradou", rooms: "3 spálne", priceUnit: "/ mesiac",
+          description: "Priestranný rodinný dom so záhradou v pokojnom prostredí, na dlhodobý prenájom." }
       ],
       about: {
         title: "Viac ako 10 rokov sprostredkujeme nehnuteľnosti na chorvátskom pobřeží",

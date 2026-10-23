@@ -118,6 +118,16 @@
         sk: 'Viac informácií'
     };
 
+    // Felirat az elsötétített "hamarosan" kártyákon
+    var SOON_LABELS = {
+        hu: 'Hamarosan',
+        en: 'Coming soon',
+        de: 'Demnächst',
+        hr: 'Uskoro',
+        cs: 'Již brzy',
+        sk: 'Čoskoro'
+    };
+
     function setNavOpen(open) {
         navBox.classList.toggle('is-open', open);
         navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -157,6 +167,7 @@
     function render(lang) {
         var T = C.translations[lang];
         var galleryLabel = DETAILS_LABELS[lang] || DETAILS_LABELS.en;
+        var soonLabel = SOON_LABELS[lang] || SOON_LABELS.en;
 
         document.documentElement.lang = lang;
         document.title = T.pageTitle;
@@ -248,16 +259,15 @@
             grid.appendChild(card);
         });
 
-        // Példa ingatlanok
+        // Eladó ingatlanok (hamarosan, példa értékekkel)
         $('exTitle').textContent = T.examplesHeading.title;
         $('exNote').textContent = T.examplesHeading.note;
         var exGrid = $('exampleGrid');
         clear(exGrid);
         T.examples.forEach(function (p, i) {
             var shared = S.examples[i] || {};
-            var card = document.createElement('button');
-            card.type = 'button';
-            card.className = 'card reveal property-card';
+            var card = document.createElement('div');
+            card.className = 'card reveal property-card is-soon';
             card.innerHTML =
                 '<div class="card-photo"><img src="' + shared.image + '" alt="' + p.title + '"><span>' + p.location + '</span></div>' +
                 '<div class="card-body">' +
@@ -268,11 +278,42 @@
                 '<span class="card-size">' + shared.size + ' · ' + p.rooms + '</span>' +
                 '<span class="card-price">' + shared.price + '</span>' +
                 '</div>' +
-                '</div>';
-            card.addEventListener('click', function () {
-                openGallery(shared.gallery || [shared.image], p.title);
-            });
+                '</div>' +
+                '<span class="soon-badge">' + soonLabel + '</span>';
             exGrid.appendChild(card);
+        });
+
+        // Kiadó ingatlanok: az első valódi (kattintható galéria), a többi hamarosan (példa)
+        $('rentTitle').textContent = T.rentalsHeading.title;
+        $('rentNote').textContent = T.rentalsHeading.note;
+        var rentGrid = $('rentalGrid');
+        clear(rentGrid);
+        T.rentals.forEach(function (p, i) {
+            var shared = S.rentals[i] || {};
+            var soon = !!shared.soon;
+            var card = document.createElement(soon ? 'div' : 'button');
+            if (!soon) {
+                card.type = 'button';
+            }
+            card.className = 'card reveal property-card' + (soon ? ' is-soon' : '');
+            card.innerHTML =
+                '<div class="card-photo"><img src="' + shared.image + '" alt="' + p.title + '"><span>' + p.location + '</span></div>' +
+                '<div class="card-body">' +
+                '<h3>' + p.title + '</h3>' +
+                '<div class="card-region">' + p.region + '</div>' +
+                '<p>' + p.description + '</p>' +
+                '<div class="card-meta">' +
+                '<span class="card-size">' + (shared.size ? shared.size + ' · ' : '') + p.rooms + '</span>' +
+                '<span class="card-price">' + shared.price + ' ' + p.priceUnit + '</span>' +
+                '</div>' +
+                '</div>' +
+                (soon ? '<span class="soon-badge">' + soonLabel + '</span>' : '');
+            if (!soon) {
+                card.addEventListener('click', function () {
+                    openGallery(shared.gallery || [shared.image], p.title, p.items, p.details, true);
+                });
+            }
+            rentGrid.appendChild(card);
         });
 
         // Rólunk
@@ -400,7 +441,7 @@
         }, 180);
     }
 
-    function openGallery(images, title, items, text) {
+    function openGallery(images, title, items, text, imagesFirst) {
         galleryImages = images || [];
         galleryIndex = 0;
         galleryReturnFocus = document.activeElement;
@@ -452,6 +493,8 @@
         }
 
         var modal = $('galleryModal');
+        // Ha imagesFirst igaz: a képek legfelül, alattuk a szöveg és a lista
+        modal.querySelector('.modal-dialog').classList.toggle('images-first', !!imagesFirst);
         modal.hidden = false;
         document.body.style.overflow = 'hidden';
         requestAnimationFrame(function () {
