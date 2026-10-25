@@ -17,7 +17,7 @@ window.SITE_CONTENT = {
     phoneHref: "tel:+36308787226",
     email: "adriahaus70@gmail.com",
     navHrefs: ["#rolunk", "#kapcsolat"],
-    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-hasznositas", "#ingatlan-felujitas", "#kapcsolat"],
+    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-hasznositas", "#ingatlan-felujitas", "#ingatlan-eladas"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
       { gradient: "linear-gradient(160deg,#3B5245,#7FA98C)", size: "210 m²", price: "395 000 €" },
@@ -31,7 +31,7 @@ window.SITE_CONTENT = {
       { emoji: "🔑", id: "ingatlan-hasznositas" },
       { emoji: "🛠️", id: "ingatlan-felujitas",
         gallery: ["felujitas-1.jpg", "felujitas-2.jpg", "felujitas-3.jpg", "felujitas-4.jpg"] },
-      { emoji: "🏷️", id: "kapcsolat" }
+      { emoji: "🏷️", id: "ingatlan-eladas" }
     ],
     examples: [
       { image: "property-apartment.svg", size: "68 m²",  price: "185 000 €",
