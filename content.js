@@ -170,7 +170,17 @@ window.SITE_CONTENT = {
         },
         formNote: "Az elküldött adatokat kizárólag a kapcsolatfelvétel céljából kezeljük.",
         submitLabel: "Ajánlat elküldése",
-        successMessage: "Köszönjük! Munkatársunk hamarosan felveszi Önnel a kapcsolatot."
+        successMessage: "Köszönjük! Munkatársunk hamarosan felveszi Önnel a kapcsolatot.",
+        errorMessage: "Hiba történt az üzenet küldésekor. Kérjük, próbálja újra, vagy írjon a következő címre:",
+        successTitle: "Köszönjük!",
+        errorTitle: "Nem sikerült elküldeni",
+        closeLabel: "Rendben",
+        validation: {
+          required: "Ez a mező kötelező.",
+          email: "Kérjük, adjon meg érvényes e-mail címet.",
+          phone: "Kérjük, adjon meg érvényes telefonszámot.",
+          select: "Kérjük, válasszon szolgáltatást."
+        }
       },
       footer: { text: "Adria Hause — horvátországi ingatlanközvetítés" }
     },
@@ -289,7 +299,17 @@ window.SITE_CONTENT = {
         },
         formNote: "We process the submitted data solely for the purpose of contacting you.",
         submitLabel: "Send enquiry",
-        successMessage: "Thank you! Our colleague will contact you shortly."
+        successMessage: "Thank you! Our colleague will contact you shortly.",
+        errorMessage: "An error occurred while sending your message. Please try again or write to:",
+        successTitle: "Thank you!",
+        errorTitle: "Message not sent",
+        closeLabel: "OK",
+        validation: {
+          required: "This field is required.",
+          email: "Please enter a valid email address.",
+          phone: "Please enter a valid phone number.",
+          select: "Please select a service."
+        }
       },
       footer: { text: "Adria Hause — Croatian real estate brokerage" }
     },
@@ -408,7 +428,17 @@ window.SITE_CONTENT = {
         },
         formNote: "Die übermittelten Daten werden ausschließlich zur Kontaktaufnahme verwendet.",
         submitLabel: "Anfrage senden",
-        successMessage: "Vielen Dank! Unser Mitarbeiter wird sich in Kürze bei Ihnen melden."
+        successMessage: "Vielen Dank! Unser Mitarbeiter wird sich in Kürze bei Ihnen melden.",
+        errorMessage: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an:",
+        successTitle: "Vielen Dank!",
+        errorTitle: "Nachricht nicht gesendet",
+        closeLabel: "OK",
+        validation: {
+          required: "Dieses Feld ist erforderlich.",
+          email: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+          phone: "Bitte geben Sie eine gültige Telefonnummer ein.",
+          select: "Bitte wählen Sie einen Service."
+        }
       },
       footer: { text: "Adria Hause — Immobilienvermittlung in Kroatien" }
     },
@@ -527,7 +557,17 @@ window.SITE_CONTENT = {
         },
         formNote: "Poslane podatke koristimo isključivo u svrhu stupanja u kontakt s vama.",
         submitLabel: "Pošalji upit",
-        successMessage: "Hvala vam! Naš djelatnik će vam se ubrzo javiti."
+        successMessage: "Hvala vam! Naš djelatnik će vam se ubrzo javiti.",
+        errorMessage: "Došlo je do pogreške prilikom slanja poruke. Pokušajte ponovno ili nam pišite na:",
+        successTitle: "Hvala vam!",
+        errorTitle: "Poruka nije poslana",
+        closeLabel: "U redu",
+        validation: {
+          required: "Ovo polje je obavezno.",
+          email: "Unesite ispravnu e-mail adresu.",
+          phone: "Unesite ispravan broj telefona.",
+          select: "Odaberite uslugu."
+        }
       },
       footer: { text: "Adria Hause — agencija za nekretnine u Hrvatskoj" }
     },
@@ -646,7 +686,17 @@ window.SITE_CONTENT = {
         },
         formNote: "Odeslané údaje zpracováváme výhradně za účelem navázání kontaktu.",
         submitLabel: "Odeslat poptávku",
-        successMessage: "Děkujeme! Náš kolega vás brzy kontaktuje."
+        successMessage: "Děkujeme! Náš kolega vás brzy kontaktuje.",
+        errorMessage: "Při odesílání zprávy došlo k chybě. Zkuste to prosím znovu nebo nám napište na:",
+        successTitle: "Děkujeme!",
+        errorTitle: "Zprávu se nepodařilo odeslat",
+        closeLabel: "OK",
+        validation: {
+          required: "Toto pole je povinné.",
+          email: "Zadejte platnou e-mailovou adresu.",
+          phone: "Zadejte platné telefonní číslo.",
+          select: "Vyberte službu."
+        }
       },
       footer: { text: "Adria Hause — zprostředkování nemovitostí v Chorvatsku" }
     },
@@ -765,7 +815,17 @@ window.SITE_CONTENT = {
         },
         formNote: "Odoslané údaje spracovávame výhradne za účelom nadviazania kontaktu.",
         submitLabel: "Odoslať dopyt",
-        successMessage: "Ďakujeme! Náš kolega vás bude čoskoro kontaktovať."
+        successMessage: "Ďakujeme! Náš kolega vás bude čoskoro kontaktovať.",
+        errorMessage: "Pri odosielaní správy sa vyskytla chyba. Skúste to prosím znova alebo nám napíšte na:",
+        successTitle: "Ďakujeme!",
+        errorTitle: "Správu sa nepodarilo odoslať",
+        closeLabel: "OK",
+        validation: {
+          required: "Toto pole je povinné.",
+          email: "Zadajte platnú e-mailovú adresu.",
+          phone: "Zadajte platné telefónne číslo.",
+          select: "Vyberte službu."
+        }
       },
       footer: { text: "Adria Hause — sprostredkovanie nehnuteľností v Chorvátsku" }
     }

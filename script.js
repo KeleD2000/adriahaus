@@ -10,6 +10,8 @@
     var STORAGE_KEY = 'site-lang';
     var firstRender = true;
     var observer = null;
+    var currentTexts = {};
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function $(id) {
         return document.getElementById(id);
@@ -366,8 +368,15 @@
 
         $('formNote').textContent = K.formNote;
         $('submitBtn').textContent = K.submitLabel;
-        $('formOk').textContent = K.successMessage;
-        $('formOk').style.display = 'none';
+        $('statusClose').textContent = K.closeLabel || 'OK';
+        currentTexts = {
+            successTitle: K.successTitle || '',
+            successMessage: K.successMessage || '',
+            errorTitle: K.errorTitle || '',
+            errorMessage: K.errorMessage || '',
+            validation: K.validation || {}
+        };
+        clearAllErrors();
 
         // Lábléc
         $('footerText').textContent = T.footer.text;
@@ -412,17 +421,192 @@
         render(lang);
     }
 
-    $('listingForm').addEventListener('submit', function (e) {
+    // --- Űrlap: validáció + beküldés a send.php-nak ---
+    var formEl = $('listingForm');
+
+    var FIELDS = [
+        {
+            id: 'name', err: 'errName',
+            check: function (v) {
+                return v.trim() !== '' ? '' : 'required';
+            }
+        },
+        {
+            id: 'phone', err: 'errPhone',
+            check: function (v) {
+                var t = v.trim();
+                if (t === '') {
+                    return 'required';
+                }
+                var digits = t.replace(/\D/g, '');
+                var ok = /^[+()\d\s\-\/.]+$/.test(t) && digits.length >= 6 && digits.length <= 15;
+                return ok ? '' : 'phone';
+            }
+        },
+        {
+            id: 'email', err: 'errEmail',
+            check: function (v) {
+                var t = v.trim();
+                if (t === '') {
+                    return 'required';
+                }
+                return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(t) ? '' : 'email';
+            }
+        },
+        {
+            id: 'service', err: 'errService',
+            check: function (v) {
+                return v ? '' : 'select';
+            }
+        }
+    ];
+
+    function setFieldError(field, code) {
+        var input = $(field.id);
+        var wrap = input.closest('.field');
+        var msgEl = $(field.err);
+        if (code) {
+            var V = currentTexts.validation || {};
+            msgEl.textContent = V[code] || V.required || '';
+            wrap.classList.add('has-error');
+            input.setAttribute('aria-invalid', 'true');
+        } else {
+            msgEl.textContent = '';
+            wrap.classList.remove('has-error');
+            input.removeAttribute('aria-invalid');
+        }
+    }
+
+    function clearAllErrors() {
+        FIELDS.forEach(function (f) {
+            setFieldError(f, '');
+        });
+    }
+
+    // Visszaadja az első hibás mezőt (vagy null-t, ha minden rendben)
+    function validateAll() {
+        var first = null;
+        FIELDS.forEach(function (f) {
+            var code = f.check($(f.id).value);
+            setFieldError(f, code);
+            if (code && !first) {
+                first = $(f.id);
+            }
+        });
+        return first;
+    }
+
+    // Gépelés / választás közben a hiba eltűnik, amint a mező érvényes lesz
+    FIELDS.forEach(function (f) {
+        var input = $(f.id);
+        var handler = function () {
+            if (input.closest('.field').classList.contains('has-error')) {
+                setFieldError(f, f.check(input.value));
+            }
+        };
+        input.addEventListener('input', handler);
+        input.addEventListener('change', handler);
+    });
+
+    // --- Státusz popup (sikeres / sikertelen küldés) ---
+    var statusReturnFocus = null;
+    var ICON_OK = '<svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+    var ICON_ERR = '<svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5v7"/><circle cx="12" cy="17.5" r="0.6" fill="currentColor"/></svg>';
+
+    function openStatus(type) {
+        var ok = type === 'success';
+        var modal = $('statusModal');
+        var dialog = modal.querySelector('.status-dialog');
+        statusReturnFocus = document.activeElement;
+
+        dialog.classList.toggle('is-success', ok);
+        dialog.classList.toggle('is-error', !ok);
+        $('statusIcon').innerHTML = ok ? ICON_OK : ICON_ERR;
+        $('statusTitle').textContent = ok ? currentTexts.successTitle : currentTexts.errorTitle;
+        $('statusText').textContent = ok ? currentTexts.successMessage : currentTexts.errorMessage;
+
+        var link = $('statusLink');
+        if (ok) {
+            link.hidden = true;
+        } else {
+            link.href = 'mailto:' + S.email;
+            link.textContent = S.email;
+            link.hidden = false;
+        }
+
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function () {
+            modal.classList.add('is-open');
+        });
+        $('statusClose').focus();
+    }
+
+    function closeStatus() {
+        var modal = $('statusModal');
+        modal.classList.remove('is-open');
+        var finish = function () {
+            modal.hidden = true;
+            document.body.style.overflow = '';
+            if (statusReturnFocus && statusReturnFocus.focus) {
+                statusReturnFocus.focus();
+            }
+        };
+        if (prefersReducedMotion) {
+            finish();
+        } else {
+            setTimeout(finish, 280);
+        }
+    }
+
+    $('statusClose').addEventListener('click', closeStatus);
+    $('statusModal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeStatus();
+        }
+    });
+    document.addEventListener('keydown', function (e) {
+        if (!$('statusModal').hidden && e.key === 'Escape') {
+            closeStatus();
+        }
+    });
+
+    formEl.addEventListener('submit', function (e) {
         e.preventDefault();
-        $('formOk').style.display = 'block';
-        this.reset();
+
+        var firstInvalid = validateAll();
+        if (firstInvalid) {
+            firstInvalid.focus();
+            return;
+        }
+
+        var btn = $('submitBtn');
+        btn.disabled = true;
+
+        fetch('send.php', {method: 'POST', body: new FormData(formEl)})
+            .then(function (r) {
+                return r.json();
+            })
+            .then(function (res) {
+                if (!res.ok) {
+                    throw new Error('send failed');
+                }
+                formEl.reset();
+                clearAllErrors();
+                openStatus('success');
+            })
+            .catch(function () {
+                openStatus('error');
+            })
+            .then(function () {
+                btn.disabled = false;
+            });
     });
 
     // --- Popup: cím, szöveg, lista, kép ---
     var galleryImages = [];
     var galleryIndex = 0;
     var galleryReturnFocus = null;
-    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function showGalleryImage(direction) {
         var img = $('galleryImg');

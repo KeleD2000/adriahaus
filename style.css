@@ -1411,3 +1411,196 @@ footer .wrap {
         padding-right: 5px;
     }
 }
+
+/* =========================================================
+   ŰRLAP: KÖTELEZŐ MEZŐK ÉS HIBAÜZENETEK
+   (a style.css VÉGÉRE illeszd be)
+   ========================================================= */
+
+:root {
+    --error: #B3382C;
+    --error-soft: rgba(179, 56, 44, 0.12);
+    --success: #2F7D5B;
+    --success-soft: rgba(47, 125, 91, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --error: #F08A7E;
+        --error-soft: rgba(240, 138, 126, 0.16);
+        --success: #7CCBA2;
+        --success-soft: rgba(124, 203, 162, 0.16);
+    }
+}
+
+:root[data-theme="dark"] {
+    --error: #F08A7E;
+    --error-soft: rgba(240, 138, 126, 0.16);
+    --success: #7CCBA2;
+    --success-soft: rgba(124, 203, 162, 0.16);
+}
+
+/* Piros csillag a kötelező mezők felirata mögött */
+label.is-required::after {
+    content: " *";
+    color: var(--error);
+    font-weight: 600;
+}
+
+/* Kitöltés közbeni, finom fókuszkiemelés */
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: var(--sea);
+    box-shadow: 0 0 0 3px rgba(62, 124, 140, 0.2);
+}
+
+.field input,
+.field select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hibás mező */
+.field.has-error input,
+.field.has-error select {
+    border-color: var(--error);
+    background-color: var(--error-soft);
+}
+
+.field.has-error input:focus,
+.field.has-error select:focus {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px var(--error-soft);
+}
+
+.field.has-error label {
+    color: var(--error);
+}
+
+/* Hibaüzenet a mező alatt */
+.field-error {
+    display: none;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--error);
+}
+
+.field.has-error .field-error {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    animation: fieldErrorIn 0.2s ease-out;
+}
+
+.field.has-error .field-error::before {
+    content: "!";
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+    border-radius: 50%;
+    background: var(--error);
+    color: var(--card);
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+}
+
+@keyframes fieldErrorIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* =========================================================
+   STÁTUSZ POPUP (sikeres / sikertelen küldés)
+   ========================================================= */
+
+.status-dialog {
+    max-width: 420px;
+    padding: 36px 28px 28px;
+    text-align: center;
+}
+
+.status-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.status-dialog.is-success .status-icon {
+    background: var(--success-soft);
+    color: var(--success);
+}
+
+.status-dialog.is-error .status-icon {
+    background: var(--error-soft);
+    color: var(--error);
+}
+
+.status-dialog h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.status-dialog p {
+    margin: 0 0 14px;
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+}
+
+.status-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 26px;
+    margin-bottom: 18px;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.1rem;
+    color: var(--sea);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+}
+
+.status-link[hidden] {
+    display: none;
+}
+
+.status-link:hover,
+.status-link:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.status-dialog .btn {
+    min-width: 140px;
+    margin-top: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field.has-error .field-error {
+        animation: none;
+    }
+
+    .field input,
+    .field select {
+        transition: none;
+    }
+}

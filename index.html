@@ -90,29 +90,36 @@
       <ul id="contactBullets"></ul>
     </div>
     <div class="reveal">
-      <form id="listingForm">
+      <form id="listingForm" novalidate>
         <div class="row2">
-          <div>
-            <label for="name" id="lblName"></label>
-            <input id="name" name="name" type="text" required>
+          <div class="field">
+            <label for="name" id="lblName" class="is-required"></label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="errName">
+            <span class="field-error" id="errName" role="alert"></span>
           </div>
-          <div>
-            <label for="phone" id="lblPhone"></label>
-            <input id="phone" name="phone" type="tel" required>
+          <div class="field">
+            <label for="phone" id="lblPhone" class="is-required"></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="errPhone">
+            <span class="field-error" id="errPhone" role="alert"></span>
           </div>
         </div>
-        <div>
-          <label for="email" id="lblEmail"></label>
-          <input id="email" name="email" type="email" required>
+        <div class="field">
+          <label for="email" id="lblEmail" class="is-required"></label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="errEmail">
+          <span class="field-error" id="errEmail" role="alert"></span>
         </div>
-        <div>
-          <label for="service" id="lblService"></label>
-          <select id="service" name="service" required>
+        <div class="field">
+          <label for="service" id="lblService" class="is-required"></label>
+          <select id="service" name="service" required aria-describedby="errService">
           </select>
+          <span class="field-error" id="errService" role="alert"></span>
+        </div>
+        <!-- Honeypot: botok kitöltik, emberek nem látják -->
+        <div style="position:absolute;left:-9999px" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
         </div>
         <p class="form-note" id="formNote"></p>
         <button type="submit" class="btn" id="submitBtn"></button>
-        <div id="formOk"></div>
       </form>
     </div>
   </div>
@@ -141,6 +148,16 @@
     <div class="modal-counter-bar">
       <span class="modal-counter" id="galleryCounter"></span>
     </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="statusModal" hidden>
+  <div class="modal-dialog status-dialog" role="alertdialog" aria-modal="true" aria-labelledby="statusTitle" aria-describedby="statusText">
+    <div class="status-icon" id="statusIcon" aria-hidden="true"></div>
+    <h3 id="statusTitle"></h3>
+    <p id="statusText"></p>
+    <a id="statusLink" class="status-link" hidden></a>
+    <button type="button" class="btn" id="statusClose"></button>
   </div>
 </div>
 
