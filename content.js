@@ -17,7 +17,7 @@ window.SITE_CONTENT = {
     phoneHref: "tel:+36308787226",
     email: "adriahaus70@gmail.com",
     navHrefs: ["#rolunk", "#kapcsolat"],
-    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-hasznositas", "#ingatlan-felujitas", "#ingatlan-eladas"],
+    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-felujitas", "#ingatlan-eladas"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
       { gradient: "linear-gradient(160deg,#3B5245,#7FA98C)", size: "210 m²", price: "395 000 €" },
@@ -28,7 +28,6 @@ window.SITE_CONTENT = {
     ],
     services: [
       { emoji: "🏠", id: "ingatlan-ertikesites" },
-      { emoji: "🔑", id: "ingatlan-hasznositas" },
       { emoji: "🛠️", id: "ingatlan-felujitas",
         gallery: ["felujitas-1.jpg", "felujitas-2.jpg", "felujitas-3.jpg", "felujitas-4.jpg"] },
       { emoji: "🏷️", id: "ingatlan-eladas" }
@@ -61,9 +60,9 @@ window.SITE_CONTENT = {
       nav: ["Rólunk", "Kapcsolat"],
       hero: {
         title: "Horvátországi ingatlanok közvetítése",
-        ctaServices: ["Ingatlan értékesítés", "Ingatlanok hasznosítása", "Felújítás / Karbantartás", "Eladnám az ingatlanom"]
+        ctaServices: ["Ingatlan értékesítés", "Felújítás / Karbantartás", "Eladnám/Bérbeadnám az ingatlanom"]
       },
-      servicesHeading: { title: "Aktuális szolgáltatásaink", note: "4 fő szolgáltatási terület" },
+      servicesHeading: { title: "Aktuális szolgáltatásaink", note: "3 fő szolgáltatási terület" },
       services: [
         { title: "Ingatlan értékesítés",
           description: "Végigkísérjük Önt a hirdetéstől az adásvételi szerződésig, teljes körű jogi és piaci támogatással.",
@@ -75,14 +74,6 @@ window.SITE_CONTENT = {
             "Közművek átírása"
           ]
         },
-        { title: "Ingatlanok hasznosítása",
-          description: "Bérbeadás és hosszú távú hasznosítás megszervezése, hogy ingatlana a lehető legjobban megtérüljön.",
-          details: "A Senj székhelyű ügynökség ingatlanokat keres portfóliója bővítésére. Több mint 10 éves horvátországi tapasztalatával egyéni megoldásokat és támogatást kínál ingatlana bérbeadásához.",
-          items: [
-            "Marketing: Európa-szerte népszerűsítjük ingatlanját, gondoskodunk a hirdetésekről és a vendégekkel való kommunikációról.",
-            "Vendéggondozás: Teljes körű szolgáltatást nyújtunk a foglalástól a kijelentkezésig.",
-            "Ingatlankezelés: Egész évben havonta kétszer meglátogatjuk az ingatlant. A látogatást fotókkal igazoljuk, és ha bármilyen meghibásodást észlelünk, jelezzük, igény szerint szakember bevonásával javítjuk.",
-          ] },
         { title: "Ingatlanok felújítása / karbantartás",
           description: "Amennyiben felújítani szeretné ingatlanát, mi segítünk! Rijeka és Zadar között, beleértve a közeli szigeteket is (Pag, Krk, Rab). 15 éves tapasztalattal rendelkező vállalkozás vállal.",
           items: [
@@ -93,14 +84,13 @@ window.SITE_CONTENT = {
             "Riasztó, kamerák telepítése",
             "Klímaberendezések telepítése, karbantartása, tisztítása"
           ] },
-        { title: "Eladnám az ingatlanomat",
-          description: "Segítünk gyorsan és a legjobb piaci áron értékesíteni horvátországi ingatlanát megbízható vevőkörben.",
-          details: "Segítünk horvátországi ingatlana sikeres értékesítésében a piaci érték meghatározásától a vevők felkutatásán át az adásvétel lebonyolításáig.",
+        { title: "Eladnám/Bérbeadnám az ingatlanomat",
+          description: "Bérbeadás és hosszú távú hasznosítás megszervezése, hogy ingatlana a lehető legjobban megtérüljön.",
+          details: "A Senj székhelyű ügynökség ingatlanokat keres portfóliója bővítésére. Több mint 10 éves horvátországi tapasztalatával egyéni megoldásokat és támogatást kínál ingatlana bérbeadásához.",
           items: [
-            "Ingatlan piaci értékének felmérése",
-            "Ingatlan hirdetése és marketingje",
-            "Érdeklődők és megtekintések szervezése",
-            "Segítség az adásvétel lebonyolításában"
+            "Marketing: Európa-szerte népszerűsítjük ingatlanját, gondoskodunk a hirdetésekről és a vendégekkel való kommunikációról.",
+            "Vendéggondozás: Teljes körű szolgáltatást nyújtunk a foglalástól a kijelentkezésig.",
+            "Ingatlankezelés: Egész évben havonta kétszer meglátogatjuk az ingatlant. A látogatást fotókkal igazoljuk, és ha bármilyen meghibásodást észlelünk, jelezzük, igény szerint szakember bevonásával javítjuk."
           ]
         }
       ],
@@ -190,9 +180,9 @@ window.SITE_CONTENT = {
       nav: ["About us", "Contact"],
       hero: {
         title: "Real estate brokerage in Croatia",
-        ctaServices: ["Property Sales", "Property Management", "Renovation & Maintenance", "I want to sell my property"]
+        ctaServices: ["Property Sales", "Renovation & Maintenance", "I want to sell my property"]
       },
-      servicesHeading: { title: "Our current services", note: "4 core service areas" },
+      servicesHeading: { title: "Our current services", note: "3 core service areas" },
       services: [
         { title: "Property sales",
           description: "We guide you from listing to signing the contract, with full legal and market support.",
@@ -204,14 +194,6 @@ window.SITE_CONTENT = {
             "Utility account transfers"
           ]
         },
-        { title: "Property management",
-          description: "We arrange renting and long-term management so your property performs at its best.",
-          details: "A Senj-based agency is looking for properties to expand its portfolio. With over 10 years of experience in Croatia, it offers tailored solutions and support for renting out your property.",
-          items: [
-            "Marketing: We promote your property across Europe, taking care of listings and guest communication.",
-            "Guest care: We provide a full service from booking to check-out.",
-            "Property management: We visit the property twice a month all year round. Each visit is verified with photos, and if any defects are found, we report them and have them repaired by a professional upon request."
-          ] },
         { title: "Renovation & maintenance",
           description: "If you want to renovate your property, we are here to help! Between Rijeka and Zadar, including the nearby islands (Pag, Krk, Rab). A company with 15 years of experience offers:",
           items: [
@@ -223,13 +205,12 @@ window.SITE_CONTENT = {
             "Air conditioner installation, maintenance and cleaning"
           ] },
         { title: "Sell your property",
-          description: "We help you sell your property in Croatia quickly and at the best market price to trusted buyers.",
-          details: "We help you sell your property in Croatia, from assessing its market value and marketing it to finding buyers and completing the transaction.",
+          description: "Organization of rentals and long-term utilization to ensure the best possible return on your property.",
+          details: "Based in Senj, our agency is looking for properties to expand its portfolio. With over 10 years of experience in Croatia, we offer customized solutions and support for renting out your property.",
           items: [
-            "Property market valuation",
-            "Property listing and marketing",
-            "Buyer enquiries and viewing arrangements",
-            "Assistance with completing the sale"
+            "Marketing: We promote your property across Europe, handle listings, and manage guest communication.",
+            "Guest care: We provide comprehensive service from booking to check-out.",
+            "Property management: We visit the property twice a month throughout the year. We verify visits with photos, report any faults detected, and repair them with professional assistance upon request."
           ]
         }
       ],
@@ -319,9 +300,9 @@ window.SITE_CONTENT = {
       nav: ["Über uns", "Kontakt"],
       hero: {
         title: "Immobilienvermittlung in Kroatien",
-        ctaServices: ["Immobilienverkauf", "Immobilienverwaltung", "Renovierung & Instandhaltung", "Ich möchte meine Immobilie verkaufen"]
+        ctaServices: ["Immobilienverkauf", "Renovierung & Instandhaltung", "Ich möchte meine Immobilie verkaufen"]
       },
-      servicesHeading: { title: "Unsere Dienstleistungen", note: "4 Hauptleistungsbereiche" },
+      servicesHeading: { title: "Unsere Dienstleistungen", note: "3 Hauptleistungsbereiche" },
       services: [
         { title: "Immobilienverkauf",
           description: "Wir begleiten Sie von der Inserierung bis zum Kaufvertrag mit vollständiger rechtlicher und marktbezogener Unterstützung.",
@@ -333,14 +314,6 @@ window.SITE_CONTENT = {
             "Ummeldung der Versorgungsverträge"
           ]
         },
-        { title: "Immobilienverwaltung",
-          description: "Vermietung und langfristige Verwaltung, damit Ihre Immobilie den maximalen Ertrag erzielt.",
-          details: "Die in Senj ansässige Agentur sucht Immobilien zur Erweiterung ihres Portfolios. Mit mehr als 10 Jahren Erfahrung in Kroatien bietet sie individuelle Lösungen und Unterstützung bei der Vermietung Ihrer Immobilie.",
-          items: [
-            "Marketing: Wir vermarkten Ihre Immobilie europaweit, kümmern uns um Inserate und die Kommunikation mit Gästen.",
-            "Gästebetreuung: Wir bieten einen Komplettservice von der Buchung bis zum Check-out.",
-            "Immobilienverwaltung: Wir besuchen die Immobilie das ganze Jahr über zweimal im Monat. Die Besuche werden mit Fotos dokumentiert, und bei eventuellen Mängeln informieren wir Sie und veranlassen auf Wunsch die Reparatur durch einen Fachmann."
-          ] },
         { title: "Renovierung & Instandhaltung",
           description: "Wenn Sie Ihre Immobilie renovieren möchten, helfen wir Ihnen gerne! Zwischen Rijeka und Zadar, einschließlich der nahegelegenen Inseln (Pag, Krk, Rab). Ein Unternehmen mit 15 Jahren Erfahrung übernimmt:",
           items: [
@@ -352,13 +325,12 @@ window.SITE_CONTENT = {
             "Installation, Wartung und Reinigung von Klimaanlagen"
           ] },
         { title: "Immobilie verkaufen",
-          description: "Wir unterstützen Sie beim schnellen und erfolgreichen Verkauf Ihrer Immobilie in Kroatien.",
-          details: "Wir unterstützen Sie beim Verkauf Ihrer Immobilie in Kroatien – von der Ermittlung des Marktwerts und der Vermarktung bis zur Käufersuche und zum Abschluss des Verkaufs.",
+          description: "Organisation von Vermietung und langfristiger Nutzung, damit sich Ihre Immobilie optimal rentiert.",
+          details: "Die Agentur mit Sitz in Senj sucht Immobilien zur Erweiterung ihres Portfolios. Mit über 10 Jahren Erfahrung in Kroatien bieten wir individuelle Lösungen und Unterstützung bei der Vermietung Ihrer Immobilie.",
           items: [
-            "Ermittlung des Immobilienmarktwerts",
-            "Immobilieninserat und Vermarktung",
-            "Bearbeitung von Kaufanfragen und Organisation von Besichtigungen",
-            "Unterstützung beim Abschluss des Verkaufs"
+            "Marketing: Wir vermarkten Ihre Immobilie europaweit, kümmern uns um Inserate und die Gästekommunikation.",
+            "Gästebetreuung: Wir bieten einen umfassenden Service von der Buchung bis zum Check-out.",
+            "Immobilienverwaltung: Wir besuchen das Objekt das ganze Jahr über zweimal monatlich. Die Besuche werden mit Fotos dokumentiert, eventuelle Mängel werden gemeldet und auf Wunsch mit fachlicher Unterstützung behoben."
           ]
         }
       ],
@@ -448,9 +420,9 @@ window.SITE_CONTENT = {
       nav: ["O nama", "Kontakt"],
       hero: {
         title: "Posredovanje u prometu nekretninama u Hrvatskoj",
-        ctaServices: ["Prodaja nekretnina", "Upravljanje nekretninama", "Renovacija i održavanje", "Želim prodati svoju nekretninu"]
+        ctaServices: ["Prodaja nekretnina", "Renovacija i održavanje", "Želim prodati svoju nekretninu"]
       },
-      servicesHeading: { title: "Naše usluge", note: "4 glavna područja rada" },
+      servicesHeading: { title: "Naše usluge", note: "3 glavna područja rada" },
       services: [
         { title: "Prodaja nekretnina",
           description: "Vodimo vas kroz cijeli proces, od oglašavanja do potpisivanja kupoprodajnog ugovora, uz punu pravnu podršku.",
@@ -462,14 +434,6 @@ window.SITE_CONTENT = {
             "Prijenos režija"
           ]
         },
-        { title: "Upravljanje nekretninama",
-          description: "Organizacija iznajmljivanja i dugoročnog održavanja kako bi vaša nekretnina ostvarila najbolji povrat.",
-          details: "Agencija sa sjedištem u Senju traži nekretnine radi proširenja svog portfelja. S više od 10 godina iskustva u Hrvatskoj nudi individualna rješenja i podršku pri iznajmljivanju vaše nekretnine.",
-          items: [
-            "Marketing: Promoviramo vašu nekretninu diljem Europe, brinemo se o oglasima i komunikaciji s gostima.",
-            "Briga o gostima: Pružamo potpunu uslugu od rezervacije do odjave.",
-            "Upravljanje nekretninom: Tijekom cijele godine posjećujemo nekretninu dvaput mjesečno. Svaki posjet potvrđujemo fotografijama, a u slučaju bilo kakvih kvarova obavještavamo vas i prema želji ih popravljamo uz angažman stručnjaka."
-          ] },
         { title: "Renovacija i održavanje",
           description: "Ako želite renovirati svoju nekretninu, mi vam pomažemo! Između Rijeke i Zadra, uključujući obližnje otoke (Pag, Krk, Rab). Tvrtka s 15 godina iskustva preuzima:",
           items: [
@@ -481,13 +445,12 @@ window.SITE_CONTENT = {
             "Ugradnja, održavanje i čišćenje klima uređaja"
           ] },
         { title: "Prodaja vaše nekretnine",
-          description: "Pomažemo vam u brzoj i uspješnoj prodaji nekretnine u Hrvatskoj po najboljoj cijeni.",
-          details: "Pomažemo vam u prodaji vaše nekretnine u Hrvatskoj, od procjene tržišne vrijednosti i oglašavanja do pronalaska kupaca i završetka prodaje.",
+          description: "Organizacija najma i dugoročnog korištenja kako bi vaša nekretnina ostvarila što bolji povrat ulaganja.",
+          details: "Agencija sa sjedištem u Senju traži nekretnine radi proširenja svog portfelja. S više od 10 godina iskustva u Hrvatskoj nudimo individualna rješenja i podršku pri iznajmljivanju vaše nekretnine.",
           items: [
-            "Procjena tržišne vrijednosti nekretnine",
-            "Oglas i promocija nekretnine",
-            "Upiti kupaca i organizacija razgledavanja",
-            "Pomoć pri realizaciji kupoprodaje"
+            "Marketing: Promoviramo vašu nekretninu diljem Europe, brinemo se o oglasima i komunikaciji s gostima.",
+            "Briga o gostima: Pružamo uslugu od A do Ž, od rezervacije do odjave.",
+            "Upravljanje nekretninom: Tijekom cijele godine obilazimo nekretninu dvaput mjesečno. Posjet dokazujemo fotografijama, a u slučaju bilo kakvog kvara obavještavamo vas i prema dogovoru otklanjamo uz angažman stručne osobe."
           ]
         }
       ],
@@ -577,9 +540,9 @@ window.SITE_CONTENT = {
       nav: ["O nás", "Kontakt"],
       hero: {
         title: "Zprostředkování nemovitostí v Chorvatsku",
-        ctaServices: ["Prodej nemovitostí", "Správa nemovitostí", "Renovace a údržba", "Chci prodat svou nemovitost"]
+        ctaServices: ["Prodej nemovitostí", "Renovace a údržba", "Chci prodat svou nemovitost"]
       },
-      servicesHeading: { title: "Naše aktuální služby", note: "4 hlavní oblasti služeb" },
+      servicesHeading: { title: "Naše aktuální služby", note: "3 hlavní oblasti služeb" },
       services: [
         { title: "Prodej nemovitostí",
           description: "Provedeme vás od inzerce až po podpis smlouvy, s kompletní právní a tržní podporou.",
@@ -591,14 +554,6 @@ window.SITE_CONTENT = {
             "Přepis odběrných míst energií a služeb"
           ]
         },
-        { title: "Správa nemovitostí",
-          description: "Zajistíme pronájem a dlouhodobou správu, aby se vaše nemovitost co nejlépe zhodnotila.",
-          details: "Agentura se sídlem v Senji hledá nemovitosti pro rozšíření svého portfolia. S více než 10letými zkušenostmi v Chorvatsku nabízí individuální řešení a podporu při pronájmu vaší nemovitosti.",
-          items: [
-            "Marketing: Propagujeme vaši nemovitost po celé Evropě, staráme se o inzeráty a komunikaci s hosty.",
-            "Péče o hosty: Poskytujeme kompletní služby od rezervace až po odhlášení.",
-            "Správa nemovitosti: Po celý rok navštěvujeme nemovitost dvakrát měsíčně. Každou návštěvu dokládáme fotografiemi, a pokud zjistíme jakoukoliv závadu, nahlásíme ji a na přání zajistíme opravu odborníkem."
-          ] },
         { title: "Renovace a údržba",
           description: "Pokud chcete zrenovovat svou nemovitost, rádi vám pomůžeme! Mezi Rijekou a Zadarem, včetně blízkých ostrovů (Pag, Krk, Rab). Firma s 15letými zkušenostmi provádí:",
           items: [
@@ -610,13 +565,12 @@ window.SITE_CONTENT = {
             "Instalace, údržba a čištění klimatizací"
           ] },
         { title: "Chci prodat nemovitost",
-          description: "Pomůžeme vám s rychlým a výhodným prodejem vaší nemovitosti v Chorvatsku.",
-          details: "Pomůžeme vám s prodejem nemovitosti v Chorvatsku – od stanovení tržní hodnoty a propagace až po hledání kupců a dokončení prodeje.",
+          description: "Organizace pronájmu a dlouhodobého využití tak, aby vám nemovitost přinesla co nejlepší návratnost.",
+          details: "Agentura se sídlem v Senji hledá nemovitosti k rozšíření svého portfolia. S více než 10 lety zkušeností v Chorvatsku nabízíme individuální řešení a podporu při pronájmu vaší nemovitosti.",
           items: [
-            "Stanovení tržní hodnoty nemovitosti",
-            "Inzerce a propagace nemovitosti",
-            "Komunikace se zájemci a organizace prohlídek",
-            "Pomoc s dokončením prodeje"
+            "Marketing: Propagujeme vaši nemovitost po celé Evropě, staráme se o inzerci a komunikaci s hosty.",
+            "Péče o hosty: Poskytujeme komplexní služby od rezervace až po odhlášení.",
+            "Správa nemovitosti: Celoročně navštěvujeme nemovitost dvakrát měsíčně. Návštěvy dokládáme fotografiemi, v případě zjištění závady vás informujeme a na přání zajistíme opravu odborníkem."
           ]
         }
       ],
@@ -680,7 +634,7 @@ window.SITE_CONTENT = {
             "Koupě nemovitosti",
             "Prodej nemovitosti",
             "Správa / Pronájem nemovitosti",
-            "Renovace a údržba",
+            "Renovacija i održavanje",
             "Jiný dotaz"
           ]
         },
@@ -706,9 +660,9 @@ window.SITE_CONTENT = {
       nav: ["O nás", "Kontakt"],
       hero: {
         title: "Sprostredkovanie nehnuteľností v Chorvátsku",
-        ctaServices: ["Predaj nehnuteľností", "Správa nehnuteľností", "Renovácia a údržba", "Chcem predať svoju nehnuteľnosť"]
+        ctaServices: ["Predaj nehnuteľností", "Renovácia a údržba", "Chcem predať svoju nehnuteľnosť"]
       },
-      servicesHeading: { title: "Naše aktuálne služby", note: "4 hlavné oblasti služieb" },
+      servicesHeading: { title: "Naše aktuálne služby", note: "3 hlavné oblasti služieb" },
       services: [
         { title: "Predaj nehnuteľností",
           description: "Sprevádzame vás od inzercie až po podpis zmluvy, s kompletnou právnou a trhovou podporou.",
@@ -720,14 +674,6 @@ window.SITE_CONTENT = {
             "Prepis odberateľov energií a služieb"
           ]
         },
-        { title: "Správa nehnuteľností",
-          description: "Zabezpečíme prenájom a dlhodobú správu, aby sa vaša nehnuteľnosť čo najlepšie zhodnotila.",
-          details: "Agentúra so sídlom v Senji hľadá nehnuteľnosti na rozšírenie svojho portfólia. S viac ako 10-ročnými skúsenosťami v Chorvátsku ponúka individuálne riešenia a podporu pri prenájme vašej nehnuteľnosti.",
-          items: [
-            "Marketing: Propagujeme vašu nehnuteľnosť v celej Európe, staráme sa o inzeráty a komunikáciu s hosťami.",
-            "Starostlivosť o hostí: Poskytujeme kompletné služby od rezervácie až po odhlásenie.",
-            "Správa nehnuteľnosti: Počas celého roka navštevujeme nehnuteľnosť dvakrát mesačne. Každú návštevu doložíme fotografiami, a ak zistíme akúkoľvek poruchu, nahlásime ju a na želanie zabezpečíme opravu odborníkom."
-          ] },
         { title: "Renovácia a údržba",
           description: "Ak chcete zrenovovať svoju nehnuteľnosť, radi vám pomôžeme! Medzi Rijekou a Zadarom, vrátane blízkych ostrovov (Pag, Krk, Rab). Firma s 15-ročnými skúsenosťami vykonáva:",
           items: [
@@ -739,13 +685,12 @@ window.SITE_CONTENT = {
             "Inštalácia, údržba a čistenie klimatizácií"
           ] },
         { title: "Chcem predať nehnuteľnosť",
-          description: "Pomôžeme vám s rýchlym a výhodným predajom vašej nehnuteľnosti v Chorvátsku.",
-          details: "Pomôžeme vám s predajom nehnuteľnosti v Chorvátsku – od stanovenia trhovej hodnoty a propagácie až po hľadanie kupujúcich a dokončenie predaja.",
+          description: "Organizácia prenájmu a dlhodobého využitia tak, aby vám nehnuteľnosť priniesla čo najlepšiu návratnosť.",
+          details: "Agentúra so sídlom v Senji hľadá nehnuteľnosti na rozšírenie svojho portfólia. S viac ako 10-ročnými skúsenosťami v Chorvátsku ponúkame individuálne riešenia a podporu pri prenájme vašej nehnuteľnosti.",
           items: [
-            "Stanovenie trhovej hodnoty nehnuteľnosti",
-            "Inzerovanie a propagácia nehnuteľnosti",
-            "Komunikácia so záujemcami a organizácia obhliadok",
-            "Pomoc s dokončením predaja"
+            "Marketing: Propagujeme vašu nehnuteľnosť po celej Európe, staráme sa o inzerciu a komunikáciu s hosťami.",
+            "Starostlivosť o hostí: Poskytujeme komplexné služby od rezervácie až po odhlásenie.",
+            "Správa nehnuteľnosti: Celoročne navštevujeme nehnuteľnosť dvakrát mesačne. Návštevy dokladáme fotografiami, v prípade zistenia akejkoľvek poruchy vás informujeme a na želanie zabezpečíme opravu odborníkom."
           ]
         }
       ],
@@ -762,11 +707,11 @@ window.SITE_CONTENT = {
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranské pobrežie", title: "Apartmán s výhľadom na more", rooms: "3 spálne + obývačka", priceUnit: "/ noc",
           description: "Vkusne zariadený, plne vybavený apartmán pre 4–6 osôb, 400 m od mora.",
-          details: "V Zakose pri Sveti Juraj je možné rezervovať vkusne zariadený apartmán s výhľadom na more pre 4–6 osôb. Pobrežie s pláží je vzdialené asi 400 m, upravená pláž asi 1,5 km, preto je vhodný aj pre rodiny s malými deťmi.\n\nPre ďalšie informácie nás neváhajte kontaktovať.",
+          details: "V Zakose pri Svetom Jurajovi je možné rezervovať vkusne zariadený apartmán s výhľadom na more pre 4–6 osôb. Pobrežie s pláží je vzdialené asi 400 m, upravená pláž asi 1,5 km, preto je vhodný aj pre rodiny s malými deťmi.\n\nPre ďalšie informácie nás neváhajte kontaktovať.",
           items: [
             "Výhľad na more, plne vybavené: wifi, klimatizácia, možnosť prania, posteľná bielizeň, uteráky",
             "3 spálne + obývačka, vhodné pre 4–6 osôb",
-            "More a pláž asi 400 m, upravená pláž asi 1,5 km – vhodné aj pre rodiny s malými deťmi",
+            "More a pláž asi 400 m, upravená pláž asi 1,5 km – vhodné aj pre rodiny s deťmi",
             "Obchody, reštaurácie a detské ihrisko v blízkosti",
             "Cena (leto): základná cena 100 €/noc pre 4 osoby, každá ďalšia osoba +10 €/noc, vrátane dane",
             "3-dňový výlet na jeseň a na jar: doprava a ubytovanie len za 50 000 HUF! Zvláštne zľavy pre páry a rodiny.",
@@ -778,11 +723,11 @@ window.SITE_CONTENT = {
           ] },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Štúdio apartmán", rooms: "1 spálňa", priceUnit: "/ mesiac",
           description: "Kompaktný, zariadený apartmán blízko pobrežnej promenády, ideálny pre páry alebo jednotlivcov." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dom so záhradou", rooms: "3 spálne", priceUnit: "/ mesiac",
-          description: "Priestranný rodinný dom so záhradou v pokojnom prostredí, na dlhodobý prenájom." }
+        { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dom so zahradou", rooms: "3 spálne", priceUnit: "/ mesiac",
+          description: "Priestranný rodinný dom so zahradou v pokojnom prostredí, na dlhodobý prenájom." }
       ],
       about: {
-        title: "Viac ako 10 rokov sprostredkujeme nehnuteľnosti na chorvátskom pobřeží",
+        title: "Viac ako 10 rokov sprostredkujeme nehnuteľnosti na chorvátskom pobreží",
         intro: "Vďaka miestnym právnym a trhovým znalostiam a partnerskej sieti v Chorvátsku sprevádzame klientov od výberu až po zápis vlastníckeho práva.",
         stats: [
           { value: "10+", label: "rokov skúseností" },
@@ -791,7 +736,7 @@ window.SITE_CONTENT = {
       },
       contact: {
         title: "Kontakt",
-        text: "Máte otázku, alebo by ste chceli predať svoju nehnuteľnosť v Chorvátsku? Napíšte nám, zavolajte, alebo vyplňte formulár.",
+        text: "Máte otázku, alebo by ste chceli predať svoju nehnuteľnosť v Chorvátsku? Napíšte nám, zavolajte, nebo vyplňte formulář.",
         phoneLabel: "Telefón",
         emailLabel: "E-mail",
         bullets: [
@@ -809,7 +754,7 @@ window.SITE_CONTENT = {
             "Kúpa nehnuteľnosti",
             "Predaj nehnuteľnosti",
             "Správa / Prenájom nehnuteľnosti",
-            "Renovácia a údržba",
+            "Renovacija i održavanje",
             "Iný dopyt"
           ]
         },
@@ -818,7 +763,7 @@ window.SITE_CONTENT = {
         successMessage: "Ďakujeme! Náš kolega vás bude čoskoro kontaktovať.",
         errorMessage: "Pri odosielaní správy sa vyskytla chyba. Skúste to prosím znova alebo nám napíšte na:",
         successTitle: "Ďakujeme!",
-        errorTitle: "Správu sa nepodarilo odoslať",
+        errorTitle: "Správu sa nepodařilo odoslať",
         closeLabel: "OK",
         validation: {
           required: "Toto pole je povinné.",
