@@ -84,13 +84,17 @@ window.SITE_CONTENT = {
             "Riasztó, kamerák telepítése",
             "Klímaberendezések telepítése, karbantartása, tisztítása"
           ] },
-        { title: "Eladnám/Bérbeadnám az ingatlanomat",
-          description: "Bérbeadás és hosszú távú hasznosítás megszervezése, hogy ingatlana a lehető legjobban megtérüljön.",
-          details: "A Senj székhelyű ügynökség ingatlanokat keres portfóliója bővítésére. Több mint 10 éves horvátországi tapasztalatával egyéni megoldásokat és támogatást kínál ingatlana bérbeadásához.",
+        {
+          title: "Eladnám vagy bérbeadnám az ingatlanomat",
+          description: "Segítünk gyorsan és a legjobb piaci áron értékesíteni, illetve hosszú távon hasznosítani horvátországi ingatlanát megbízható vevő- és vendégkörben.",
+          details: "A Senj székhelyű ügynökség ingatlanokat keres portfóliója bővítésére. Több mint 10 éves horvátországi tapasztalatunkkal teljes körű támogatást nyújtunk a piaci érték meghatározásától és a hirdetéstől kezdve a vevők felkutatásán, a bérbeadáson át egészen az adásvétel lebonyolításáig és az ingatlankezelésig.",
           items: [
-            "Marketing: Európa-szerte népszerűsítjük ingatlanját, gondoskodunk a hirdetésekről és a vendégekkel való kommunikációról.",
-            "Vendéggondozás: Teljes körű szolgáltatást nyújtunk a foglalástól a kijelentkezésig.",
-            "Ingatlankezelés: Egész évben havonta kétszer meglátogatjuk az ingatlant. A látogatást fotókkal igazoljuk, és ha bármilyen meghibásodást észlelünk, jelezzük, igény szerint szakember bevonásával javítjuk."
+            "Ingatlan piaci értékének felmérése és árazás",
+            "Ingatlan hirdetése és célzott marketingje Európa-szerte",
+            "Érdeklődők, megtekintések és a vendégkommunikáció teljes körű szervezése",
+            "Vendéggondozás: teljes körű szolgáltatás a foglalástól a kijelentkezésig",
+            "Ingatlankezelés: egész évben havonta kétszeri ellenőrzés fotós igazolással, hibajelzéssel és szakember általi javítással",
+            "Segítség az adásvétel vagy bérbeadás zökkenőmentes lebonyolításában"
           ]
         }
       ],
@@ -204,13 +208,17 @@ window.SITE_CONTENT = {
             "Alarm and camera installation",
             "Air conditioner installation, maintenance and cleaning"
           ] },
-        { title: "Sell your property",
-          description: "Organization of rentals and long-term utilization to ensure the best possible return on your property.",
-          details: "Based in Senj, our agency is looking for properties to expand its portfolio. With over 10 years of experience in Croatia, we offer customized solutions and support for renting out your property.",
+        {
+          title: "Sell or rent out my property",
+          description: "We help you quickly and at the best market price to sell or long-term utilize your property in Croatia among a trusted buyer and guest network.",
+          details: "Based in Senj, our agency is looking for properties to expand its portfolio. With over 10 years of experience in Croatia, we provide comprehensive support from determining market value and advertising to finding buyers, renting out, completing the transaction, and property management.",
           items: [
-            "Marketing: We promote your property across Europe, handle listings, and manage guest communication.",
-            "Guest care: We provide comprehensive service from booking to check-out.",
-            "Property management: We visit the property twice a month throughout the year. We verify visits with photos, report any faults detected, and repair them with professional assistance upon request."
+            "Property market valuation and pricing",
+            "Property listing and targeted marketing across Europe",
+            "Full organization of viewings, inquiries, and guest communication",
+            "Guest care: comprehensive service from booking to check-out",
+            "Property management: bi-monthly inspections throughout the year with photo verification, fault reporting, and professional repairs",
+            "Assistance with the smooth completion of the sale or rental"
           ]
         }
       ],
@@ -324,13 +332,17 @@ window.SITE_CONTENT = {
             "Installation von Alarmanlagen und Kameras",
             "Installation, Wartung und Reinigung von Klimaanlagen"
           ] },
-        { title: "Immobilie verkaufen",
-          description: "Organisation von Vermietung und langfristiger Nutzung, damit sich Ihre Immobilie optimal rentiert.",
-          details: "Die Agentur mit Sitz in Senj sucht Immobilien zur Erweiterung ihres Portfolios. Mit über 10 Jahren Erfahrung in Kroatien bieten wir individuelle Lösungen und Unterstützung bei der Vermietung Ihrer Immobilie.",
+        {
+          title: "Meine Immobilie verkaufen oder vermieten",
+          description: "Wir helfen Ihnen, Ihre Immobilie in Kroatien schnell und zum besten Marktpreis zu verkaufen oder langfristig zu nutzen – mit einem zuverlässigen Käufer- und Gästeয়েs,reis.",
+          details: "Die Agentur mit Sitz in Senj sucht Immobilien zur Erweiterung ihres Portfolios. Mit über 10 Jahren Erfahrung in Kroatien bieten wir umfassende Unterstützung von der Marktwertermittlung und Vermarktung über die Käufersuche und Vermietung bis hin zum erfolgreichen Abschluss und zur Immobilienverwaltung.",
           items: [
-            "Marketing: Wir vermarkten Ihre Immobilie europaweit, kümmern uns um Inserate und die Gästekommunikation.",
-            "Gästebetreuung: Wir bieten einen umfassenden Service von der Buchung bis zum Check-out.",
-            "Immobilienverwaltung: Wir besuchen das Objekt das ganze Jahr über zweimal monatlich. Die Besuche werden mit Fotos dokumentiert, eventuelle Mängel werden gemeldet und auf Wunsch mit fachlicher Unterstützung behoben."
+            "Marktwertermittlung und Preisfestsetzung der Immobilie",
+            "Immobilieninserat und zielgerichtetes Marketing europaweit",
+            "Vollständige Organisation von Besichtigungen, Anfragen und Gästekommunikation",
+            "Gästebetreuung: Rundum-Service von der Buchung bis zum Check-out",
+            "Immobilienverwaltung: Ganzjährig zweimal monatlich Inspektionen mit Fotodokumentation, Mängelmeldung und fachgerechter Instandsetzung",
+            "Unterstützung beim reibungslosen Abschluss des Verkaufs oder der Vermietung"
           ]
         }
       ],
@@ -444,13 +456,17 @@ window.SITE_CONTENT = {
             "Ugradnja alarma i kamera",
             "Ugradnja, održavanje i čišćenje klima uređaja"
           ] },
-        { title: "Prodaja vaše nekretnine",
-          description: "Organizacija najma i dugoročnog korištenja kako bi vaša nekretnina ostvarila što bolji povrat ulaganja.",
-          details: "Agencija sa sjedištem u Senju traži nekretnine radi proširenja svog portfelja. S više od 10 godina iskustva u Hrvatskoj nudimo individualna rješenja i podršku pri iznajmljivanju vaše nekretnine.",
+        {
+          title: "Želim prodati ili iznajmiti svoju nekretninu",
+          description: "Pomažemo vam u brzoj i uspješnoj prodaji ili dugoročnom korištenju vaše nekretnine u Hrvatskoj po najboljoj cijeni uz pouzdan krug kupaca i gostiju.",
+          details: "Agencija sa sjedištem u Senju traži nekretnine radi proširenja svog portfelja. S više od 10 godina iskustva u Hrvatskoj pružamo cjelovitu podršku od utvrđivanja tržišne vrijednosti i oglašavanja do pronalaženja kupaca, najma, realizacije prodaje i upravljanja nekretninom.",
           items: [
-            "Marketing: Promoviramo vašu nekretninu diljem Europe, brinemo se o oglasima i komunikaciji s gostima.",
-            "Briga o gostima: Pružamo uslugu od A do Ž, od rezervacije do odjave.",
-            "Upravljanje nekretninom: Tijekom cijele godine obilazimo nekretninu dvaput mjesečno. Posjet dokazujemo fotografijama, a u slučaju bilo kakvog kvara obavještavamo vas i prema dogovoru otklanjamo uz angažman stručne osobe."
+            "Procjena tržišne vrijednosti nekretnine i određivanje cijene",
+            "Oglašavanje i ciljani marketing nekretnine diljem Europe",
+            "Kompletna organizacija razgledavanja, upita i komunikacije s gostima",
+            "Briga o gostima: usluga od A do Ž, od rezervacije do odjave",
+            "Upravljanje nekretninom: dvaput mjesečno tijekom cijele godine uz foto-dokaz, dojavu kvarova i stručni popravak",
+            "Pomoć pri nesmetanoj realizaciji prodaje ili najma"
           ]
         }
       ],
@@ -564,13 +580,17 @@ window.SITE_CONTENT = {
             "Instalace alarmů a kamer",
             "Instalace, údržba a čištění klimatizací"
           ] },
-        { title: "Chci prodat nemovitost",
-          description: "Organizace pronájmu a dlouhodobého využití tak, aby vám nemovitost přinesla co nejlepší návratnost.",
-          details: "Agentura se sídlem v Senji hledá nemovitosti k rozšíření svého portfolia. S více než 10 lety zkušeností v Chorvatsku nabízíme individuální řešení a podporu při pronájmu vaší nemovitosti.",
+        {
+          title: "Chci prodat nebo pronajmout nemovitost",
+          description: "Pomůžeme vám rychle a za nejlepší tržní cenu prodat nebo dlouhodobě využít vaši nemovitost v Chorvatsku v rámci spolehlivé sítě kupujících a hostů.",
+          details: "Agentura se sídlem v Senji hledá nemovitosti k rozšíření svého portfolia. S více než 10 lety zkušeností v Chorvatsku poskytujeme komplexní podporu od stanovení tržní hodnoty a inzerce až po hledání kupců, pronájem, dokončení obchodu a správu nemovitosti.",
           items: [
-            "Marketing: Propagujeme vaši nemovitost po celé Evropě, staráme se o inzerci a komunikaci s hosty.",
-            "Péče o hosty: Poskytujeme komplexní služby od rezervace až po odhlášení.",
-            "Správa nemovitosti: Celoročně navštěvujeme nemovitost dvakrát měsíčně. Návštěvy dokládáme fotografiemi, v případě zjištění závady vás informujeme a na přání zajistíme opravu odborníkem."
+            "Odhad tržní hodnoty nemovitosti a stanovení ceny",
+            "Inzerce a cílený marketing nemovitosti po celé Evropě",
+            "Kompletní organizace prohlídek, dotazů a komunikace s hosty",
+            "Péče o hosty: komplexní služby od rezervace až po odhlášení",
+            "Správa nemovitosti: celoročně dvakrát měsíčně kontroly s fotodokumentací, hlášením závad a odbornou opravou",
+            "Asistence při hladkém dokončení prodeje nebo pronájmu"
           ]
         }
       ],
@@ -684,13 +704,17 @@ window.SITE_CONTENT = {
             "Inštalácia alarmov a kamier",
             "Inštalácia, údržba a čistenie klimatizácií"
           ] },
-        { title: "Chcem predať nehnuteľnosť",
-          description: "Organizácia prenájmu a dlhodobého využitia tak, aby vám nehnuteľnosť priniesla čo najlepšiu návratnosť.",
-          details: "Agentúra so sídlom v Senji hľadá nehnuteľnosti na rozšírenie svojho portfólia. S viac ako 10-ročnými skúsenosťami v Chorvátsku ponúkame individuálne riešenia a podporu pri prenájme vašej nehnuteľnosti.",
+        {
+          title: "Chcem predať alebo prenajať nehnuteľnosť",
+          description: "Pomôžeme vám rýchlo a za najlepšiu trhovú cenu predať alebo dlhodobo využiť vašu nehnuteľnosť v Chorvátsku v rámci spoľahlivej siete kupujúcich a hostí.",
+          details: "Agentúra so sídlom v Senji hľadá nehnuteľnosti na rozšírenie svojho portfólia. S viac ako 10-ročnými skúsenosťami v Chorvátsku poskytujeme komplexnú podporu od stanovenia trhovej hodnoty a inzercie až po hľadanie kupujúcich, prenájom, dokončenie obchodu a správu nehnuteľnosti.",
           items: [
-            "Marketing: Propagujeme vašu nehnuteľnosť po celej Európe, staráme sa o inzerciu a komunikáciu s hosťami.",
-            "Starostlivosť o hostí: Poskytujeme komplexné služby od rezervácie až po odhlásenie.",
-            "Správa nehnuteľnosti: Celoročne navštevujeme nehnuteľnosť dvakrát mesačne. Návštevy dokladáme fotografiami, v prípade zistenia akejkoľvek poruchy vás informujeme a na želanie zabezpečíme opravu odborníkom."
+            "Odhad trhovej hodnoty nehnuteľnosti a stanovenie ceny",
+            "Inzercia a cielený marketing nehnuteľnosti po celej Európe",
+            "Kompletná organizácia obhliadok, dopytov a komunikácie s hosťami",
+            "Starostlivosť o hostí: komplexné služby od rezervácie až po odhlásenie",
+            "Správa nehnuteľnosti: celoročne dvakrát mesačne kontroly s fotodokumentáciou, hlásením porúch a odbornou opravou",
+            "Asistencia pri hladkom dokončení predaja alebo prenájmu"
           ]
         }
       ],
