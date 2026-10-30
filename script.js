@@ -179,7 +179,6 @@
         $('brand').innerHTML = '<img src="logo-mark.svg" alt="" class="brand-mark">' +
             '<span class="brand-text">' +
             '<span class="brand-name">' + S.brand.name + '</span>' +
-            '<em>' + S.brand.accent + '</em>' +
             '</span>';
 
         var navList = $('navList');
@@ -199,40 +198,42 @@
         $('heroTitle').textContent = T.hero.title;
         $('heroText').textContent = T.hero.text || '';
 
-        // Hero gombok: csak a megfelelő szekcióhoz görgetnek, galériát nem nyitnak
+        // Hero gombok: az #ingatlan- hivatkozásúak popupot nyitnak, a többi odagörget
         var heroActions = $('heroActions');
         clear(heroActions);
         T.hero.ctaServices.forEach(function (btnText, i) {
-            var a = document.createElement('a');
-            a.href = S.heroHrefs[i] || '#ingatlanok';
+            var href = S.heroHrefs[i] || '#';
+            var svc = T.services[i];
+            var shared = S.services[i] || {};
+            var opensPopup = svc && /^#ingatlan-/.test(href);
 
-            a.addEventListener('click', function (e) {
-                var target = document.querySelector(a.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                }
-            });
+            var a = document.createElement('a');
+            a.href = href;
             a.className = i === 0 ? 'btn btn-primary' : 'btn btn-secondary';
             a.textContent = btnText;
+
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (opensPopup) {
+                    openGallery(shared.gallery || [], svc.title, svc.items, svc.details || svc.description);
+                } else {
+                    var target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+
             heroActions.appendChild(a);
         });
 
         // Szolgáltatások
-        $('propTitle').textContent = T.servicesHeading.title;
-        $('propNote').textContent = T.servicesHeading.note;
-        var grid = $('propertyGrid');
-        clear(grid);
         T.services.forEach(function (svc, i) {
             var shared = S.services[i] || {};
             var card = document.createElement('div');
             card.id = shared.id || ('service-' + i);
             card.className = 'card service-card reveal';
             card.innerHTML =
-                '<div class="service-emoji" aria-hidden="true">' + shared.emoji + '</div>' +
                 '<h3>' + svc.title + '</h3>' +
                 '<p>' + svc.description + '</p>';
 
@@ -258,10 +259,9 @@
                 }
             });
 
-            grid.appendChild(card);
         });
 
-        // Eladó ingatlanok (hamarosan, példa értékekkel)
+        /* Eladó ingatlanok (egyelőre kikapcsolva)
         $('exTitle').textContent = T.examplesHeading.title;
         $('exNote').textContent = T.examplesHeading.note;
         var exGrid = $('exampleGrid');
@@ -284,20 +284,22 @@
                 '<span class="soon-badge">' + soonLabel + '</span>';
             exGrid.appendChild(card);
         });
+        */
 
-        // Kiadó ingatlanok: az első valódi (kattintható galéria), a többi hamarosan (példa)
+        // Bérelhető ingatlanok: az első valódi (kattintható galéria), a többi hamarosan (példa)
         $('rentTitle').textContent = T.rentalsHeading.title;
         $('rentNote').textContent = T.rentalsHeading.note;
         var rentGrid = $('rentalGrid');
         clear(rentGrid);
+        var programData = null;
         T.rentals.forEach(function (p, i) {
             var shared = S.rentals[i] || {};
             var soon = !!shared.soon;
-            var card = document.createElement(soon ? 'div' : 'button');
-            if (!soon) {
-                card.type = 'button';
+            if (!programData && p.program) {
+                programData = p.program;
             }
-            card.className = 'card reveal property-card' + (soon ? ' is-soon' : '');
+            var card = document.createElement('div');
+            card.className = 'card reveal property-card' + (soon ? ' is-soon' : ' is-clickable');
             card.innerHTML =
                 '<div class="card-photo"><img src="' + shared.image + '" alt="' + p.title + '"><span>' + p.location + '</span></div>' +
                 '<div class="card-body">' +
@@ -310,13 +312,36 @@
                 '</div>' +
                 '</div>' +
                 (soon ? '<span class="soon-badge">' + soonLabel + '</span>' : '');
+
             if (!soon) {
-                card.addEventListener('click', function () {
+                var openRental = function () {
                     openGallery(shared.gallery || [shared.image], p.title, p.items, p.details, true);
+                };
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('aria-label', p.title);
+                card.addEventListener('click', openRental);
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openRental();
+                    }
                 });
             }
             rentGrid.appendChild(card);
         });
+
+        // Programajánló gomb az ingatlanok felett
+        var programBtn = $('programBtn');
+        if (programData) {
+            programBtn.textContent = programData.label;
+            programBtn.hidden = false;
+            programBtn.onclick = function () {
+                openGallery([], programData.label, programData.items, '');
+            };
+        } else {
+            programBtn.hidden = true;
+        }
 
         // Rólunk
         $('aboutTitle').textContent = T.about.title;

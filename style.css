@@ -1604,3 +1604,70 @@ label.is-required::after {
         transition: none;
     }
 }
+
+/* Kattintható bérelhető ingatlan kártya */
+.property-card.is-clickable {
+    cursor: pointer;
+}
+
+.property-card.is-clickable:focus-visible {
+    outline: 2px solid var(--sea);
+    outline-offset: 2px;
+}
+
+/* Szekció fejléc: cím + megjegyzés balra, gomb jobbra */
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    margin-bottom: 40px;
+}
+
+.section-head h2 {
+    font-size: 1.9rem;
+}
+
+.section-head-text span {
+    display: block;
+    margin-top: 6px;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+}
+
+.program-btn {
+    flex: 0 0 auto;
+}
+
+.program-btn[hidden] {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    .section-head {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    .program-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.program-btn:hover,
+.program-btn:focus-visible {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #16323A;
+}
+
+.program-btn:hover,
+.program-btn:focus-visible {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #16323A;
+}

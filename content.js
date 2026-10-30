@@ -12,12 +12,13 @@ window.SITE_CONTENT = {
   ],
 
   shared: {
-    brand: { name: "Adria Haus", accent: "Tengerparti ingatlanok" },
+    brand: { name: "Adria Haus" },
     phone: "+36 30 878 7226",
     phoneHref: "tel:+36308787226",
     email: "adriahaus70@gmail.com",
     navHrefs: ["#rolunk", "#kapcsolat"],
-    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-felujitas", "#ingatlan-eladas"],
+    // 1-2: popup (az #ingatlan- kezdetű linkek), 3: űrlap, 4: kiadó ingatlanok
+    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-felujitas", "#kapcsolat", "#kiado-ingatlanok"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
       { gradient: "linear-gradient(160deg,#3B5245,#7FA98C)", size: "210 m²", price: "395 000 €" },
@@ -27,10 +28,9 @@ window.SITE_CONTENT = {
       { gradient: "linear-gradient(160deg,#3E7C8C,#DCA95F)", size: "93 m²",  price: "62 000 €" }
     ],
     services: [
-      { emoji: "🏠", id: "ingatlan-ertikesites" },
-      { emoji: "🛠️", id: "ingatlan-felujitas",
-        gallery: ["felujitas-1.jpg", "felujitas-2.jpg", "felujitas-3.jpg", "felujitas-4.jpg"] },
-      { emoji: "🏷️", id: "ingatlan-eladas" }
+      { id: "ingatlan-ertikesites" },
+      { id: "ingatlan-felujitas",
+        gallery: ["felujitas-1.jpg", "felujitas-2.jpg", "felujitas-3.jpg", "felujitas-4.jpg", "felujitas-5.jpeg", "felujitas-6.jpeg", "felujitas-7.jpeg", "felujitas-8.jpeg"] }
     ],
     examples: [
       { image: "property-apartment.svg", size: "68 m²",  price: "185 000 €",
@@ -60,9 +60,8 @@ window.SITE_CONTENT = {
       nav: ["Rólunk", "Kapcsolat"],
       hero: {
         title: "Horvátországi ingatlanok közvetítése",
-        ctaServices: ["Ingatlan értékesítés", "Felújítás / Karbantartás", "Eladnám/Bérbeadnám az ingatlanom"]
+        ctaServices: ["Ingatlan értékesítés", "Felújítás / Karbantartás", "Eladnám / bérbeadnám az ingatlanom", "Bérelhető ingatlanok"]
       },
-      servicesHeading: { title: "Aktuális szolgáltatásaink", note: "3 fő szolgáltatási terület" },
       services: [
         { title: "Ingatlan értékesítés",
           description: "Végigkísérjük Önt a hirdetéstől az adásvételi szerződésig, teljes körű jogi és piaci támogatással.",
@@ -83,20 +82,7 @@ window.SITE_CONTENT = {
             "Nyílászárók cseréje, teljes helyreállítással",
             "Riasztó, kamerák telepítése",
             "Klímaberendezések telepítése, karbantartása, tisztítása"
-          ] },
-        {
-          title: "Eladnám vagy bérbeadnám az ingatlanomat",
-          description: "Segítünk gyorsan és a legjobb piaci áron értékesíteni, illetve hosszú távon hasznosítani horvátországi ingatlanát megbízható vevő- és vendégkörben.",
-          details: "A Senj székhelyű ügynökség ingatlanokat keres portfóliója bővítésére. Több mint 10 éves horvátországi tapasztalatunkkal teljes körű támogatást nyújtunk a piaci érték meghatározásától és a hirdetéstől kezdve a vevők felkutatásán, a bérbeadáson át egészen az adásvétel lebonyolításáig és az ingatlankezelésig.",
-          items: [
-            "Ingatlan piaci értékének felmérése és árazás",
-            "Ingatlan hirdetése és célzott marketingje Európa-szerte",
-            "Érdeklődők, megtekintések és a vendégkommunikáció teljes körű szervezése",
-            "Vendéggondozás: teljes körű szolgáltatás a foglalástól a kijelentkezésig",
-            "Ingatlankezelés: egész évben havonta kétszeri ellenőrzés fotós igazolással, hibajelzéssel és szakember általi javítással",
-            "Segítség az adásvétel vagy bérbeadás zökkenőmentes lebonyolításában"
-          ]
-        }
+          ] }
       ],
       examplesHeading: { title: "Eladó ingatlanaink", note: "Hamarosan – a megjelenített értékek csak példák" },
       examples: [
@@ -107,7 +93,7 @@ window.SITE_CONTENT = {
         { location: "Split, Közép-Dalmácia", region: "Közép-Dalmácia", title: "Belvárosi kőház", rooms: "3 szint",
           description: "Történelmi óvárosi kőház, részlegesen felújítva, kiváló befektetési lehetőség rövid távú bérbeadásra." }
       ],
-      rentalsHeading: { title: "Kiadó ingatlanaink", note: "További ingatlanok hamarosan – a halványított kártyák értékei csak példák" },
+      rentalsHeading: { title: "Bérelhető ingatlanaink", note: "További ingatlanok hamarosan – a halványított kártyák értékei csak példák" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Adriai tengerpart", title: "Tengerre néző apartman", rooms: "3 hálószoba + nappali", priceUnit: "/ nap",
           description: "Igényesen berendezett, teljesen felszerelt apartman 4–6 főre, a vízparttól 400 m-re.",
@@ -117,14 +103,19 @@ window.SITE_CONTENT = {
             "3 hálószoba + nappali, 4–6 fő számára alkalmas",
             "Vízpart, strand kb. 400 m, kiépített strand kb. 1,5 km – kisgyerekes családoknak is alkalmas",
             "Boltok, éttermek, játszótér a közelben",
-            "Ár (nyári): alap 100 €/nap 4 főnek, minden további személy +10 €/nap, adóval együtt",
-            "Őszi és tavaszi 3 napos kirándulás: utazással, szállással mindössze 50 000 Ft-ért! Pároknak, családoknak egyedi kedvezmény.",
-            "Az ár tartalmazza a szállást és a kisbuszos utazás költségét; indulás Baranya, Somogy, Tolna megyékből és Budapestről, igény szerint háztól házig.",
-            "Zadar: Horvátország egyik legszebb és legismertebb városa, az ókori város az Adria kellős közepére épült.",
-            "Paklenica Nemzeti Park: a Velebit hegylánc tengeri oldalán, Zadartól kb. 30 km-re, sokszínű növény- és állatvilággal.",
-            "Kuterevo: menedékhely, ahol a mamájukat elvesztett barna medvebocsoknak minden gondoskodást megadnak.",
-            "Plitvicei-tavak: az erdős, szelíd völgyekben számtalan zuhatag ömlik alá, formájuk és magasságuk folyamatosan változik."
-          ] },
+            "Ár (nyári): alap 100 €/nap 4 főnek, minden további személy +10 €/nap, adóval együtt"
+          ],
+          program: {
+            label: "Programajánló",
+            items: [
+              "Őszi és tavaszi 3 napos kirándulás: utazással, szállással mindössze 50 000 Ft-ért! Pároknak, családoknak egyedi kedvezmény.",
+              "Az ár tartalmazza a szállást és a kisbuszos utazás költségét; indulás Baranya, Somogy, Tolna megyékből és Budapestről, igény szerint háztól házig.",
+              "Zadar: Horvátország egyik legszebb és legismertebb városa, az ókori város az Adria kellős közepére épült.",
+              "Paklenica Nemzeti Park: a Velebit hegylánc tengeri oldalán, Zadartól kb. 30 km-re, sokszínű növény- és állatvilággal.",
+              "Kuterevo: menedékhely, ahol a mamájukat elvesztett barna medvebocsoknak minden gondoskodást megadnak.",
+              "Plitvicei-tavak: az erdős, szelíd völgyekben számtalan zuhatag ömlik alá, formájuk és magasságuk folyamatosan változik."
+            ]
+          } },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Stúdió apartman", rooms: "1 hálószoba", priceUnit: "/ hó",
           description: "Kompakt, felszerelt apartman a tengerparti sétány közelében, pároknak vagy egyedülállóknak." },
         { location: "Krk, Kvarner", region: "Kvarner", title: "Családi ház kerttel", rooms: "3 hálószoba", priceUnit: "/ hó",
@@ -184,9 +175,8 @@ window.SITE_CONTENT = {
       nav: ["About us", "Contact"],
       hero: {
         title: "Real estate brokerage in Croatia",
-        ctaServices: ["Property Sales", "Renovation & Maintenance", "I want to sell my property"]
+        ctaServices: ["Property sales", "Renovation & maintenance", "Sell / rent out my property", "Rental properties"]
       },
-      servicesHeading: { title: "Our current services", note: "3 core service areas" },
       services: [
         { title: "Property sales",
           description: "We guide you from listing to signing the contract, with full legal and market support.",
@@ -207,20 +197,7 @@ window.SITE_CONTENT = {
             "Window and door replacement, with full restoration",
             "Alarm and camera installation",
             "Air conditioner installation, maintenance and cleaning"
-          ] },
-        {
-          title: "Sell or rent out my property",
-          description: "We help you quickly and at the best market price to sell or long-term utilize your property in Croatia among a trusted buyer and guest network.",
-          details: "Based in Senj, our agency is looking for properties to expand its portfolio. With over 10 years of experience in Croatia, we provide comprehensive support from determining market value and advertising to finding buyers, renting out, completing the transaction, and property management.",
-          items: [
-            "Property market valuation and pricing",
-            "Property listing and targeted marketing across Europe",
-            "Full organization of viewings, inquiries, and guest communication",
-            "Guest care: comprehensive service from booking to check-out",
-            "Property management: bi-monthly inspections throughout the year with photo verification, fault reporting, and professional repairs",
-            "Assistance with the smooth completion of the sale or rental"
-          ]
-        }
+          ] }
       ],
       examplesHeading: { title: "Properties for sale", note: "Coming soon – the values shown are examples only" },
       examples: [
@@ -231,7 +208,7 @@ window.SITE_CONTENT = {
         { location: "Split, Central Dalmatia", region: "Central Dalmatia", title: "Stone house in the city centre", rooms: "3 floors",
           description: "Historic old-town stone house, partly renovated, an excellent investment for short-term rentals." }
       ],
-      rentalsHeading: { title: "Properties for rent", note: "More properties coming soon – values on the darkened cards are examples only" },
+      rentalsHeading: { title: "Rental properties", note: "More properties coming soon – values on the darkened cards are examples only" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Adriatic coast", title: "Sea-view apartment", rooms: "3 bedrooms + living room", priceUnit: "/ night",
           description: "Tastefully furnished, fully equipped apartment for 4–6 guests, 400 m from the water.",
@@ -241,14 +218,19 @@ window.SITE_CONTENT = {
             "3 bedrooms + living room, suitable for 4–6 guests",
             "Waterfront and beach about 400 m, developed beach about 1.5 km – also suitable for families with small children",
             "Shops, restaurants and a playground nearby",
-            "Price (summer): base rate €100/night for 4 guests, each additional guest +€10/night, tax included",
-            "Autumn and spring 3-day trip: travel and accommodation for just 50,000 HUF! Special discounts for couples and families.",
-            "The price includes accommodation and minibus travel, departing from Baranya, Somogy and Tolna counties and Budapest; door-to-door on request.",
-            "Zadar: one of Croatia's most beautiful and best-known cities, an ancient town built in the middle of the Croatian Adriatic.",
-            "Paklenica National Park: on the sea side of the Velebit range, about 30 km from Zadar, home to a rich variety of plants and animals.",
-            "Kuterevo: a shelter where brown bear cubs that have lost their mothers receive full care.",
-            "Plitvice Lakes: in wooded, gentle valleys countless waterfalls cascade down, constantly changing in shape and height."
-          ] },
+            "Price (summer): base rate €100/night for 4 guests, each additional guest +€10/night, tax included"
+          ],
+          program: {
+            label: "Things to do",
+            items: [
+              "Autumn and spring 3-day trip: travel and accommodation for just 50,000 HUF! Special discounts for couples and families.",
+              "The price includes accommodation and minibus travel, departing from Baranya, Somogy and Tolna counties and Budapest; door-to-door on request.",
+              "Zadar: one of Croatia's most beautiful and best-known cities, an ancient town built in the middle of the Croatian Adriatic.",
+              "Paklenica National Park: on the sea side of the Velebit range, about 30 km from Zadar, home to a rich variety of plants and animals.",
+              "Kuterevo: a shelter where brown bear cubs that have lost their mothers receive full care.",
+              "Plitvice Lakes: in wooded, gentle valleys countless waterfalls cascade down, constantly changing in shape and height."
+            ]
+          } },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartment", rooms: "1 bedroom", priceUnit: "/ month",
           description: "Compact, furnished apartment near the seafront promenade, ideal for couples or singles." },
         { location: "Krk, Kvarner", region: "Kvarner", title: "Family house with garden", rooms: "3 bedrooms", priceUnit: "/ month",
@@ -308,9 +290,8 @@ window.SITE_CONTENT = {
       nav: ["Über uns", "Kontakt"],
       hero: {
         title: "Immobilienvermittlung in Kroatien",
-        ctaServices: ["Immobilienverkauf", "Renovierung & Instandhaltung", "Ich möchte meine Immobilie verkaufen"]
+        ctaServices: ["Immobilienverkauf", "Renovierung & Instandhaltung", "Meine Immobilie verkaufen / vermieten", "Mietobjekte"]
       },
-      servicesHeading: { title: "Unsere Dienstleistungen", note: "3 Hauptleistungsbereiche" },
       services: [
         { title: "Immobilienverkauf",
           description: "Wir begleiten Sie von der Inserierung bis zum Kaufvertrag mit vollständiger rechtlicher und marktbezogener Unterstützung.",
@@ -331,20 +312,7 @@ window.SITE_CONTENT = {
             "Austausch von Fenstern und Türen, mit vollständiger Wiederherstellung",
             "Installation von Alarmanlagen und Kameras",
             "Installation, Wartung und Reinigung von Klimaanlagen"
-          ] },
-        {
-          title: "Meine Immobilie verkaufen oder vermieten",
-          description: "Wir helfen Ihnen, Ihre Immobilie in Kroatien schnell und zum besten Marktpreis zu verkaufen oder langfristig zu nutzen – mit einem zuverlässigen Käufer- und Gästeয়েs,reis.",
-          details: "Die Agentur mit Sitz in Senj sucht Immobilien zur Erweiterung ihres Portfolios. Mit über 10 Jahren Erfahrung in Kroatien bieten wir umfassende Unterstützung von der Marktwertermittlung und Vermarktung über die Käufersuche und Vermietung bis hin zum erfolgreichen Abschluss und zur Immobilienverwaltung.",
-          items: [
-            "Marktwertermittlung und Preisfestsetzung der Immobilie",
-            "Immobilieninserat und zielgerichtetes Marketing europaweit",
-            "Vollständige Organisation von Besichtigungen, Anfragen und Gästekommunikation",
-            "Gästebetreuung: Rundum-Service von der Buchung bis zum Check-out",
-            "Immobilienverwaltung: Ganzjährig zweimal monatlich Inspektionen mit Fotodokumentation, Mängelmeldung und fachgerechter Instandsetzung",
-            "Unterstützung beim reibungslosen Abschluss des Verkaufs oder der Vermietung"
-          ]
-        }
+          ] }
       ],
       examplesHeading: { title: "Immobilien zum Verkauf", note: "Demnächst – die angezeigten Werte sind nur Beispiele" },
       examples: [
@@ -355,7 +323,7 @@ window.SITE_CONTENT = {
         { location: "Split, Mitteldalmatien", region: "Mitteldalmatien", title: "Steinhaus im Stadtzentrum", rooms: "3 Etagen",
           description: "Historisches Steinhaus in der Altstadt, teilweise renoviert, hervorragende Kapitalanlage für die Ferienvermietung." }
       ],
-      rentalsHeading: { title: "Immobilien zur Miete", note: "Weitere Objekte demnächst – die Werte auf den abgedunkelten Karten sind nur Beispiele" },
+      rentalsHeading: { title: "Mietobjekte", note: "Weitere Objekte demnächst – die Werte auf den abgedunkelten Karten sind nur Beispiele" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Adriaküste", title: "Apartment mit Meerblick", rooms: "3 Schlafzimmer + Wohnzimmer", priceUnit: "/ Nacht",
           description: "Geschmackvoll eingerichtetes, voll ausgestattetes Apartment für 4–6 Personen, 400 m vom Wasser.",
@@ -365,14 +333,19 @@ window.SITE_CONTENT = {
             "3 Schlafzimmer + Wohnzimmer, geeignet für 4–6 Personen",
             "Wasser und Strand ca. 400 m, ausgebauter Strand ca. 1,5 km – auch für Familien mit kleinen Kindern geeignet",
             "Geschäfte, Restaurants und Spielplatz in der Nähe",
-            "Preis (Sommer): Grundpreis 100 €/Nacht für 4 Personen, jede weitere Person +10 €/Nacht, inkl. Steuern",
-            "3-Tage-Reise im Herbst und Frühling: Anreise und Unterkunft für nur 50.000 HUF! Sonderrabatte für Paare und Familien.",
-            "Im Preis enthalten sind Unterkunft und Kleinbusfahrt ab den Komitaten Baranya, Somogy, Tolna und Budapest; auf Wunsch von Haus zu Haus.",
-            "Zadar: eine der schönsten und bekanntesten Städte Kroatiens, eine antike Stadt mitten an der kroatischen Adria.",
-            "Nationalpark Paklenica: an der Meerseite des Velebit-Gebirges, ca. 30 km von Zadar entfernt, mit vielfältiger Tier- und Pflanzenwelt.",
-            "Kuterevo: eine Auffangstation, in der Braunbärenjunge, die ihre Mutter verloren haben, rundum versorgt werden.",
-            "Plitvicer Seen: In bewaldeten, sanften Tälern stürzen unzählige Wasserfälle herab, deren Form und Höhe sich ständig verändern."
-          ] },
+            "Preis (Sommer): Grundpreis 100 €/Nacht für 4 Personen, jede weitere Person +10 €/Nacht, inkl. Steuern"
+          ],
+          program: {
+            label: "Ausflugstipps",
+            items: [
+              "3-Tage-Reise im Herbst und Frühling: Anreise und Unterkunft für nur 50.000 HUF! Sonderrabatte für Paare und Familien.",
+              "Im Preis enthalten sind Unterkunft und Kleinbusfahrt ab den Komitaten Baranya, Somogy, Tolna und Budapest; auf Wunsch von Haus zu Haus.",
+              "Zadar: eine der schönsten und bekanntesten Städte Kroatiens, eine antike Stadt mitten an der kroatischen Adria.",
+              "Nationalpark Paklenica: an der Meerseite des Velebit-Gebirges, ca. 30 km von Zadar entfernt, mit vielfältiger Tier- und Pflanzenwelt.",
+              "Kuterevo: eine Auffangstation, in der Braunbärenjunge, die ihre Mutter verloren haben, rundum versorgt werden.",
+              "Plitvicer Seen: In bewaldeten, sanften Tälern stürzen unzählige Wasserfälle herab, deren Form und Höhe sich ständig verändern."
+            ]
+          } },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Studio-Apartment", rooms: "1 Schlafzimmer", priceUnit: "/ Monat",
           description: "Kompaktes, möbliertes Apartment nahe der Strandpromenade, ideal für Paare oder Singles." },
         { location: "Krk, Kvarner", region: "Kvarner", title: "Familienhaus mit Garten", rooms: "3 Schlafzimmer", priceUnit: "/ Monat",
@@ -432,9 +405,8 @@ window.SITE_CONTENT = {
       nav: ["O nama", "Kontakt"],
       hero: {
         title: "Posredovanje u prometu nekretninama u Hrvatskoj",
-        ctaServices: ["Prodaja nekretnina", "Renovacija i održavanje", "Želim prodati svoju nekretninu"]
+        ctaServices: ["Prodaja nekretnina", "Renovacija i održavanje", "Želim prodati / iznajmiti nekretninu", "Nekretnine za iznajmljivanje"]
       },
-      servicesHeading: { title: "Naše usluge", note: "3 glavna područja rada" },
       services: [
         { title: "Prodaja nekretnina",
           description: "Vodimo vas kroz cijeli proces, od oglašavanja do potpisivanja kupoprodajnog ugovora, uz punu pravnu podršku.",
@@ -455,20 +427,7 @@ window.SITE_CONTENT = {
             "Zamjena stolarije, uz potpunu sanaciju",
             "Ugradnja alarma i kamera",
             "Ugradnja, održavanje i čišćenje klima uređaja"
-          ] },
-        {
-          title: "Želim prodati ili iznajmiti svoju nekretninu",
-          description: "Pomažemo vam u brzoj i uspješnoj prodaji ili dugoročnom korištenju vaše nekretnine u Hrvatskoj po najboljoj cijeni uz pouzdan krug kupaca i gostiju.",
-          details: "Agencija sa sjedištem u Senju traži nekretnine radi proširenja svog portfelja. S više od 10 godina iskustva u Hrvatskoj pružamo cjelovitu podršku od utvrđivanja tržišne vrijednosti i oglašavanja do pronalaženja kupaca, najma, realizacije prodaje i upravljanja nekretninom.",
-          items: [
-            "Procjena tržišne vrijednosti nekretnine i određivanje cijene",
-            "Oglašavanje i ciljani marketing nekretnine diljem Europe",
-            "Kompletna organizacija razgledavanja, upita i komunikacije s gostima",
-            "Briga o gostima: usluga od A do Ž, od rezervacije do odjave",
-            "Upravljanje nekretninom: dvaput mjesečno tijekom cijele godine uz foto-dokaz, dojavu kvarova i stručni popravak",
-            "Pomoć pri nesmetanoj realizaciji prodaje ili najma"
-          ]
-        }
+          ] }
       ],
       examplesHeading: { title: "Nekretnine na prodaju", note: "Uskoro – prikazane vrijednosti samo su primjeri" },
       examples: [
@@ -479,7 +438,7 @@ window.SITE_CONTENT = {
         { location: "Split, Srednja Dalmacija", region: "Srednja Dalmacija", title: "Kamena kuća u centru", rooms: "3 etaže",
           description: "Povijesna kamena kuća u staroj jezgri grada, djelomično renovirana, izvrsna prilika za turistički najam." }
       ],
-      rentalsHeading: { title: "Nekretnine za najam", note: "Uskoro još nekretnina – vrijednosti na zatamnjenim karticama samo su primjeri" },
+      rentalsHeading: { title: "Nekretnine za iznajmljivanje", note: "Uskoro još nekretnina – vrijednosti na zatamnjenim karticama samo su primjeri" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranska obala", title: "Apartman s pogledom na more", rooms: "3 spavaće sobe + dnevni boravak", priceUnit: "/ noć",
           description: "Ukusno uređen, potpuno opremljen apartman za 4–6 osoba, 400 m od mora.",
@@ -489,14 +448,19 @@ window.SITE_CONTENT = {
             "3 spavaće sobe + dnevni boravak, pogodno za 4–6 osoba",
             "More i plaža oko 400 m, uređena plaža oko 1,5 km – pogodno i za obitelji s malom djecom",
             "Trgovine, restorani i igralište u blizini",
-            "Cijena (ljeto): osnovna cijena 100 €/noć za 4 osobe, svaka dodatna osoba +10 €/noć, porez uključen",
-            "Trodnevni izlet na jesen i proljeće: prijevoz i smještaj samo za 50.000 HUF! Posebni popusti za parove i obitelji.",
-            "Cijena uključuje smještaj i prijevoz kombijem iz županija Baranya, Somogy, Tolna i iz Budimpešte; na zahtjev od vrata do vrata.",
-            "Zadar: jedan od najljepših i najpoznatijih hrvatskih gradova, antički grad usred hrvatskog Jadrana.",
-            "Nacionalni park Paklenica: na morskoj strani Velebita, oko 30 km od Zadra, s raznolikim biljnim i životinjskim svijetom.",
-            "Kuterevo: utočište u kojem se o medvjedićima koji su ostali bez majke brine s punom pažnjom.",
-            "Plitvička jezera: u šumovitim blagim dolinama slijevaju se brojni slapovi čiji se oblik i visina stalno mijenjaju."
-          ] },
+            "Cijena (ljeto): osnovna cijena 100 €/noć za 4 osobe, svaka dodatna osoba +10 €/noć, porez uključen"
+          ],
+          program: {
+            label: "Prijedlozi izleta",
+            items: [
+              "Trodnevni izlet na jesen i proljeće: prijevoz i smještaj samo za 50.000 HUF! Posebni popusti za parove i obitelji.",
+              "Cijena uključuje smještaj i prijevoz kombijem iz županija Baranya, Somogy, Tolna i iz Budimpešte; na zahtjev od vrata do vrata.",
+              "Zadar: jedan od najljepših i najpoznatijih hrvatskih gradova, antički grad usred hrvatskog Jadrana.",
+              "Nacionalni park Paklenica: na morskoj strani Velebita, oko 30 km od Zadra, s raznolikim biljnim i životinjskim svijetom.",
+              "Kuterevo: utočište u kojem se o medvjedićima koji su ostali bez majke brine s punom pažnjom.",
+              "Plitvička jezera: u šumovitim blagim dolinama slijevaju se brojni slapovi čiji se oblik i visina stalno mijenjaju."
+            ]
+          } },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartman", rooms: "1 spavaća soba", priceUnit: "/ mjesec",
           description: "Kompaktan, opremljen apartman blizu morske šetnice, idealan za parove ili samce." },
         { location: "Krk, Kvarner", region: "Kvarner", title: "Obiteljska kuća s vrtom", rooms: "3 spavaće sobe", priceUnit: "/ mjesec",
@@ -556,9 +520,8 @@ window.SITE_CONTENT = {
       nav: ["O nás", "Kontakt"],
       hero: {
         title: "Zprostředkování nemovitostí v Chorvatsku",
-        ctaServices: ["Prodej nemovitostí", "Renovace a údržba", "Chci prodat svou nemovitost"]
+        ctaServices: ["Prodej nemovitostí", "Renovace a údržba", "Chci prodat / pronajmout nemovitost", "Pronajímatelné nemovitosti"]
       },
-      servicesHeading: { title: "Naše aktuální služby", note: "3 hlavní oblasti služeb" },
       services: [
         { title: "Prodej nemovitostí",
           description: "Provedeme vás od inzerce až po podpis smlouvy, s kompletní právní a tržní podporou.",
@@ -579,20 +542,7 @@ window.SITE_CONTENT = {
             "Výměna oken a dveří, včetně kompletní opravy okolí",
             "Instalace alarmů a kamer",
             "Instalace, údržba a čištění klimatizací"
-          ] },
-        {
-          title: "Chci prodat nebo pronajmout nemovitost",
-          description: "Pomůžeme vám rychle a za nejlepší tržní cenu prodat nebo dlouhodobě využít vaši nemovitost v Chorvatsku v rámci spolehlivé sítě kupujících a hostů.",
-          details: "Agentura se sídlem v Senji hledá nemovitosti k rozšíření svého portfolia. S více než 10 lety zkušeností v Chorvatsku poskytujeme komplexní podporu od stanovení tržní hodnoty a inzerce až po hledání kupců, pronájem, dokončení obchodu a správu nemovitosti.",
-          items: [
-            "Odhad tržní hodnoty nemovitosti a stanovení ceny",
-            "Inzerce a cílený marketing nemovitosti po celé Evropě",
-            "Kompletní organizace prohlídek, dotazů a komunikace s hosty",
-            "Péče o hosty: komplexní služby od rezervace až po odhlášení",
-            "Správa nemovitosti: celoročně dvakrát měsíčně kontroly s fotodokumentací, hlášením závad a odbornou opravou",
-            "Asistence při hladkém dokončení prodeje nebo pronájmu"
-          ]
-        }
+          ] }
       ],
       examplesHeading: { title: "Nemovitosti k prodeji", note: "Již brzy – zobrazené hodnoty jsou pouze ukázkové" },
       examples: [
@@ -603,7 +553,7 @@ window.SITE_CONTENT = {
         { location: "Split, Střední Dalmácie", region: "Střední Dalmácie", title: "Kamenný dům v centru", rooms: "3 podlaží",
           description: "Historický kamenný dům ve starém městě, částečně zrekonstruovaný, skvělá investiční příležitost pro krátkodobý pronájem." }
       ],
-      rentalsHeading: { title: "Nemovitosti k pronájmu", note: "Další nemovitosti již brzy – hodnoty na ztmavených kartách jsou pouze ukázkové" },
+      rentalsHeading: { title: "Pronajímatelné nemovitosti", note: "Další nemovitosti již brzy – hodnoty na ztmavených kartách jsou pouze ukázkové" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranské pobřeží", title: "Apartmán s výhledem na moře", rooms: "3 ložnice + obývací pokoj", priceUnit: "/ noc",
           description: "Vkusně zařízený, plně vybavený apartmán pro 4–6 osob, 400 m od moře.",
@@ -613,14 +563,19 @@ window.SITE_CONTENT = {
             "3 ložnice + obývací pokoj, vhodné pro 4–6 osob",
             "Moře a pláž asi 400 m, upravená pláž asi 1,5 km – vhodné i pro rodiny s malými dětmi",
             "Obchody, restaurace a dětské hřiště v blízkosti",
-            "Cena (léto): základní cena 100 €/noc pro 4 osoby, každá další osoba +10 €/noc, včetně daně",
-            "3denní výlet na podzim a na jaře: doprava a ubytování jen za 50 000 HUF! Zvláštní slevy pro páry a rodiny.",
-            "Cena zahrnuje ubytování a dopravu minibusem z žup Baranya, Somogy, Tolna a z Budapešti; na přání od domu k domu.",
-            "Zadar: jedno z nejkrásnějších a nejznámějších chorvatských měst, antické město uprostřed chorvatského Jadranu.",
-            "Národní park Paklenica: na mořské straně pohoří Velebit, asi 30 km od Zadaru, s rozmanitou flórou a faunou.",
-            "Kuterevo: útulek, kde se medvíďatům, která přišla o matku, dostává plné péče.",
-            "Plitvická jezera: v zalesněných mírných údolích se řítí nespočet vodopádů, jejichž tvar a výška se neustále mění."
-          ] },
+            "Cena (léto): základní cena 100 €/noc pro 4 osoby, každá další osoba +10 €/noc, včetně daně"
+          ],
+          program: {
+            label: "Tipy na výlety",
+            items: [
+              "3denní výlet na podzim a na jaře: doprava a ubytování jen za 50 000 HUF! Zvláštní slevy pro páry a rodiny.",
+              "Cena zahrnuje ubytování a dopravu minibusem z žup Baranya, Somogy, Tolna a z Budapešti; na přání od domu k domu.",
+              "Zadar: jedno z nejkrásnějších a nejznámějších chorvatských měst, antické město uprostřed chorvatského Jadranu.",
+              "Národní park Paklenica: na mořské straně pohoří Velebit, asi 30 km od Zadaru, s rozmanitou flórou a faunou.",
+              "Kuterevo: útulek, kde se medvíďatům, která přišla o matku, dostává plné péče.",
+              "Plitvická jezera: v zalesněných mírných údolích se řítí nespočet vodopádů, jejichž tvar a výška se neustále mění."
+            ]
+          } },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartmán", rooms: "1 ložnice", priceUnit: "/ měsíc",
           description: "Kompaktní, zařízený apartmán poblíž pobřežní promenády, ideální pro páry nebo jednotlivce." },
         { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dům se zahradou", rooms: "3 ložnice", priceUnit: "/ měsíc",
@@ -654,7 +609,7 @@ window.SITE_CONTENT = {
             "Koupě nemovitosti",
             "Prodej nemovitosti",
             "Správa / Pronájem nemovitosti",
-            "Renovacija i održavanje",
+            "Renovace a údržba",
             "Jiný dotaz"
           ]
         },
@@ -680,9 +635,8 @@ window.SITE_CONTENT = {
       nav: ["O nás", "Kontakt"],
       hero: {
         title: "Sprostredkovanie nehnuteľností v Chorvátsku",
-        ctaServices: ["Predaj nehnuteľností", "Renovácia a údržba", "Chcem predať svoju nehnuteľnosť"]
+        ctaServices: ["Predaj nehnuteľností", "Renovácia a údržba", "Chcem predať / prenajať nehnuteľnosť", "Prenajímateľné nehnuteľnosti"]
       },
-      servicesHeading: { title: "Naše aktuálne služby", note: "3 hlavné oblasti služieb" },
       services: [
         { title: "Predaj nehnuteľností",
           description: "Sprevádzame vás od inzercie až po podpis zmluvy, s kompletnou právnou a trhovou podporou.",
@@ -703,20 +657,7 @@ window.SITE_CONTENT = {
             "Výmena okien a dverí, vrátane kompletnej opravy okolia",
             "Inštalácia alarmov a kamier",
             "Inštalácia, údržba a čistenie klimatizácií"
-          ] },
-        {
-          title: "Chcem predať alebo prenajať nehnuteľnosť",
-          description: "Pomôžeme vám rýchlo a za najlepšiu trhovú cenu predať alebo dlhodobo využiť vašu nehnuteľnosť v Chorvátsku v rámci spoľahlivej siete kupujúcich a hostí.",
-          details: "Agentúra so sídlom v Senji hľadá nehnuteľnosti na rozšírenie svojho portfólia. S viac ako 10-ročnými skúsenosťami v Chorvátsku poskytujeme komplexnú podporu od stanovenia trhovej hodnoty a inzercie až po hľadanie kupujúcich, prenájom, dokončenie obchodu a správu nehnuteľnosti.",
-          items: [
-            "Odhad trhovej hodnoty nehnuteľnosti a stanovenie ceny",
-            "Inzercia a cielený marketing nehnuteľnosti po celej Európe",
-            "Kompletná organizácia obhliadok, dopytov a komunikácie s hosťami",
-            "Starostlivosť o hostí: komplexné služby od rezervácie až po odhlásenie",
-            "Správa nehnuteľnosti: celoročne dvakrát mesačne kontroly s fotodokumentáciou, hlásením porúch a odbornou opravou",
-            "Asistencia pri hladkom dokončení predaja alebo prenájmu"
-          ]
-        }
+          ] }
       ],
       examplesHeading: { title: "Nehnuteľnosti na predaj", note: "Čoskoro – zobrazené hodnoty sú len ukážkové" },
       examples: [
@@ -727,7 +668,7 @@ window.SITE_CONTENT = {
         { location: "Split, Stredná Dalmácia", region: "Stredná Dalmácia", title: "Kamenný dom v centre", rooms: "3 podlažia",
           description: "Historický kamenný dom v starom meste, čiastočne zrekonštruovaný, skvelá investičná príležitosť na krátkodobý prenájom." }
       ],
-      rentalsHeading: { title: "Nehnuteľnosti na prenájom", note: "Ďalšie nehnuteľnosti čoskoro – hodnoty na stmavených kartách sú len ukážkové" },
+      rentalsHeading: { title: "Prenajímateľné nehnuteľnosti", note: "Ďalšie nehnuteľnosti čoskoro – hodnoty na stmavených kartách sú len ukážkové" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranské pobrežie", title: "Apartmán s výhľadom na more", rooms: "3 spálne + obývačka", priceUnit: "/ noc",
           description: "Vkusne zariadený, plne vybavený apartmán pre 4–6 osôb, 400 m od mora.",
@@ -737,14 +678,19 @@ window.SITE_CONTENT = {
             "3 spálne + obývačka, vhodné pre 4–6 osôb",
             "More a pláž asi 400 m, upravená pláž asi 1,5 km – vhodné aj pre rodiny s deťmi",
             "Obchody, reštaurácie a detské ihrisko v blízkosti",
-            "Cena (leto): základná cena 100 €/noc pre 4 osoby, každá ďalšia osoba +10 €/noc, vrátane dane",
-            "3-dňový výlet na jeseň a na jar: doprava a ubytovanie len za 50 000 HUF! Zvláštne zľavy pre páry a rodiny.",
-            "Cena zahŕňa ubytovanie a dopravu minibusom zo žúp Baranya, Somogy, Tolna a z Budapešti; na želanie od domu k domu.",
-            "Zadar: jedno z najkrajších a najznámejších chorvátskych miest, antické mesto uprostred chorvátskeho Jadranu.",
-            "Národný park Paklenica: na morskej strane pohoria Velebit, asi 30 km od Zadaru, s rozmanitou flórou a faunou.",
-            "Kuterevo: útulok, kde sa medvieďatám, ktoré prišli o matku, dostáva plná starostlivosť.",
-            "Plitvické jazerá: v zalesnených miernych dolinách sa rútia nespočetné vodopády, ktorých tvar a výška sa neustále menia."
-          ] },
+            "Cena (leto): základná cena 100 €/noc pre 4 osoby, každá ďalšia osoba +10 €/noc, vrátane dane"
+          ],
+          program: {
+            label: "Tipy na výlety",
+            items: [
+              "3-dňový výlet na jeseň a na jar: doprava a ubytovanie len za 50 000 HUF! Zvláštne zľavy pre páry a rodiny.",
+              "Cena zahŕňa ubytovanie a dopravu minibusom zo žúp Baranya, Somogy, Tolna a z Budapešti; na želanie od domu k domu.",
+              "Zadar: jedno z najkrajších a najznámejších chorvátskych miest, antické mesto uprostred chorvátskeho Jadranu.",
+              "Národný park Paklenica: na morskej strane pohoria Velebit, asi 30 km od Zadaru, s rozmanitou flórou a faunou.",
+              "Kuterevo: útulok, kde sa medvieďatám, ktoré prišli o matku, dostáva plná starostlivosť.",
+              "Plitvické jazerá: v zalesnených miernych dolinách sa rútia nespočetné vodopády, ktorých tvar a výška sa neustále menia."
+            ]
+          } },
         { location: "Rab, Kvarner", region: "Kvarner", title: "Štúdio apartmán", rooms: "1 spálňa", priceUnit: "/ mesiac",
           description: "Kompaktný, zariadený apartmán blízko pobrežnej promenády, ideálny pre páry alebo jednotlivcov." },
         { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dom so zahradou", rooms: "3 spálne", priceUnit: "/ mesiac",
@@ -760,7 +706,7 @@ window.SITE_CONTENT = {
       },
       contact: {
         title: "Kontakt",
-        text: "Máte otázku, alebo by ste chceli predať svoju nehnuteľnosť v Chorvátsku? Napíšte nám, zavolajte, nebo vyplňte formulář.",
+        text: "Máte otázku, alebo by ste chceli predať svoju nehnuteľnosť v Chorvátsku? Napíšte nám, zavolajte alebo vyplňte formulár.",
         phoneLabel: "Telefón",
         emailLabel: "E-mail",
         bullets: [
@@ -778,7 +724,7 @@ window.SITE_CONTENT = {
             "Kúpa nehnuteľnosti",
             "Predaj nehnuteľnosti",
             "Správa / Prenájom nehnuteľnosti",
-            "Renovacija i održavanje",
+            "Renovácia a údržba",
             "Iný dopyt"
           ]
         },
@@ -787,7 +733,7 @@ window.SITE_CONTENT = {
         successMessage: "Ďakujeme! Náš kolega vás bude čoskoro kontaktovať.",
         errorMessage: "Pri odosielaní správy sa vyskytla chyba. Skúste to prosím znova alebo nám napíšte na:",
         successTitle: "Ďakujeme!",
-        errorTitle: "Správu sa nepodařilo odoslať",
+        errorTitle: "Správu sa nepodarilo odoslať",
         closeLabel: "OK",
         validation: {
           required: "Toto pole je povinné.",
