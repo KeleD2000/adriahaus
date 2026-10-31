@@ -17,7 +17,6 @@ window.SITE_CONTENT = {
     phoneHref: "tel:+36308787226",
     email: "adriahaus70@gmail.com",
     navHrefs: ["#rolunk", "#kapcsolat"],
-    // 1-2: popup (az #ingatlan- kezdetű linkek), 3: űrlap, 4: kiadó ingatlanok
     heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-felujitas", "#kapcsolat", "#kiado-ingatlanok"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
@@ -50,10 +49,14 @@ window.SITE_CONTENT = {
         ] },
       { image: "lakas-2-13.jpeg", size: "", price: "100 €",
         gallery: [
-          "lakas-2-13.jpeg", "lakas-2-2.jpeg", "lakas-2-3.jpeg", "lakas-2-4.jpeg",
-          "lakas-2-5.jpeg", "lakas-2-6.jpeg", "lakas-2-7.jpeg", "lakas-2-8.jpeg",
-          "lakas-2-9.jpeg", "lakas-2-10.jpeg", "lakas-2-1.jpeg", "lakas-2-12.jpeg",
-          "lakas-2-11.jpeg"
+          "lakas-2-13.jpeg", "lakas-2-2.jpeg", "lakas-2-16.jpeg",
+          "lakas-2-17.jpeg","lakas-2-11.jpeg", "lakas-2-3.jpeg", "lakas-2-18.jpeg",
+          "lakas-2-4.jpeg", "lakas-2-5.jpeg", "lakas-2-15.jpeg",
+          "lakas-2-6.jpeg", "lakas-2-7.jpeg", "lakas-2-8.jpeg", "lakas-2-9.jpeg",
+          "lakas-2-10.jpeg", "lakas-2-1.jpeg", "lakas-2-12.jpeg", "lakas-2-14.jpeg",
+          "lakas-2-19.jpeg", "lakas-2-20.jpeg", "lakas-2-21.jpeg",
+          "lakas-2-22.jpeg", "lakas-2-23.jpeg", "lakas-2-24.jpeg", "lakas-2-25.jpeg",
+          "lakas-2-26.jpeg", "lakas-2-27.jpeg", "lakas-2-28.jpeg", "lakas-2-11.jpeg"
         ] }
     ]
   },
@@ -122,18 +125,24 @@ window.SITE_CONTENT = {
             ]
           } },
         { location: "Cesarica, Karlobag", region: "Adriai tengerpart", title: "Villa Alexa", rooms: "3 apartman, 5 hálószoba", priceUnit: "/ nap",
-          description: "Három légkondicionált apartman kerttel, terasszal és kilátással a tengerre, a Trodražica strand 7 perc sétára.",
-          details: "A cesaricai (Karlobag) Villa Alexa három apartmant kínál: két kétszobás (kb. 60 m²) és egy egyszobás (kb. 45 m²) egységet, összesen 5 hálószobával, akár 16 vendég számára. Minden apartman saját bejárattal és saját fürdőszobával rendelkezik, ágynemű és törölköző biztosított.\n\nKeressen bizalommal további információért.",
+          description: "Tengerparti béke és kényelem a Villa Alexa Cesaricában! Csendes, kristálytiszta vizű öböl a gondtalan nyaraláshoz.",
+          details: "Tengerparti béke és kényelem a Villa Alexa Cesaricában!\n\nSzeretne egy csendes, kristálytiszta vizű öbölben pihenni? A horvátországi Cesarica falujában fekvő apartmanházunk tökéletes választás a gondtalan nyaraláshoz!\n\nNálunk igazi otthonos, vendégszerető menedék várja (magyarul is beszélünk)!",
           items: [
-            "Három apartman: két kétszobás (kb. 60 m²) és egy egyszobás (kb. 45 m²), összesen akár 16 vendégnek",
-            "Légkondi, ingyenes wifi, lapostévé, társasjátékok",
-            "Felszerelt konyha: tűzhely, mikrohullámú sütő, hűtő, kávéfőző, vízforraló, kenyérpirító (a kétszobás apartmanokban sütő is)",
-            "Saját fürdőszoba zuhannyal, hajszárító, ágynemű és törölköző biztosított",
-            "Erkély/terasz, kert, kerti bútorok és étkezőhely; kilátás a tengerre és a hegyekre",
-            "Ingyenes, saját parkoló a háznál",
-            "Trodražica strand kb. 7 perc sétára",
-            "Kisállat kérésre hozható (felár lehetséges); az apartmanokban tilos a dohányzás"
-          ] }
+            "Tenger: A strand mindössze pár perc sétára van a háztól, így bármikor leugorhat csobbanni egyet!",
+            "Tengeri panoráma: Tágas, saját teraszok a csodás naplementékhez.",
+            "Felszerelt és patyolattiszta: Kényelmes szobák, okostévé és teljes konyha várja.",
+            "Klíma & szélsebes Wi-Fi: Hűvös szobák és stabil internet az egész házban.",
+            "Kerti grill: Privát zöldövezet a hangulatos esti sütögetésekhez.",
+            "Ingyenes zárt parkolás közvetlenül a szállásnál."
+          ],
+          program: {
+            label: "Minden a közelben",
+            items: [
+              "Boltok és éttermek 5 perc autóútra",
+              "Karlobag központja 7 km",
+              "Tökéletes kiindulópont az Északi-Velebit, a Plitvicei-tavak vagy a Pag-sziget felfedezéséhez is!"
+            ]
+          } }
       ],
       about: {
         title: "Több mint 10 éve közvetítünk a horvát tengerparton",
@@ -245,19 +254,25 @@ window.SITE_CONTENT = {
               "Plitvice Lakes: in wooded, gentle valleys countless waterfalls cascade down, constantly changing in shape and height."
             ]
           } },
-        { location: "Cesarica, Karlobag", region: "Adriatic coast", title: "Villa Alexa", rooms: "3 apartments, 5 bedrooms", priceUnit: "Request a quote",
-          description: "Three air-conditioned apartments with a garden, terrace and sea views, a 7-minute walk from Trodražica beach.",
-          details: "Villa Alexa in Cesarica (Karlobag) offers three apartments: two with two bedrooms (about 60 m²) and one with one bedroom (about 45 m²), with 5 bedrooms in total and room for up to 16 guests. Every apartment has a private entrance and a private bathroom, and bed linen and towels are provided.\n\nFeel free to contact us for more information.",
+        { location: "Cesarica, Karlobag", region: "Adriatic coast", title: "Villa Alexa", rooms: "3 apartments, 5 bedrooms", priceUnit: "/ night",
+          description: "Seaside peace and comfort at Villa Alexa in Cesarica! A quiet bay with crystal-clear water for a carefree vacation.",
+          details: "Seaside peace and comfort at Villa Alexa in Cesarica!\n\nWould you like to relax in a quiet bay with crystal-clear water? Our apartment house in the village of Cesarica, Croatia is the perfect choice for a carefree holiday!\n\nA truly welcoming, cozy retreat awaits you (we also speak Hungarian)!",
           items: [
-            "Three apartments: two with two bedrooms (about 60 m²) and one with one bedroom (about 45 m²), for up to 16 guests in total",
-            "Air conditioning, free Wi-Fi, flat-screen TV, board games",
-            "Equipped kitchen: stovetop, microwave, fridge, coffee machine, kettle, toaster (oven in the two-bedroom apartments)",
-            "Private bathroom with shower, hairdryer, bed linen and towels provided",
-            "Balcony/terrace, garden, outdoor furniture and dining area; sea and mountain views",
-            "Free private parking at the house",
-            "Trodražica beach about 7 minutes on foot",
-            "Pets allowed on request (charges may apply); non-smoking apartments"
-          ] }
+            "Sea: The beach is just a few minutes' walk from the house, so you can jump in for a swim anytime!",
+            "Sea panorama: Spacious private terraces for wonderful sunsets.",
+            "Fully equipped & spotlessly clean: Comfortable rooms, Smart TV, and a full kitchen await.",
+            "Aircon & High-speed Wi-Fi: Cool rooms and stable internet throughout the house.",
+            "Garden BBQ: Private green area for cozy evening barbecues.",
+            "Free enclosed parking directly at the accommodation."
+          ],
+          program: {
+            label: "Everything nearby",
+            items: [
+              "Shops and restaurants a 5-minute drive away",
+              "Karlobag town center 7 km",
+              "Perfect starting point for exploring Northern Velebit, Plitvice Lakes, or Pag Island!"
+            ]
+          } }
       ],
       about: {
         title: "Over 10 years of brokerage experience on the Croatian coast",
@@ -369,19 +384,25 @@ window.SITE_CONTENT = {
               "Plitvicer Seen: In bewaldeten, sanften Tälern stürzen unzählige Wasserfälle herab, deren Form und Höhe sich ständig verändern."
             ]
           } },
-        { location: "Cesarica, Karlobag", region: "Adriaküste", title: "Villa Alexa", rooms: "3 Apartments, 5 Schlafzimmer", priceUnit: "Angebot anfragen",
-          description: "Drei klimatisierte Apartments mit Garten, Terrasse und Meerblick, 7 Gehminuten vom Strand Trodražica.",
-          details: "Die Villa Alexa in Cesarica (Karlobag) bietet drei Apartments: zwei mit zwei Schlafzimmern (ca. 60 m²) und eines mit einem Schlafzimmer (ca. 45 m²), insgesamt 5 Schlafzimmer für bis zu 16 Gäste. Jedes Apartment hat einen eigenen Eingang und ein eigenes Bad; Bettwäsche und Handtücher werden gestellt.\n\nKontaktieren Sie uns gerne für weitere Informationen.",
+        { location: "Cesarica, Karlobag", region: "Adriaküste", title: "Villa Alexa", rooms: "3 Apartments, 5 Schlafzimmer", priceUnit: "/ Nacht",
+          description: "Ruhe und Komfort am Meer in der Villa Alexa in Cesarica! Eine ruhige Bucht mit kristallklarem Wasser für einen sorgenfreien Urlaub.",
+          details: "Ruhe und Komfort am Meer in der Villa Alexa in Cesarica!\n\nMöchten Sie sich in einer ruhigen Bucht mit kristallklarem Wasser erholen? Unser Apartmenthaus im Ort Cesarica ist die perfekte Wahl für einen unbeschwerten Urlaub!\n\nBei uns erwartet Sie ein gastfreundlicher Rückzugsort zum Wohlfühlen (wir sprechen auch Ungarisch)!",
           items: [
-            "Drei Apartments: zwei mit zwei Schlafzimmern (ca. 60 m²) und eines mit einem Schlafzimmer (ca. 45 m²), insgesamt für bis zu 16 Gäste",
-            "Klimaanlage, kostenloses WLAN, Flachbildfernseher, Gesellschaftsspiele",
-            "Ausgestattete Küche: Herd, Mikrowelle, Kühlschrank, Kaffeemaschine, Wasserkocher, Toaster (Backofen in den Apartments mit zwei Schlafzimmern)",
-            "Eigenes Bad mit Dusche, Haartrockner, Bettwäsche und Handtücher werden gestellt",
-            "Balkon/Terrasse, Garten, Gartenmöbel und Essbereich im Freien; Meer- und Bergblick",
-            "Kostenloser privater Parkplatz am Haus",
-            "Strand Trodražica ca. 7 Gehminuten entfernt",
-            "Haustiere auf Anfrage erlaubt (ggf. gegen Aufpreis); Nichtraucher-Apartments"
-          ] }
+            "Meer: Der Strand ist nur wenige Gehminuten vom Haus entfernt – ideal für eine spontane Erfrischung!",
+            "Meerblick: Großzügige private Terrassen für traumhafte Sonnenuntergänge.",
+            "Ausgestattet & blitzsauber: Gemütliche Zimmer, Smart-TV und eine voll ausgestattete Küche.",
+            "Klimaanlage & schnelles WLAN: Kühle Räume und stabiles Internet im gesamten Haus.",
+            "Gartengrill: Privater Grünbereich für gemütliche Grillabende.",
+            "Kostenfreier umzäunter Parkplatz direkt an der Unterkunft."
+          ],
+          program: {
+            label: "Alles in der Nähe",
+            items: [
+              "Geschäfte und Restaurants nur 5 Autominuten entfernt",
+              "Ortszentrum Karlobag 7 km",
+              "Perfekter Ausgangspunkt zur Erkundung des Nord-Velebit, der Plitvicer Seen oder der Insel Pag!"
+            ]
+          } }
       ],
       about: {
         title: "Seit über 10 Jahren vermitteln wir Immobilien an der kroatischen Küste",
@@ -493,19 +514,25 @@ window.SITE_CONTENT = {
               "Plitvička jezera: u šumovitim blagim dolinama slijevaju se brojni slapovi čiji se oblik i visina stalno mijenjaju."
             ]
           } },
-        { location: "Cesarica, Karlobag", region: "Jadranska obala", title: "Villa Alexa", rooms: "3 apartmana, 5 spavaćih soba", priceUnit: "Zatražite ponudu",
-          description: "Tri klimatizirana apartmana s vrtom, terasom i pogledom na more, plaža Trodražica udaljena je 7 minuta hoda.",
-          details: "Villa Alexa u Cesarici (Karlobag) nudi tri apartmana: dva s dvije spavaće sobe (oko 60 m²) i jedan s jednom spavaćom sobom (oko 45 m²), ukupno 5 spavaćih soba za do 16 gostiju. Svaki apartman ima zaseban ulaz i vlastitu kupaonicu, a posteljina i ručnici su osigurani.\n\nSlobodno nas kontaktirajte za više informacija.",
+        { location: "Cesarica, Karlobag", region: "Jadranska obala", title: "Villa Alexa", rooms: "3 apartmana, 5 spavaćih soba", priceUnit: "/ noć",
+          description: "Mir i udobnost uz obalu u Villi Alexa u Cesarici! Mirna uvala s kristalno čistim morem za bezbrižan odmor.",
+          details: "Mir i udobnost uz obalu u Villi Alexa u Cesarici!\n\nŽelite li se opustiti u mirnoj uvali s kristalno čistim morem? Naša kuća s apartmanima u Cesarici savršen je izbor za bezbrižan odmor!\n\nKod nas vas čeka ugodan dom pun dobrodošlice (govorimo i mađarski)!",
           items: [
-            "Tri apartmana: dva s dvije spavaće sobe (oko 60 m²) i jedan s jednom spavaćom sobom (oko 45 m²), ukupno do 16 gostiju",
-            "Klima, besplatni wifi, ravni TV, društvene igre",
-            "Opremljena kuhinja: štednjak, mikrovalna, hladnjak, aparat za kavu, kuhalo za vodu, toster (pećnica u apartmanima s dvije spavaće sobe)",
-            "Vlastita kupaonica s tušem, sušilo za kosu, posteljina i ručnici osigurani",
-            "Balkon/terasa, vrt, vrtni namještaj i prostor za blagovanje; pogled na more i planine",
-            "Besplatan privatni parking uz kuću",
-            "Plaža Trodražica oko 7 minuta hoda",
-            "Kućni ljubimci na zahtjev (moguća doplata); apartmani za nepušače"
-          ] }
+            "More: Plaža je udaljena svega nekoliko minuta hoda od kuće, tako da u bilo kojem trenutku možete skočiti na osvježenje!",
+            "Panorama na more: Prostrane privatne terase za prekrasne zalaske sunca.",
+            "Opremljeno i besprijekorno čisto: Udobne sobe, Smart TV i kompletna kuhinja.",
+            "Klima & brzi Wi-Fi: Ugodno rashlađene sobe i stabilan internet u cijeloj kući.",
+            "Roštilj u vrtu: Privatna zelena zona za ugodna večernja druženja uz roštilj.",
+            "Besplatan ograđeni parking neposredno uz objekt."
+          ],
+          program: {
+            label: "Sve u blizini",
+            items: [
+              "Trgovine i restorani na 5 minuta vožnje",
+              "Centar Karlobaga udaljen 7 km",
+              "Savršeno polazište za istraživanje Sjevernog Velebita, Plitvičkih jezera ili otoka Paga!"
+            ]
+          } }
       ],
       about: {
         title: "Više od 10 godina iskustva u posredovanju na hrvatskoj obali",
@@ -617,19 +644,25 @@ window.SITE_CONTENT = {
               "Plitvická jezera: v zalesněných mírných údolích se řítí nespočet vodopádů, jejichž tvar a výška se neustále mění."
             ]
           } },
-        { location: "Cesarica, Karlobag", region: "Jadranské pobřeží", title: "Villa Alexa", rooms: "3 apartmány, 5 ložnic", priceUnit: "Vyžádejte si nabídku",
-          description: "Tři klimatizované apartmány se zahradou, terasou a výhledem na moře, pláž Trodražica je 7 minut pěšky.",
-          details: "Villa Alexa v Cesarici (Karlobag) nabízí tři apartmány: dva se dvěma ložnicemi (asi 60 m²) a jeden s jednou ložnicí (asi 45 m²), celkem 5 ložnic pro až 16 hostů. Každý apartmán má vlastní vchod a vlastní koupelnu, ložní prádlo a ručníky jsou k dispozici.\n\nPro další informace nás neváhejte kontaktovat.",
+        { location: "Cesarica, Karlobag", region: "Jadranské pobřeží", title: "Villa Alexa", rooms: "3 apartmány, 5 ložnic", priceUnit: "/ noc",
+          description: "Pobřežní klid a pohodlí ve Villa Alexa v Cesarici! Klidná zátoka s průzračnou vodou pro bezstarostnou dovolenou.",
+          details: "Pobřežní klid a pohodlí ve Villa Alexa v Cesarici!\n\nChcete si odpočinout v klidné zátoce s krystalicky čistou vodou? Náš apartmánový dům v vesnici Cesarica je ideální volbou pro bezstarostnou dovolenou!\n\nU nás vás čeká opravdový útulný a pohostinný azyl (mluvíme také maďarsky)!",
           items: [
-            "Tři apartmány: dva se dvěma ložnicemi (asi 60 m²) a jeden s jednou ložnicí (asi 45 m²), celkem pro až 16 hostů",
-            "Klimatizace, wifi zdarma, plochá televize, společenské hry",
-            "Vybavená kuchyně: sporák, mikrovlnná trouba, lednice, kávovar, rychlovarná konvice, toustovač (trouba v apartmánech se dvěma ložnicemi)",
-            "Vlastní koupelna se sprchou, fén, ložní prádlo a ručníky k dispozici",
-            "Balkon/terasa, zahrada, zahradní nábytek a posezení venku; výhled na moře a hory",
-            "Bezplatné vlastní parkování u domu",
-            "Pláž Trodražica asi 7 minut pěšky",
-            "Domácí mazlíčci na vyžádání (možný příplatek); nekuřácké apartmány"
-          ] }
+            "Moře: Pláž je jen pár minut chůze od domu, takže si můžete jít kdykoliv zaplavat!",
+            "Panoráma moře: Prostorné soukromé terasy pro nádherné západy slunce.",
+            "Vybavené a čisté: Pohodlné pokoje, Smart TV a kompletní kuchyně.",
+            "Klimatizace & rychlá Wi-Fi: Chladné pokoje a stabilní internet v celém domě.",
+            "Zahrada s grilem: Soukromá zelená zóna pro příjemné večerní grilování.",
+            "Bezplatné oplocené parkování přímo u ubytování."
+          ],
+          program: {
+            label: "Vše v blízkosti",
+            items: [
+              "Obchody a restaurace 5 minut jízdy autem",
+              "Centrum města Karlobag 7 km",
+              "Skvělý výchozí bod pro objevování Severního Velebitu, Plitvických jezer nebo ostrova Pag!"
+            ]
+          } }
       ],
       about: {
         title: "Více než 10 let zprostředkováváme nemovitosti na chorvatském pobřeží",
@@ -741,19 +774,25 @@ window.SITE_CONTENT = {
               "Plitvické jazerá: v zalesnených miernych dolinách sa rútia nespočetné vodopády, ktorých tvar a výška sa neustále menia."
             ]
           } },
-        { location: "Cesarica, Karlobag", region: "Jadranské pobrežie", title: "Villa Alexa", rooms: "3 apartmány, 5 spální", priceUnit: "Vyžiadajte si ponuku",
-          description: "Tri klimatizované apartmány so záhradou, terasou a výhľadom na more, pláž Trodražica je 7 minút pešo.",
-          details: "Villa Alexa v Cesarici (Karlobag) ponúka tri apartmány: dva s dvoma spálňami (asi 60 m²) a jeden s jednou spálňou (asi 45 m²), spolu 5 spální pre až 16 hostí. Každý apartmán má vlastný vchod a vlastnú kúpeľňu, posteľná bielizeň a uteráky sú k dispozícii.\n\nPre ďalšie informácie nás neváhajte kontaktovať.",
+        { location: "Cesarica, Karlobag", region: "Jadranské pobrežie", title: "Villa Alexa", rooms: "3 apartmány, 5 spální", priceUnit: "/ noc",
+          description: "Pobrežný pokoj a pohodlie vo Villa Alexa v Cesarici! Tichá zátoka s krištáľovo čistou vodou pre bezstarostnú dovolenku.",
+          details: "Pobrežný pokoj a pohodlie vo Villa Alexa v Cesarici!\n\nChcete si oddýchnuť v tichej zátoke s krištáľovo čistou vodou? Náš apartmánový dóm v dedinke Cesarica je ideálnou voľbou pre bezstarostnú dovolenku!\n\nU nás vás čaka skutočne útulný a pohostinný azyl (hovoríme aj po maďarsky)!",
           items: [
-            "Tri apartmány: dva s dvoma spálňami (asi 60 m²) a jeden s jednou spálňou (asi 45 m²), spolu pre až 16 hostí",
-            "Klimatizácia, wifi zdarma, plochá televízia, spoločenské hry",
-            "Vybavená kuchyňa: sporák, mikrovlnná rúra, chladnička, kávovar, rýchlovarná kanvica, hriankovač (rúra v apartmánoch s dvoma spálňami)",
-            "Vlastná kúpeľňa so sprchou, fén, posteľná bielizeň a uteráky k dispozícii",
-            "Balkón/terasa, záhrada, záhradný nábytok a posedenie vonku; výhľad na more a hory",
-            "Bezplatné súkromné parkovanie pri dome",
-            "Pláž Trodražica asi 7 minút pešo",
-            "Domáce zvieratá na požiadanie (možný príplatok); nefajčiarske apartmány"
-          ] }
+            "More: Pláž je len pár minút chôdze od domu, takže si môžete ísť kedykoľvek zaplávať!",
+            "Panoráma mora: Priestranné súkromné terasy na nádherné západy slnka.",
+            "Vybavené a čisté: Pohodlné izby, Smart TV a kompletná kuchyňa.",
+            "Klimatizácia & rýchle Wi-Fi: Chladné izby a stabilný internet v celom dome.",
+            "Záhrada s grilom: Súkromná zelená zóna pre príjemné večerné grilovanie.",
+            "Bezplatné oplotené parkovanie priamo pri ubytovaní."
+          ],
+          program: {
+            label: "Všetko v blízkosti",
+            items: [
+              "Obchody a reštaurácie 5 minút jazdy autom",
+              "Centrum mesta Karlobag 7 km",
+              "Skvelý východiskový bod na objavovanie Severného Velebitu, Plitvických jazier alebo ostrova Pag!"
+            ]
+          } }
       ],
       about: {
         title: "Viac ako 10 rokov sprostredkujeme nehnuteľnosti na chorvátskom pobreží",
