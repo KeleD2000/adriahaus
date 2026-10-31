@@ -121,7 +121,7 @@ window.SITE_CONTENT = {
               "Plitvicei-tavak: az erdős, szelíd völgyekben számtalan zuhatag ömlik alá, formájuk és magasságuk folyamatosan változik."
             ]
           } },
-        { location: "Cesarica, Karlobag", region: "Adriai tengerpart", title: "Villa Alexa", rooms: "3 apartman, 5 hálószoba", priceUnit: "Kérjen ajánlatot",
+        { location: "Cesarica, Karlobag", region: "Adriai tengerpart", title: "Villa Alexa", rooms: "3 apartman, 5 hálószoba", priceUnit: "/ nap",
           description: "Három légkondicionált apartman kerttel, terasszal és kilátással a tengerre, a Trodražica strand 7 perc sétára.",
           details: "A cesaricai (Karlobag) Villa Alexa három apartmant kínál: két kétszobás (kb. 60 m²) és egy egyszobás (kb. 45 m²) egységet, összesen 5 hálószobával, akár 16 vendég számára. Minden apartman saját bejárattal és saját fürdőszobával rendelkezik, ágynemű és törölköző biztosított.\n\nKeressen bizalommal további információért.",
           items: [
