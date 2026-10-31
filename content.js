@@ -48,8 +48,13 @@ window.SITE_CONTENT = {
           "lakas-1-9.jpg", "lakas-1-10.jpg", "lakas-1-11.jpg", "lakas-1-12.jpg",
           "lakas-1-13.jpg", "lakas-1-14.jpg"
         ] },
-      { image: "property-apartment.svg", size: "38 m²", price: "480 €", soon: true },
-      { image: "property-house.svg", size: "110 m²", price: "900 €", soon: true }
+      { image: "lakas-2-13.jpeg", size: "", price: "100 €",
+        gallery: [
+          "lakas-2-13.jpeg", "lakas-2-2.jpeg", "lakas-2-3.jpeg", "lakas-2-4.jpeg",
+          "lakas-2-5.jpeg", "lakas-2-6.jpeg", "lakas-2-7.jpeg", "lakas-2-8.jpeg",
+          "lakas-2-9.jpeg", "lakas-2-10.jpeg", "lakas-2-1.jpeg", "lakas-2-12.jpeg",
+          "lakas-2-11.jpeg"
+        ] }
     ]
   },
 
@@ -93,7 +98,7 @@ window.SITE_CONTENT = {
         { location: "Split, Közép-Dalmácia", region: "Közép-Dalmácia", title: "Belvárosi kőház", rooms: "3 szint",
           description: "Történelmi óvárosi kőház, részlegesen felújítva, kiváló befektetési lehetőség rövid távú bérbeadásra." }
       ],
-      rentalsHeading: { title: "Bérelhető ingatlanaink", note: "További ingatlanok hamarosan – a halványított kártyák értékei csak példák" },
+      rentalsHeading: { title: "Bérelhető ingatlanaink", note: "" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Adriai tengerpart", title: "Tengerre néző apartman", rooms: "3 hálószoba + nappali", priceUnit: "/ nap",
           description: "Igényesen berendezett, teljesen felszerelt apartman 4–6 főre, a vízparttól 400 m-re.",
@@ -116,10 +121,19 @@ window.SITE_CONTENT = {
               "Plitvicei-tavak: az erdős, szelíd völgyekben számtalan zuhatag ömlik alá, formájuk és magasságuk folyamatosan változik."
             ]
           } },
-        { location: "Rab, Kvarner", region: "Kvarner", title: "Stúdió apartman", rooms: "1 hálószoba", priceUnit: "/ hó",
-          description: "Kompakt, felszerelt apartman a tengerparti sétány közelében, pároknak vagy egyedülállóknak." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Családi ház kerttel", rooms: "3 hálószoba", priceUnit: "/ hó",
-          description: "Tágas, kertes családi ház csendes környéken, hosszú távú bérbeadásra." }
+        { location: "Cesarica, Karlobag", region: "Adriai tengerpart", title: "Villa Alexa", rooms: "3 apartman, 5 hálószoba", priceUnit: "Kérjen ajánlatot",
+          description: "Három légkondicionált apartman kerttel, terasszal és kilátással a tengerre, a Trodražica strand 7 perc sétára.",
+          details: "A cesaricai (Karlobag) Villa Alexa három apartmant kínál: két kétszobás (kb. 60 m²) és egy egyszobás (kb. 45 m²) egységet, összesen 5 hálószobával, akár 16 vendég számára. Minden apartman saját bejárattal és saját fürdőszobával rendelkezik, ágynemű és törölköző biztosított.\n\nKeressen bizalommal további információért.",
+          items: [
+            "Három apartman: két kétszobás (kb. 60 m²) és egy egyszobás (kb. 45 m²), összesen akár 16 vendégnek",
+            "Légkondi, ingyenes wifi, lapostévé, társasjátékok",
+            "Felszerelt konyha: tűzhely, mikrohullámú sütő, hűtő, kávéfőző, vízforraló, kenyérpirító (a kétszobás apartmanokban sütő is)",
+            "Saját fürdőszoba zuhannyal, hajszárító, ágynemű és törölköző biztosított",
+            "Erkély/terasz, kert, kerti bútorok és étkezőhely; kilátás a tengerre és a hegyekre",
+            "Ingyenes, saját parkoló a háznál",
+            "Trodražica strand kb. 7 perc sétára",
+            "Kisállat kérésre hozható (felár lehetséges); az apartmanokban tilos a dohányzás"
+          ] }
       ],
       about: {
         title: "Több mint 10 éve közvetítünk a horvát tengerparton",
@@ -208,7 +222,7 @@ window.SITE_CONTENT = {
         { location: "Split, Central Dalmatia", region: "Central Dalmatia", title: "Stone house in the city centre", rooms: "3 floors",
           description: "Historic old-town stone house, partly renovated, an excellent investment for short-term rentals." }
       ],
-      rentalsHeading: { title: "Rental properties", note: "More properties coming soon – values on the darkened cards are examples only" },
+      rentalsHeading: { title: "Rental properties", note: "" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Adriatic coast", title: "Sea-view apartment", rooms: "3 bedrooms + living room", priceUnit: "/ night",
           description: "Tastefully furnished, fully equipped apartment for 4–6 guests, 400 m from the water.",
@@ -231,10 +245,19 @@ window.SITE_CONTENT = {
               "Plitvice Lakes: in wooded, gentle valleys countless waterfalls cascade down, constantly changing in shape and height."
             ]
           } },
-        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartment", rooms: "1 bedroom", priceUnit: "/ month",
-          description: "Compact, furnished apartment near the seafront promenade, ideal for couples or singles." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Family house with garden", rooms: "3 bedrooms", priceUnit: "/ month",
-          description: "Spacious family house with a garden in a quiet area, for long-term rental." }
+        { location: "Cesarica, Karlobag", region: "Adriatic coast", title: "Villa Alexa", rooms: "3 apartments, 5 bedrooms", priceUnit: "Request a quote",
+          description: "Three air-conditioned apartments with a garden, terrace and sea views, a 7-minute walk from Trodražica beach.",
+          details: "Villa Alexa in Cesarica (Karlobag) offers three apartments: two with two bedrooms (about 60 m²) and one with one bedroom (about 45 m²), with 5 bedrooms in total and room for up to 16 guests. Every apartment has a private entrance and a private bathroom, and bed linen and towels are provided.\n\nFeel free to contact us for more information.",
+          items: [
+            "Three apartments: two with two bedrooms (about 60 m²) and one with one bedroom (about 45 m²), for up to 16 guests in total",
+            "Air conditioning, free Wi-Fi, flat-screen TV, board games",
+            "Equipped kitchen: stovetop, microwave, fridge, coffee machine, kettle, toaster (oven in the two-bedroom apartments)",
+            "Private bathroom with shower, hairdryer, bed linen and towels provided",
+            "Balcony/terrace, garden, outdoor furniture and dining area; sea and mountain views",
+            "Free private parking at the house",
+            "Trodražica beach about 7 minutes on foot",
+            "Pets allowed on request (charges may apply); non-smoking apartments"
+          ] }
       ],
       about: {
         title: "Over 10 years of brokerage experience on the Croatian coast",
@@ -323,7 +346,7 @@ window.SITE_CONTENT = {
         { location: "Split, Mitteldalmatien", region: "Mitteldalmatien", title: "Steinhaus im Stadtzentrum", rooms: "3 Etagen",
           description: "Historisches Steinhaus in der Altstadt, teilweise renoviert, hervorragende Kapitalanlage für die Ferienvermietung." }
       ],
-      rentalsHeading: { title: "Mietobjekte", note: "Weitere Objekte demnächst – die Werte auf den abgedunkelten Karten sind nur Beispiele" },
+      rentalsHeading: { title: "Mietobjekte", note: "" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Adriaküste", title: "Apartment mit Meerblick", rooms: "3 Schlafzimmer + Wohnzimmer", priceUnit: "/ Nacht",
           description: "Geschmackvoll eingerichtetes, voll ausgestattetes Apartment für 4–6 Personen, 400 m vom Wasser.",
@@ -346,10 +369,19 @@ window.SITE_CONTENT = {
               "Plitvicer Seen: In bewaldeten, sanften Tälern stürzen unzählige Wasserfälle herab, deren Form und Höhe sich ständig verändern."
             ]
           } },
-        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio-Apartment", rooms: "1 Schlafzimmer", priceUnit: "/ Monat",
-          description: "Kompaktes, möbliertes Apartment nahe der Strandpromenade, ideal für Paare oder Singles." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Familienhaus mit Garten", rooms: "3 Schlafzimmer", priceUnit: "/ Monat",
-          description: "Geräumiges Familienhaus mit Garten in ruhiger Lage, für langfristige Vermietung." }
+        { location: "Cesarica, Karlobag", region: "Adriaküste", title: "Villa Alexa", rooms: "3 Apartments, 5 Schlafzimmer", priceUnit: "Angebot anfragen",
+          description: "Drei klimatisierte Apartments mit Garten, Terrasse und Meerblick, 7 Gehminuten vom Strand Trodražica.",
+          details: "Die Villa Alexa in Cesarica (Karlobag) bietet drei Apartments: zwei mit zwei Schlafzimmern (ca. 60 m²) und eines mit einem Schlafzimmer (ca. 45 m²), insgesamt 5 Schlafzimmer für bis zu 16 Gäste. Jedes Apartment hat einen eigenen Eingang und ein eigenes Bad; Bettwäsche und Handtücher werden gestellt.\n\nKontaktieren Sie uns gerne für weitere Informationen.",
+          items: [
+            "Drei Apartments: zwei mit zwei Schlafzimmern (ca. 60 m²) und eines mit einem Schlafzimmer (ca. 45 m²), insgesamt für bis zu 16 Gäste",
+            "Klimaanlage, kostenloses WLAN, Flachbildfernseher, Gesellschaftsspiele",
+            "Ausgestattete Küche: Herd, Mikrowelle, Kühlschrank, Kaffeemaschine, Wasserkocher, Toaster (Backofen in den Apartments mit zwei Schlafzimmern)",
+            "Eigenes Bad mit Dusche, Haartrockner, Bettwäsche und Handtücher werden gestellt",
+            "Balkon/Terrasse, Garten, Gartenmöbel und Essbereich im Freien; Meer- und Bergblick",
+            "Kostenloser privater Parkplatz am Haus",
+            "Strand Trodražica ca. 7 Gehminuten entfernt",
+            "Haustiere auf Anfrage erlaubt (ggf. gegen Aufpreis); Nichtraucher-Apartments"
+          ] }
       ],
       about: {
         title: "Seit über 10 Jahren vermitteln wir Immobilien an der kroatischen Küste",
@@ -438,7 +470,7 @@ window.SITE_CONTENT = {
         { location: "Split, Srednja Dalmacija", region: "Srednja Dalmacija", title: "Kamena kuća u centru", rooms: "3 etaže",
           description: "Povijesna kamena kuća u staroj jezgri grada, djelomično renovirana, izvrsna prilika za turistički najam." }
       ],
-      rentalsHeading: { title: "Nekretnine za iznajmljivanje", note: "Uskoro još nekretnina – vrijednosti na zatamnjenim karticama samo su primjeri" },
+      rentalsHeading: { title: "Nekretnine za iznajmljivanje", note: "" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranska obala", title: "Apartman s pogledom na more", rooms: "3 spavaće sobe + dnevni boravak", priceUnit: "/ noć",
           description: "Ukusno uređen, potpuno opremljen apartman za 4–6 osoba, 400 m od mora.",
@@ -461,10 +493,19 @@ window.SITE_CONTENT = {
               "Plitvička jezera: u šumovitim blagim dolinama slijevaju se brojni slapovi čiji se oblik i visina stalno mijenjaju."
             ]
           } },
-        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartman", rooms: "1 spavaća soba", priceUnit: "/ mjesec",
-          description: "Kompaktan, opremljen apartman blizu morske šetnice, idealan za parove ili samce." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Obiteljska kuća s vrtom", rooms: "3 spavaće sobe", priceUnit: "/ mjesec",
-          description: "Prostrana obiteljska kuća s vrtom u mirnom okruženju, za dugoročni najam." }
+        { location: "Cesarica, Karlobag", region: "Jadranska obala", title: "Villa Alexa", rooms: "3 apartmana, 5 spavaćih soba", priceUnit: "Zatražite ponudu",
+          description: "Tri klimatizirana apartmana s vrtom, terasom i pogledom na more, plaža Trodražica udaljena je 7 minuta hoda.",
+          details: "Villa Alexa u Cesarici (Karlobag) nudi tri apartmana: dva s dvije spavaće sobe (oko 60 m²) i jedan s jednom spavaćom sobom (oko 45 m²), ukupno 5 spavaćih soba za do 16 gostiju. Svaki apartman ima zaseban ulaz i vlastitu kupaonicu, a posteljina i ručnici su osigurani.\n\nSlobodno nas kontaktirajte za više informacija.",
+          items: [
+            "Tri apartmana: dva s dvije spavaće sobe (oko 60 m²) i jedan s jednom spavaćom sobom (oko 45 m²), ukupno do 16 gostiju",
+            "Klima, besplatni wifi, ravni TV, društvene igre",
+            "Opremljena kuhinja: štednjak, mikrovalna, hladnjak, aparat za kavu, kuhalo za vodu, toster (pećnica u apartmanima s dvije spavaće sobe)",
+            "Vlastita kupaonica s tušem, sušilo za kosu, posteljina i ručnici osigurani",
+            "Balkon/terasa, vrt, vrtni namještaj i prostor za blagovanje; pogled na more i planine",
+            "Besplatan privatni parking uz kuću",
+            "Plaža Trodražica oko 7 minuta hoda",
+            "Kućni ljubimci na zahtjev (moguća doplata); apartmani za nepušače"
+          ] }
       ],
       about: {
         title: "Više od 10 godina iskustva u posredovanju na hrvatskoj obali",
@@ -553,7 +594,7 @@ window.SITE_CONTENT = {
         { location: "Split, Střední Dalmácie", region: "Střední Dalmácie", title: "Kamenný dům v centru", rooms: "3 podlaží",
           description: "Historický kamenný dům ve starém městě, částečně zrekonstruovaný, skvělá investiční příležitost pro krátkodobý pronájem." }
       ],
-      rentalsHeading: { title: "Pronajímatelné nemovitosti", note: "Další nemovitosti již brzy – hodnoty na ztmavených kartách jsou pouze ukázkové" },
+      rentalsHeading: { title: "Pronajímatelné nemovitosti", note: "" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranské pobřeží", title: "Apartmán s výhledem na moře", rooms: "3 ložnice + obývací pokoj", priceUnit: "/ noc",
           description: "Vkusně zařízený, plně vybavený apartmán pro 4–6 osob, 400 m od moře.",
@@ -576,10 +617,19 @@ window.SITE_CONTENT = {
               "Plitvická jezera: v zalesněných mírných údolích se řítí nespočet vodopádů, jejichž tvar a výška se neustále mění."
             ]
           } },
-        { location: "Rab, Kvarner", region: "Kvarner", title: "Studio apartmán", rooms: "1 ložnice", priceUnit: "/ měsíc",
-          description: "Kompaktní, zařízený apartmán poblíž pobřežní promenády, ideální pro páry nebo jednotlivce." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dům se zahradou", rooms: "3 ložnice", priceUnit: "/ měsíc",
-          description: "Prostorný rodinný dům se zahradou v klidné lokalitě, pro dlouhodobý pronájem." }
+        { location: "Cesarica, Karlobag", region: "Jadranské pobřeží", title: "Villa Alexa", rooms: "3 apartmány, 5 ložnic", priceUnit: "Vyžádejte si nabídku",
+          description: "Tři klimatizované apartmány se zahradou, terasou a výhledem na moře, pláž Trodražica je 7 minut pěšky.",
+          details: "Villa Alexa v Cesarici (Karlobag) nabízí tři apartmány: dva se dvěma ložnicemi (asi 60 m²) a jeden s jednou ložnicí (asi 45 m²), celkem 5 ložnic pro až 16 hostů. Každý apartmán má vlastní vchod a vlastní koupelnu, ložní prádlo a ručníky jsou k dispozici.\n\nPro další informace nás neváhejte kontaktovat.",
+          items: [
+            "Tři apartmány: dva se dvěma ložnicemi (asi 60 m²) a jeden s jednou ložnicí (asi 45 m²), celkem pro až 16 hostů",
+            "Klimatizace, wifi zdarma, plochá televize, společenské hry",
+            "Vybavená kuchyně: sporák, mikrovlnná trouba, lednice, kávovar, rychlovarná konvice, toustovač (trouba v apartmánech se dvěma ložnicemi)",
+            "Vlastní koupelna se sprchou, fén, ložní prádlo a ručníky k dispozici",
+            "Balkon/terasa, zahrada, zahradní nábytek a posezení venku; výhled na moře a hory",
+            "Bezplatné vlastní parkování u domu",
+            "Pláž Trodražica asi 7 minut pěšky",
+            "Domácí mazlíčci na vyžádání (možný příplatek); nekuřácké apartmány"
+          ] }
       ],
       about: {
         title: "Více než 10 let zprostředkováváme nemovitosti na chorvatském pobřeží",
@@ -668,7 +718,7 @@ window.SITE_CONTENT = {
         { location: "Split, Stredná Dalmácia", region: "Stredná Dalmácia", title: "Kamenný dom v centre", rooms: "3 podlažia",
           description: "Historický kamenný dom v starom meste, čiastočne zrekonštruovaný, skvelá investičná príležitosť na krátkodobý prenájom." }
       ],
-      rentalsHeading: { title: "Prenajímateľné nehnuteľnosti", note: "Ďalšie nehnuteľnosti čoskoro – hodnoty na stmavených kartách sú len ukážkové" },
+      rentalsHeading: { title: "Prenajímateľné nehnuteľnosti", note: "" },
       rentals: [
         { location: "Sveti Juraj, Zakos", region: "Jadranské pobrežie", title: "Apartmán s výhľadom na more", rooms: "3 spálne + obývačka", priceUnit: "/ noc",
           description: "Vkusne zariadený, plne vybavený apartmán pre 4–6 osôb, 400 m od mora.",
@@ -691,10 +741,19 @@ window.SITE_CONTENT = {
               "Plitvické jazerá: v zalesnených miernych dolinách sa rútia nespočetné vodopády, ktorých tvar a výška sa neustále menia."
             ]
           } },
-        { location: "Rab, Kvarner", region: "Kvarner", title: "Štúdio apartmán", rooms: "1 spálňa", priceUnit: "/ mesiac",
-          description: "Kompaktný, zariadený apartmán blízko pobrežnej promenády, ideálny pre páry alebo jednotlivcov." },
-        { location: "Krk, Kvarner", region: "Kvarner", title: "Rodinný dom so zahradou", rooms: "3 spálne", priceUnit: "/ mesiac",
-          description: "Priestranný rodinný dom so zahradou v pokojnom prostredí, na dlhodobý prenájom." }
+        { location: "Cesarica, Karlobag", region: "Jadranské pobrežie", title: "Villa Alexa", rooms: "3 apartmány, 5 spální", priceUnit: "Vyžiadajte si ponuku",
+          description: "Tri klimatizované apartmány so záhradou, terasou a výhľadom na more, pláž Trodražica je 7 minút pešo.",
+          details: "Villa Alexa v Cesarici (Karlobag) ponúka tri apartmány: dva s dvoma spálňami (asi 60 m²) a jeden s jednou spálňou (asi 45 m²), spolu 5 spální pre až 16 hostí. Každý apartmán má vlastný vchod a vlastnú kúpeľňu, posteľná bielizeň a uteráky sú k dispozícii.\n\nPre ďalšie informácie nás neváhajte kontaktovať.",
+          items: [
+            "Tri apartmány: dva s dvoma spálňami (asi 60 m²) a jeden s jednou spálňou (asi 45 m²), spolu pre až 16 hostí",
+            "Klimatizácia, wifi zdarma, plochá televízia, spoločenské hry",
+            "Vybavená kuchyňa: sporák, mikrovlnná rúra, chladnička, kávovar, rýchlovarná kanvica, hriankovač (rúra v apartmánoch s dvoma spálňami)",
+            "Vlastná kúpeľňa so sprchou, fén, posteľná bielizeň a uteráky k dispozícii",
+            "Balkón/terasa, záhrada, záhradný nábytok a posedenie vonku; výhľad na more a hory",
+            "Bezplatné súkromné parkovanie pri dome",
+            "Pláž Trodražica asi 7 minút pešo",
+            "Domáce zvieratá na požiadanie (možný príplatok); nefajčiarske apartmány"
+          ] }
       ],
       about: {
         title: "Viac ako 10 rokov sprostredkujeme nehnuteľnosti na chorvátskom pobreží",

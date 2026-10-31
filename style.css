@@ -1671,3 +1671,7 @@ label.is-required::after {
     border-color: var(--accent);
     color: #16323A;
 }
+
+.section-head-text span:empty {
+    display: none;
+}
