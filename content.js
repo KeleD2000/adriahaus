@@ -15,7 +15,16 @@ window.SITE_CONTENT = {
     brand: { name: "Adria Haus" },
     phone: "+36 30 878 7226",
     phoneHref: "tel:+36308787226",
+    phones: [
+      { number: "+36 30 878 7226", href: "tel:+36308787226" },
+      { number: "+385 98 1671 626", href: "tel:+385981671626" }
+    ],
     email: "adriahaus70@gmail.com",
+    analytics: {
+      provider: "umami",
+      id: "84f4b714-1b66-42bd-917a-5930344a9b6f",
+      domain: ""
+    },
     navHrefs: ["#rolunk", "#kapcsolat"],
     heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-felujitas", "#kapcsolat", "#kiado-ingatlanok"],
     properties: [
@@ -78,7 +87,8 @@ window.SITE_CONTENT = {
             "Személyre szabott ingatlankeresés",
             "OIB-adószám igénylése",
             "Ingatlanmegtekintések szervezése",
-            "Közművek átírása"
+            "Közművek átírása",
+            "Helyi jogi és piaci ismeretünk, valamint horvátországi partnerhálózatunk révén végigkísérjük ügyfeleinket a kiválasztástól a tulajdonjog bejegyzéséig."
           ]
         },
         { title: "Ingatlanok felújítása / karbantartás",
@@ -193,7 +203,8 @@ window.SITE_CONTENT = {
             "Personalized property search",
             "OIB tax identification number application",
             "Property viewing arrangements",
-            "Utility account transfers"
+            "Utility account transfers",
+            "With local legal and market expertise and a partner network in Croatia, we guide our clients from selection to registration of ownership."
           ]
         },
         { title: "Renovation & maintenance",
@@ -308,7 +319,8 @@ window.SITE_CONTENT = {
             "Individuelle Immobiliensuche",
             "Beantragung der kroatischen OIB-Steueridentifikationsnummer",
             "Organisation von Immobilienbesichtigungen",
-            "Ummeldung der Versorgungsverträge"
+            "Ummeldung der Versorgungsverträge",
+            "Durch unsere fundierte Rechts- und Marktkenntnis vor Ort sowie unser Partnernetzwerk begleiten wir Sie vom Erstkontakt bis zum Grundbucheintrag."
           ]
         },
         { title: "Renovierung & Instandhaltung",
@@ -423,7 +435,8 @@ window.SITE_CONTENT = {
             "Personalizirana potraga za nekretninom",
             "Ishođenje OIB-a",
             "Organizacija razgledavanja nekretnina",
-            "Prijenos režija"
+            "Prijenos režija",
+            "Zahvaljujući poznavanju lokalnog prava i tržišta te mreži partnera diljem Hrvatske, pratimo klijente od odabira do uknjižbe vlasništva."
           ]
         },
         { title: "Renovacija i održavanje",
@@ -538,7 +551,8 @@ window.SITE_CONTENT = {
             "Vyhledávání nemovitostí na míru",
             "Vyřízení chorvatského daňového identifikačního čísla OIB",
             "Organizace prohlídek nemovitostí",
-            "Přepis odběrných míst energií a služeb"
+            "Přepis odběrných míst energií a služeb",
+            "Díky místním právním a tržním znalostem a partnerské síti v Chorvatsku provázíme klienty od výběru až po zápis vlastnického práva."
           ]
         },
         { title: "Renovace a údržba",
@@ -653,7 +667,8 @@ window.SITE_CONTENT = {
             "Vyhľadávanie nehnuteľností na mieru",
             "Vybavenie chorvátskeho daňového identifikačného čísla OIB",
             "Organizácia obhliadok nehnuteľností",
-            "Prepis odberateľov energií a služieb"
+            "Prepis odberateľov energií a služieb",
+            "Vďaka miestnym právnym a trhovým znalostiam a partnerskej sieti v Chorvátsku sprevádzame klientov od výberu až po zápis vlastníckeho práva."
           ]
         },
         { title: "Renovácia a údržba",

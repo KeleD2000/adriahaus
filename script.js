@@ -13,6 +13,58 @@
     var currentTexts = {};
     var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // --- Statisztika (a beállítás a content.js-ben: shared.analytics) ---
+    var AN = S.analytics || {};
+
+    function loadAnalytics() {
+        var local = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+        if (!AN.provider || local) {
+            AN.provider = '';
+            return;
+        }
+        var el = document.createElement('script');
+        el.async = true;
+        if (AN.provider === 'ga4' && AN.id) {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () {
+                window.dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config', AN.id, {anonymize_ip: true});
+            el.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(AN.id);
+        } else if (AN.provider === 'plausible' && AN.domain) {
+            window.plausible = window.plausible || function () {
+                (window.plausible.q = window.plausible.q || []).push(arguments);
+            };
+            el.defer = true;
+            el.src = 'https://plausible.io/js/script.js';
+            el.setAttribute('data-domain', AN.domain);
+        } else if (AN.provider === 'umami' && AN.id) {
+            el.defer = true;
+            el.src = 'https://cloud.umami.is/script.js';
+            el.setAttribute('data-website-id', AN.id);
+        } else {
+            AN.provider = '';
+            return;
+        }
+        document.head.appendChild(el);
+    }
+
+    function track(name, props) {
+        try {
+            if (AN.provider === 'ga4' && window.gtag) {
+                window.gtag('event', name, props || {});
+            } else if (AN.provider === 'plausible' && window.plausible) {
+                window.plausible(name, {props: props || {}});
+            } else if (AN.provider === 'umami' && window.umami) {
+                window.umami.track(name, props || {});
+            }
+        } catch (e) {
+        }
+    }
+
+    loadAnalytics();
+
     function $(id) {
         return document.getElementById(id);
     }
@@ -214,6 +266,7 @@
 
             a.addEventListener('click', function (e) {
                 e.preventDefault();
+                track('hero_click', {button: btnText});
                 if (opensPopup) {
                     openGallery(shared.gallery || [], svc.title, svc.items, svc.details || svc.description);
                 } else {
@@ -315,6 +368,7 @@
 
             if (!soon) {
                 var openRental = function () {
+                    track('rental_open', {property: p.title});
                     openGallery(shared.gallery || [shared.image], p.title, p.items, p.details, true);
                 };
                 card.setAttribute('role', 'button');
@@ -337,6 +391,7 @@
             programBtn.textContent = programData.label;
             programBtn.hidden = false;
             programBtn.onclick = function () {
+                track('program_open');
                 openGallery([], programData.label, programData.items, '');
             };
         } else {
@@ -359,8 +414,12 @@
         var K = T.contact;
         $('contactTitle').textContent = K.title;
         $('contactText').textContent = K.text;
+        var phones = S.phones || [{number: S.phone, href: S.phoneHref}];
+        var phoneLinks = phones.map(function (ph) {
+            return '<a href="' + ph.href + '">' + ph.number + '</a>';
+        }).join('');
         $('contactDetails').innerHTML =
-            '<div><span>' + K.phoneLabel + '</span><a href="' + S.phoneHref + '">' + S.phone + '</a></div>' +
+            '<div><span>' + K.phoneLabel + '</span>' + phoneLinks + '</div>' +
             '<div><span>' + K.emailLabel + '</span><a href="mailto:' + S.email + '">' + S.email + '</a></div>';
         var bullets = $('contactBullets');
         clear(bullets);
@@ -405,7 +464,9 @@
 
         // Lábléc
         $('footerText').textContent = T.footer.text;
-        $('footerContact').textContent = S.email + ' · ' + S.phone;
+        $('footerContact').textContent = S.email + ' · ' + phones.map(function (ph) {
+            return ph.number;
+        }).join(' · ');
 
         renderSwitcher(lang);
         activateReveal();
@@ -439,12 +500,23 @@
     }
 
     function setLanguage(lang) {
+        track('language_change', {lang: lang});
         try {
             localStorage.setItem(STORAGE_KEY, lang);
         } catch (e) {
         }
         render(lang);
     }
+
+    // --- Telefon- és e-mail-kattintások mérése ---
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (a) {
+            var href = a.getAttribute('href');
+            track(href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click',
+                {target: href.replace(/^(tel:|mailto:)/, '')});
+        }
+    });
 
     // --- Űrlap: validáció + beküldés a send.php-nak ---
     var formEl = $('listingForm');
@@ -605,6 +677,7 @@
             return;
         }
 
+        var chosenService = $('service').value;
         var btn = $('submitBtn');
         btn.disabled = true;
 
@@ -616,6 +689,7 @@
                 if (!res.ok) {
                     throw new Error('send failed');
                 }
+                track('form_submit', {service: chosenService});
                 formEl.reset();
                 clearAllErrors();
                 openStatus('success');
