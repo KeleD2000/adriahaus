@@ -141,7 +141,7 @@ window.SITE_CONTENT = {
       ],
       about: {
         title: "Több mint 10 éve közvetítünk a horvát tengerparton",
-        intro: "Helyi jogi és piaci ismeretünk, valamint horvátországi partnerhálózatunk révén végigkísérjük ügyfeleinket a kiválasztástól a tulajdonjog bejegyzéséig.",
+        intro: "",
         stats: [
           { value: "10+", label: "év tapasztalat" },
           { value: "5", label: "régió" }
@@ -257,7 +257,7 @@ window.SITE_CONTENT = {
       ],
       about: {
         title: "Over 10 years of brokerage experience on the Croatian coast",
-        intro: "With local legal and market expertise and a partner network in Croatia, we guide our clients from selection to registration of ownership.",
+        intro: "",
         stats: [
           { value: "10+", label: "years of experience" },
           { value: "5", label: "regions" }
@@ -373,7 +373,7 @@ window.SITE_CONTENT = {
       ],
       about: {
         title: "Seit über 10 Jahren vermitteln wir Immobilien an der kroatischen Küste",
-        intro: "Durch unsere fundierte Rechts- und Marktkenntnis vor Ort sowie unser Partnernetzwerk begleiten wir Sie vom Erstkontakt bis zum Grundbucheintrag.",
+        intro: "",
         stats: [
           { value: "10+", label: "Jahre Erfahrung" },
           { value: "5", label: "Regionen" }
@@ -489,7 +489,7 @@ window.SITE_CONTENT = {
       ],
       about: {
         title: "Više od 10 godina iskustva u posredovanju na hrvatskoj obali",
-        intro: "Zahvaljujući poznavanju lokalnog prava i tržišta te mreži partnera diljem Hrvatske, pratimo klijente od odabira do uknjižbe vlasništva.",
+        intro: "",
         stats: [
           { value: "10+", label: "godina iskustva" },
           { value: "5", label: "regija" }
@@ -605,7 +605,7 @@ window.SITE_CONTENT = {
       ],
       about: {
         title: "Více než 10 let zprostředkováváme nemovitosti na chorvatském pobřeží",
-        intro: "Díky místním právním a tržním znalostem a partnerské síti v Chorvatsku provázíme klienty od výběru až po zápis vlastnického práva.",
+        intro: "",
         stats: [
           { value: "10+", label: "let zkušeností" },
           { value: "5", label: "regionů" }
@@ -721,7 +721,7 @@ window.SITE_CONTENT = {
       ],
       about: {
         title: "Viac ako 10 rokov sprostredkujeme nehnuteľnosti na chorvátskom pobreží",
-        intro: "Vďaka miestnym právnym a trhovým znalostiam a partnerskej sieti v Chorvátsku sprevádzame klientov od výberu až po zápis vlastníckeho práva.",
+        intro: "",
         stats: [
           { value: "10+", label: "rokov skúseností" },
           { value: "5", label: "regiónov" }
