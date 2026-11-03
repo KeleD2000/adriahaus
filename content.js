@@ -26,7 +26,7 @@ window.SITE_CONTENT = {
       domain: ""
     },
     navHrefs: ["#rolunk", "#kapcsolat"],
-    heroHrefs: ["#ingatlan-ertikesites", "#ingatlan-felujitas", "#kapcsolat", "#kiado-ingatlanok"],
+    heroHrefs: [/* "#ingatlan-ertikesites", */ "#ingatlan-felujitas", "#kapcsolat", "#kiado-ingatlanok"],
     properties: [
       { gradient: "linear-gradient(160deg,#2E6F7E,#8FCAD4)", size: "68 m²",  price: "185 000 €" },
       { gradient: "linear-gradient(160deg,#3B5245,#7FA98C)", size: "210 m²", price: "395 000 €" },
@@ -36,7 +36,7 @@ window.SITE_CONTENT = {
       { gradient: "linear-gradient(160deg,#3E7C8C,#DCA95F)", size: "93 m²",  price: "62 000 €" }
     ],
     services: [
-      { id: "ingatlan-ertikesites" },
+      /* { id: "ingatlan-ertikesites" }, */
       { id: "ingatlan-felujitas",
         gallery: ["felujitas-1.jpg", "felujitas-2.jpg", "felujitas-3.jpg", "felujitas-4.jpg", "felujitas-5.jpeg", "felujitas-6.jpeg", "felujitas-7.jpeg", "felujitas-8.jpeg"] }
     ],
@@ -77,10 +77,10 @@ window.SITE_CONTENT = {
       nav: ["Rólunk", "Kapcsolat"],
       hero: {
         title: "Horvátországi ingatlanok közvetítése",
-        ctaServices: ["Ingatlan értékesítés", "Felújítás / Karbantartás", "Eladnám / bérbeadnám az ingatlanom", "Bérelhető ingatlanok"]
+        ctaServices: [/* "Ingatlan értékesítés", */ "Felújítás / Karbantartás", "Eladnám / bérbeadnám az ingatlanom", "Bérelhető ingatlanok"]
       },
       services: [
-        { title: "Ingatlan értékesítés",
+        /* { title: "Ingatlan értékesítés",
           description: "Végigkísérjük Önt a hirdetéstől az adásvételi szerződésig, teljes körű jogi és piaci támogatással.",
           details: "Teljes körű támogatást nyújtunk horvátországi ingatlana értékesítésében, a piaci árazástól a megfelelő vevő megtalálásáig és az adásvétel lebonyolításáig.",
           items: [
@@ -90,7 +90,7 @@ window.SITE_CONTENT = {
             "Közművek átírása",
             "Helyi jogi és piaci ismeretünk, valamint horvátországi partnerhálózatunk révén végigkísérjük ügyfeleinket a kiválasztástól a tulajdonjog bejegyzéséig."
           ]
-        },
+        }, */
         { title: "Ingatlanok felújítása / karbantartás",
           description: "Amennyiben felújítani szeretné ingatlanát, mi segítünk! Rijeka és Zadar között, beleértve a közeli szigeteket is (Pag, Krk, Rab). 15 éves tapasztalattal rendelkező vállalkozás vállal.",
           items: [
@@ -193,10 +193,10 @@ window.SITE_CONTENT = {
       nav: ["About us", "Contact"],
       hero: {
         title: "Real estate brokerage in Croatia",
-        ctaServices: ["Property sales", "Renovation & maintenance", "Sell / rent out my property", "Rental properties"]
+        ctaServices: [/* "Property sales", */ "Renovation & maintenance", "Sell / rent out my property", "Rental properties"]
       },
       services: [
-        { title: "Property sales",
+        /* { title: "Property sales",
           description: "We guide you from listing to signing the contract, with full legal and market support.",
           details: "We provide comprehensive support with the sale of your property in Croatia, from market valuation and finding the right buyer to completing the transaction.",
           items: [
@@ -206,7 +206,7 @@ window.SITE_CONTENT = {
             "Utility account transfers",
             "With local legal and market expertise and a partner network in Croatia, we guide our clients from selection to registration of ownership."
           ]
-        },
+        }, */
         { title: "Renovation & maintenance",
           description: "If you want to renovate your property, we are here to help! Between Rijeka and Zadar, including the nearby islands (Pag, Krk, Rab). A company with 15 years of experience offers:",
           items: [
@@ -309,10 +309,10 @@ window.SITE_CONTENT = {
       nav: ["Über uns", "Kontakt"],
       hero: {
         title: "Immobilienvermittlung in Kroatien",
-        ctaServices: ["Immobilienverkauf", "Renovierung & Instandhaltung", "Meine Immobilie verkaufen / vermieten", "Mietobjekte"]
+        ctaServices: [/* "Immobilienverkauf", */ "Renovierung & Instandhaltung", "Meine Immobilie verkaufen / vermieten", "Mietobjekte"]
       },
       services: [
-        { title: "Immobilienverkauf",
+        /* { title: "Immobilienverkauf",
           description: "Wir begleiten Sie von der Inserierung bis zum Kaufvertrag mit vollständiger rechtlicher und marktbezogener Unterstützung.",
           details: "Wir unterstützen Sie umfassend beim Verkauf Ihrer Immobilie in Kroatien – von der Marktwertermittlung über die Käufersuche bis zum erfolgreichen Abschluss des Verkaufs.",
           items: [
@@ -322,7 +322,7 @@ window.SITE_CONTENT = {
             "Ummeldung der Versorgungsverträge",
             "Durch unsere fundierte Rechts- und Marktkenntnis vor Ort sowie unser Partnernetzwerk begleiten wir Sie vom Erstkontakt bis zum Grundbucheintrag."
           ]
-        },
+        }, */
         { title: "Renovierung & Instandhaltung",
           description: "Wenn Sie Ihre Immobilie renovieren möchten, helfen wir Ihnen gerne! Zwischen Rijeka und Zadar, einschließlich der nahegelegenen Inseln (Pag, Krk, Rab). Ein Unternehmen mit 15 Jahren Erfahrung übernimmt:",
           items: [
@@ -425,10 +425,10 @@ window.SITE_CONTENT = {
       nav: ["O nama", "Kontakt"],
       hero: {
         title: "Posredovanje u prometu nekretninama u Hrvatskoj",
-        ctaServices: ["Prodaja nekretnina", "Renovacija i održavanje", "Želim prodati / iznajmiti nekretninu", "Nekretnine za iznajmljivanje"]
+        ctaServices: [/* "Prodaja nekretnina", */ "Renovacija i održavanje", "Želim prodati / iznajmiti nekretninu", "Nekretnine za iznajmljivanje"]
       },
       services: [
-        { title: "Prodaja nekretnina",
+        /* { title: "Prodaja nekretnina",
           description: "Vodimo vas kroz cijeli proces, od oglašavanja do potpisivanja kupoprodajnog ugovora, uz punu pravnu podršku.",
           details: "Pružamo cjelovitu podršku pri prodaji vaše nekretnine u Hrvatskoj, od procjene tržišne vrijednosti i pronalaska kupca do završetka prodaje.",
           items: [
@@ -438,7 +438,7 @@ window.SITE_CONTENT = {
             "Prijenos režija",
             "Zahvaljujući poznavanju lokalnog prava i tržišta te mreži partnera diljem Hrvatske, pratimo klijente od odabira do uknjižbe vlasništva."
           ]
-        },
+        }, */
         { title: "Renovacija i održavanje",
           description: "Ako želite renovirati svoju nekretninu, mi vam pomažemo! Između Rijeke i Zadra, uključujući obližnje otoke (Pag, Krk, Rab). Tvrtka s 15 godina iskustva preuzima:",
           items: [
@@ -541,10 +541,10 @@ window.SITE_CONTENT = {
       nav: ["O nás", "Kontakt"],
       hero: {
         title: "Zprostředkování nemovitostí v Chorvatsku",
-        ctaServices: ["Prodej nemovitostí", "Renovace a údržba", "Chci prodat / pronajmout nemovitost", "Pronajímatelné nemovitosti"]
+        ctaServices: [/* "Prodej nemovitostí", */ "Renovace a údržba", "Chci prodat / pronajmout nemovitost", "Pronajímatelné nemovitosti"]
       },
       services: [
-        { title: "Prodej nemovitostí",
+        /* { title: "Prodej nemovitostí",
           description: "Provedeme vás od inzerce až po podpis smlouvy, s kompletní právní a tržní podporou.",
           details: "Poskytujeme komplexní podporu při prodeji vaší nemovitosti v Chorvatsku, od stanovení tržní ceny přes hledání vhodného kupce až po dokončení prodeje.",
           items: [
@@ -554,7 +554,7 @@ window.SITE_CONTENT = {
             "Přepis odběrných míst energií a služeb",
             "Díky místním právním a tržním znalostem a partnerské síti v Chorvatsku provázíme klienty od výběru až po zápis vlastnického práva."
           ]
-        },
+        }, */
         { title: "Renovace a údržba",
           description: "Pokud chcete zrenovovat svou nemovitost, rádi vám pomůžeme! Mezi Rijekou a Zadarem, včetně blízkých ostrovů (Pag, Krk, Rab). Firma s 15letými zkušenostmi provádí:",
           items: [
@@ -657,10 +657,10 @@ window.SITE_CONTENT = {
       nav: ["O nás", "Kontakt"],
       hero: {
         title: "Sprostredkovanie nehnuteľností v Chorvátsku",
-        ctaServices: ["Predaj nehnuteľností", "Renovácia a údržba", "Chcem predať / prenajať nehnuteľnosť", "Prenajímateľné nehnuteľnosti"]
+        ctaServices: [/* "Predaj nehnuteľností", */ "Renovácia a údržba", "Chcem predať / prenajať nehnuteľnosť", "Prenajímateľné nehnuteľnosti"]
       },
       services: [
-        { title: "Predaj nehnuteľností",
+        /* { title: "Predaj nehnuteľností",
           description: "Sprevádzame vás od inzercie až po podpis zmluvy, s kompletnou právnou a trhovou podporou.",
           details: "Poskytujeme komplexnú podporu pri predaji vašej nehnuteľnosti v Chorvátsku, od stanovenia trhovej ceny cez hľadanie vhodného kupujúceho až po dokončenie predaja.",
           items: [
@@ -670,7 +670,7 @@ window.SITE_CONTENT = {
             "Prepis odberateľov energií a služieb",
             "Vďaka miestnym právnym a trhovým znalostiam a partnerskej sieti v Chorvátsku sprevádzame klientov od výberu až po zápis vlastníckeho práva."
           ]
-        },
+        }, */
         { title: "Renovácia a údržba",
           description: "Ak chcete zrenovovať svoju nehnuteľnosť, radi vám pomôžeme! Medzi Rijekou a Zadarom, vrátane blízkych ostrovov (Pag, Krk, Rab). Firma s 15-ročnými skúsenosťami vykonáva:",
           items: [
